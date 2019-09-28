@@ -6,10 +6,11 @@ const fs = require('fs');
 const insta = require('./routes/api/insta');
 
 
+
 const urlencodeParser = bodyParser.urlencoded({extended:false})
 const jsonParser = bodyParser.json();
 
-
+app.use(express.static('client/build'));
 
 app.use('/api/insta',insta);
 
