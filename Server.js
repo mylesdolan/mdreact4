@@ -20,7 +20,7 @@ app.use('/',(req,res,next)=>{
 
     next()
 })
-
+/*
 app.get('/',(req,res)=>{
     res.send(`
         <html>
@@ -33,7 +33,7 @@ app.get('/',(req,res)=>{
         </html>
     `)
 });
-
+*/
 app.get('/user',(req,res)=>{
     let HTML = fs.readFileSync(`${__dirname}/querystring.html`)
     res.send(`${HTML}`)
