@@ -113,7 +113,7 @@ app.get('/api/cars',(req,res)=>{
         },
         {
             id:2,
-            brand:'Nissan'
+            brand:'NissanWank'
         }
     ])
 })
