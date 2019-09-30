@@ -3,7 +3,7 @@ const app = express();
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const insta = require('./routes/api/insta');
+const insta = require('../routes/api/insta');
 
 
 

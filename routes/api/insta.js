@@ -4,9 +4,9 @@ const router = express.Router();
 
 const querystring = require('querystring');
 const axios = require('axios');
-
-// Load User model
-//const User = require('../../models/User');
+let theresult;
+//Load User model
+const User = require('../../models/UsersMain');
 const FormData = require('form-data');
 
 // @route   GET api/users/test
@@ -88,16 +88,63 @@ loadMore = (code) => {
     }
   };
 
+
+  /*
+  const randomId = 128398723
+const url = `/post/${randomId}`;
+getPost(url)
+export const makeRequest = (funcParamURL) => {
+  const newUrl = funcParamURL;
+  return axios.get(newUrl);
+}
+
+
+   */
+
+
+  /*
+     const
+     // Save Profile
+          new Profile(profileFields).save().then(profile => res.json(profile));*/
+
+
+
   axios.post('https://api.instagram.com/oauth/access_token', qs.stringify(requestBody), config)
       .then((result) => {
-        console.log("res",result)
+
+
+        const resultx=result.data["access_token"];
+        const user={name:'Tobeupdated',instatoken:resultx};
+       new User(user).save().then(user => res.json(user));
+        const url=`https://api.instagram.com/v1/users/self/media/recent?access_token=${resultx}`;
+        console.log("res55555555555555555555555555555555555",result.data["access_token"]);
+        axios.get(url).then((resulty) => {
+          console.log("gggggggggggggggggggggggggggg",resulty.data)}) .catch((err) => {console.log("err",err)});
+
+       // theresult=result.data["access_token"];
       })
       .catch((err) => {
         console.log("err",err)
+      });
+/*
+  console.log("AnyChancexxxxxxxxxxxxxxxxxbbbcccccccccccccccccccccccccc",theresult);
+  console.log('AnyChancexxxxxxxxxxxxxxxxxbbbcccccccccccccccccccccccccc={$theresult}'+theresult,theresult);
+
+  //axios.get('https://api.instagram.com/v1/self/media/recent?access_token='+theresult)
+  axios.get('https://api.instagram.com/v1/self/media/recent?access_token={$theresult}')
+
+      .then((result) => {
+   console.log("gggggggggggggggggggggggggggg",result);
+
+
+
       })
+      .catch((err) => {
+        console.log("err",err)
+      });*/
 
 
-
+console.log("AnyChancexxxxxxxxxxxxxxxxxbbbbbbbbbbbbbbbbbbbbbbbbb{$theresult}",theresult);
 
 
 

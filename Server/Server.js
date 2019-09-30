@@ -4,16 +4,28 @@ const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const insta = require('../routes/api/insta');
+const mongoose = require('mongoose');
 
-
+// DB Config
+const db = require('../config/keys').mongoURI;
 
 const urlencodeParser = bodyParser.urlencoded({extended:false})
 const jsonParser = bodyParser.json();
+
+
+// Connect to MongoDB
+mongoose
+    .connect(db)
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(err));
+
+
 
 app.use(express.static('client/build'));
 
 app.use('/api/insta',insta);
 
+/*
 app.use('/css',express.static(__dirname + '/public/css'))
 app.use('/',(req,res,next)=>{
     console.log('Someone made a request for' + req.url);
@@ -21,7 +33,7 @@ app.use('/',(req,res,next)=>{
 
     next()
 })
-/*
+
 app.get('/',(req,res)=>{
     res.send(`
         <html>
@@ -34,7 +46,7 @@ app.get('/',(req,res)=>{
         </html>
     `)
 });
-*/
+
 app.get('/user',(req,res)=>{
     let HTML = fs.readFileSync(`${__dirname}/querystring.html`)
     res.send(`${HTML}`)
@@ -91,7 +103,7 @@ app.get('/api/car',(req,res)=>{
     })
 })
 
-
+*/
 app.get('/api/users',(req,res)=>{
     res.json([
         {
