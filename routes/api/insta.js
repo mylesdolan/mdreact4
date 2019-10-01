@@ -74,19 +74,6 @@ loadMore = (code) => {
 
 
 
-  const requestBody = {
-    client_id: '35b7e4397b1a4809965a1b0f0fc493cf',
-    // access_token: code,
-    client_secret: 'bf7f60a691714565ae1f48db572ba296',
-    grant_type: 'authorization_code',
-    redirect_uri: 'http://localhost:3001/api/insta',
-    code: code};
-
-  const config = {
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }
-  };
 
 
   /*
@@ -106,6 +93,22 @@ export const makeRequest = (funcParamURL) => {
      const
      // Save Profile
           new Profile(profileFields).save().then(profile => res.json(profile));*/
+
+
+  const requestBody = {
+    client_id: '35b7e4397b1a4809965a1b0f0fc493cf',
+    // access_token: code,
+    client_secret: 'bf7f60a691714565ae1f48db572ba296',
+    grant_type: 'authorization_code',
+    redirect_uri: 'http://localhost:3001/api/insta',
+    code: code};
+
+  const config = {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  };
+
 
 
 
