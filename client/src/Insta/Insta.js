@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 //import Grid from "react-bootstrap";
 //import asset from '../Assets/tester.jpg'
 import { Container,Row, Col } from 'react-bootstrap';
-
+import axios from 'axios';
 type State = {
-    Fromfbx:JSON;
-}
+    Fromfbx:JSON
+};
 
 class Insta extends Component {
 
@@ -14,10 +14,10 @@ class Insta extends Component {
     constructor(props) {
 
         super(props);
-        /* this.state = {
-             FB:JSON,
-             Fromfbx:[],
-         }*/
+         this.state = {
+        //     FB:JSON,
+             title:'',
+         };
         console.log("props",props);
         let Fromfb=props.thing;
         console.log("xxxxxxxxxxxxxxxxxxu",props.thing);
@@ -25,7 +25,7 @@ class Insta extends Component {
         this.setState({Fromfbx:this.Fromfb});
         //   console.log("oooooooooooooooo",this.state.Fromfbx);
         this.handleClick = this.handleClick.bind(this);
-        this.Test2 = this.Test2.bind(this);
+       // this.Test2 = this.Test2.bind(this);
         //  this.state = {};
 
 
@@ -33,19 +33,45 @@ class Insta extends Component {
 
     componentDidMount() {
         var self = this;
-        console.log("sssssssssssssst",this.props.thing);
+      //  console.log("sssssssssssssst",this.props.thing);
         //  console.log("ssssssssssssss",this.state.Fromfbx);
         //        this.state.Fromfb.api('/417230442252839/feed?fields=full_picture,description,created_time,comments{message},caption,message&limit=15', function(response){
-        this.props.thing.api('/417230442252839/feed?fields=full_picture,description,created_time,comments{message},caption,message&limit=15', function(response){
-
-            if(response && !response.error){
-                //this.state.Pics= self.buildPicFeed(response);
-               // self.buildPicFeed(response);
-            }
-        });
 
 
     }
+
+    handleClick() {
+        const weeName={handle:this.state.title};
+
+        console.log('im here',weeName);
+
+axios.post('/api/insta/postname',weeName)
+    .then(   res =>{ console.log("resssy",res)})
+        //res =>{ history.push('/Insta')})
+    .catch(err => {
+        console.log("wee error");
+        //  dispatch({
+        //    type: GET_ERRORS,
+        //   payload: err.response.data
+        //})
+    });
+/*
+    .catch((err) => {
+            console.log("err",err)
+        });
+
+        axios.get('/api/cars')
+            .then( response =>{
+                console.log(response.data)
+            })
+*/
+
+    }
+
+    handleChange(event) {
+        this.setState({title: event.target.value})
+    }
+
 
     render() {
 
@@ -56,7 +82,12 @@ class Insta extends Component {
             <a href="#" onClick={this.handleClick}>Just Do this</a>
 
         hello   hello   hello   hello   hello   hello   hello   hello
-        hello
+        helloY
+
+
+        <input type="text" name="title" value={this.state.title} onChange={this.handleChange.bind(this)}/>
+
+       <div> {this.state.title} </div>
 
         <div id="picfeed"></div>
 
@@ -66,4 +97,4 @@ class Insta extends Component {
 
 }
 
-export default Insta;
+export {Insta};

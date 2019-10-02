@@ -8,10 +8,46 @@ let theresult;
 //Load User model
 const User = require('../../models/UsersMain');
 const FormData = require('form-data');
+const fs = require('fs');
+
+fs.writeFile("/tmp/test", "Hey there!", function(err) {
+
+  if(err) {
+    return console.log(err);
+  }
+
+  console.log("The file was saved!");
+});
+
+
 
 // @route   GET api/users/test
 // @desc    Tests users route
 // @access  Public
+
+router.post('/postname', (req, res) => {
+    //  console.log("sdjfsdjxxxy",res.json.body.handle);
+  console.log("sdjfsdjttt",req.body.handle);
+      console.log("sdjfsdjttt",req.body);
+      console.log("sdjfsdjyt",res);
+      //console.log("sdjfsdjyyyy",req.data[title]);
+      console.log("z",req.body);
+      fs.writeFile("/tmp/test", res, function(err) {
+
+        if(err) {
+          return console.log(err);
+        }
+
+        console.log("The file was saved!");
+      });
+
+
+
+}
+);
+
+
+
 
 
 

@@ -3,6 +3,7 @@ import axios from 'axios'
 import logo from './logo.svg';
 import './App.css';
 import {Fb} from './FaceBook/fb';
+import {Insta} from './Insta/Insta';
 
 class App extends Component {
 
@@ -25,8 +26,10 @@ class App extends Component {
     return (
       <div className="App">
         <Fb/>
+        <Insta/>
 
-      </div>
+
+        </div>
     );
   }
 }
