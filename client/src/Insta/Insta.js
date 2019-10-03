@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 //import asset from '../Assets/tester.jpg'
 import { Container,Row, Col } from 'react-bootstrap';
 import axios from 'axios';
+import qs from 'query-string'
 type State = {
     Fromfbx:JSON
 };
@@ -31,6 +32,8 @@ class Insta extends Component {
 
     }
 
+
+
     componentDidMount() {
         var self = this;
       //  console.log("sssssssssssssst",this.props.thing);
@@ -40,13 +43,27 @@ class Insta extends Component {
 
     }
 
+
+
+
     handleClick() {
-        const weeName={handle:this.state.title};
+        //const weeName={handle:this.state.title};
 
-        console.log('im here',weeName);
+        const requestBody = {
+            weeName: this.state.title
+        };
 
-axios.post('/api/insta/postname',weeName)
-    .then(   res =>{ console.log("resssy",res)})
+        const config = {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        };
+
+       // console.log('im here',weeName);
+
+//axios.post('/api/insta/postname',weeName)
+        axios.post('/api/insta/postname',qs.stringify(requestBody), config)
+            .then(   res =>{ console.log("resssy",res);})
         //res =>{ history.push('/Insta')})
     .catch(err => {
         console.log("wee error");

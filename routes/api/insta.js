@@ -25,21 +25,37 @@ fs.writeFile("/tmp/test", "Hey there!", function(err) {
 // @desc    Tests users route
 // @access  Public
 
-router.post('/postname', (req, res) => {
-    //  console.log("sdjfsdjxxxy",res.json.body.handle);
-  console.log("sdjfsdjttt",req.body.handle);
-      console.log("sdjfsdjttt",req.body);
-      console.log("sdjfsdjyt",res);
-      //console.log("sdjfsdjyyyy",req.data[title]);
-      console.log("z",req.body);
-      fs.writeFile("/tmp/test", res, function(err) {
+            router.post('/postname', (req, res) => {
+                    //  console.log("sdjfsdjxxxy",res.json.body.handle);
+                       console.log("wtfx",req.requestBody);
+                    console.log("wtf",req.weeName);
+                console.log("wt2f",res);
+              console.log("sdjfsdjttt",req.body);
+              //console.log("sdjfsdjyt",res);
+              //console.log("sdjfsdjyyyy",req.data[title]);
+              console.log("zzzz",req);
+                      fs.writeFile("/tmp/test", res, function(err) {
 
-        if(err) {
-          return console.log(err);
-        }
+                          if (err) {
+                              return console.log(err);
+                          }
 
-        console.log("The file was saved!");
-      });
+                          console.log("The file was saved!");
+                            res.status(200).json({
+                                              post:false
+                    })
+              /*.then( res =>{
+              //res.json(req);
+              console.log("forffs")})
+
+
+*/
+            })
+
+
+
+
+
 
 
 
