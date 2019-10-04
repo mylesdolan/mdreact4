@@ -9,9 +9,11 @@ const mongoose = require('mongoose');
 // DB Config
 const db = require('../config/keys').mongoURI;
 
-const urlencodeParser = bodyParser.urlencoded({extended:false})
+const urlencodeParser = bodyParser.urlencoded({extended:false});
 const jsonParser = bodyParser.json();
 
+app.use(urlencodeParser);
+app.use(jsonParser);
 
 // Connect to MongoDB
 mongoose
