@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 //const gravatar = require('gravatar');
+const Promise = require('promise');
 
 const querystring = require('querystring');
 const axios = require('axios');
@@ -9,6 +10,13 @@ let theresult;
 const User = require('../../models/UsersMain');
 const FormData = require('form-data');
 const fs = require('fs');
+let theUser;
+
+
+
+
+
+
 
 fs.writeFile("/tmp/test", "Hey there!", function(err) {
 
@@ -60,13 +68,53 @@ fs.writeFile("/tmp/test", "Hey there!", function(err) {
 router.get('/getname', (req, res) => {
     //console.log ("im so here",req.params.code);
 
-    fs.readFile('/tmp/test.txt', 'utf8', function(err, data) {
-        if (err) throw err;
-        console.log("hiyaaaaaaaaaaaaaaaaaaa",data);
+    const myPromise = new Promise((resolve, reject) =>
+    {
+        fs.readFile('/tmp/test.txt', 'utf8', function(err, data)
+        {
+            if (err){ reject(new Error('In 10% of the cases, I fail. Miserably.'));}
+            //throw err;
+            console.log("hiyaaaaaaaaaaaaaaaaaaa",data);
+            theUser=data;
+            resolve(data);
+
+
+        });
     });
 
 
-    return res.status(400).json(errors);
+            // Two functions
+            const onResolved = (resolvedValue) =>{ console.log("hi",resolvedValue);res.json(resolvedValue);};
+            const onRejected = (error) => console.log("ho",error);
+
+        myPromise.then(onResolved, onRejected);
+       /*     myPromise.then((resolvedValue) => {
+                console.log("rv",resolvedValue);
+                res.json(resolvedValue);
+            }, (error) => {
+                console.log("errror",error);
+                return res.status(404);
+            });
+*/
+
+    /*
+        res.send({
+            name:'Fracis',
+            car:["Ford","Nissan"]
+        })
+*/
+
+
+//    });
+
+
+
+
+
+        //.then(res.json(data));
+
+
+   // return res.status(400).json(errors);
 }) ;
 
 
@@ -178,8 +226,9 @@ export const makeRequest = (funcParamURL) => {
 
 
         const resultx=result.data["access_token"];
-        const user={name:'Tobeupdated',instatoken:resultx};
-       new User(user).save().then(user => res.json(user));
+       // const user={name:'Tobeupdated',instatoken:resultx};
+          const user={name: theUser,instatoken:resultx};
+          new User(user).save().then(user => res.json(user));
         const url=`https://api.instagram.com/v1/users/self/media/recent?access_token=${resultx}`;
         console.log("res55555555555555555555555555555555555",result.data["access_token"]);
         axios.get(url).then((resulty) => {

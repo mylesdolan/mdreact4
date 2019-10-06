@@ -26,7 +26,8 @@ class Insta extends Component {
         this.setState({Fromfbx:this.Fromfb});
         //   console.log("oooooooooooooooo",this.state.Fromfbx);
         this.handleClick = this.handleClick.bind(this);
-       // this.Test2 = this.Test2.bind(this);
+        this.handleClick2 = this.handleClick2.bind(this);
+        // this.Test2 = this.Test2.bind(this);
         //  this.state = {};
 
 
@@ -43,7 +44,19 @@ class Insta extends Component {
 
     }
 
+    handleClick2() {
 
+
+
+     //   axios.get('/api/cars')
+        axios.get('/api/insta/getname')
+
+            .then( response =>{
+                console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)
+            })
+
+
+    }
 
 
     handleClick() {
@@ -96,8 +109,8 @@ class Insta extends Component {
         return (
             <div>
 
-            <a href="#" onClick={this.handleClick}>Just Do this</a>
-
+            <a href="#" onClick={this.handleClick}>Write </a>
+        <a href="#" onClick={this.handleClick2}>Read</a>
         hello   hello   hello   hello   hello   hello   hello   hello
         helloY
 

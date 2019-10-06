@@ -15,6 +15,19 @@ const jsonParser = bodyParser.json();
 app.use(urlencodeParser);
 app.use(jsonParser);
 
+
+//Cors
+const cors = require('cors');
+
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+};
+
+
+
+
+
 // Connect to MongoDB
 mongoose
     .connect(db)
@@ -26,6 +39,18 @@ mongoose
 app.use(express.static('client/build'));
 
 app.use('/api/insta',insta);
+
+
+app.get('/api/testicles',(req,res)=>{
+    console.log("testis");
+    res.send({
+        name:'Fracis',
+        car:["Ford","Nissan"]
+    })
+});
+
+
+app.use(cors(corsOptions));
 
 /*
 app.use('/css',express.static(__dirname + '/public/css'))
@@ -76,12 +101,7 @@ app.post('/enteruser_post',jsonParser,(req,res)=>{
 })
 
 
-app.get('/api/user',(req,res)=>{
-    res.send({
-        name:'Fracis',
-        car:["Ford","Nissan"]
-    })
-})
+
 
 app.get('/api/:user/:id',(req,res)=>{
     let userName = req.params.user;
