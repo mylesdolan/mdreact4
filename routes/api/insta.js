@@ -64,6 +64,20 @@ fs.writeFile("/tmp/test", "Hey there!", function(err) {
             );
 
 
+// @route   GET api/posts/:id
+// @desc    Get post by id
+// @access  Public
+router.get('/:userm', (req, res) => {
+
+    User.findOne({name: req.params.userm})
+        .then( usermain => {console.log('whoppeeeeeeeeeee',usermain);res.json(usermain)})
+        .catch(err =>
+            res.status(404).json({ nouserfound: 'No user found with that ID' })
+        );
+});
+
+
+
 
 router.get('/getname', (req, res) => {
     //console.log ("im so here",req.params.code);

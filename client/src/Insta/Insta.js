@@ -26,6 +26,7 @@ class Insta extends Component {
         this.setState({Fromfbx:this.Fromfb});
         //   console.log("oooooooooooooooo",this.state.Fromfbx);
         this.handleClick = this.handleClick.bind(this);
+        this.handleClick3 = this.handleClick3.bind(this);
         this.handleClick2 = this.handleClick2.bind(this);
         // this.Test2 = this.Test2.bind(this);
         //  this.state = {};
@@ -43,6 +44,29 @@ class Insta extends Component {
 
 
     }
+
+    handleClick3() {
+        const requestBody2 = {
+            weeName: this.state.title
+        };
+
+//let namevar='Helder';
+        let namevar=this.state.title;
+
+
+        //   `${__dirname}/querystring.html`
+
+        //   axios.get('/api/cars')
+        //axios.get('/api/insta/helder')
+        axios.get(`/api/insta/${namevar}`)
+
+            .then( response =>{
+                console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)
+            })
+
+
+    }
+
 
     handleClick2() {
 
@@ -111,6 +135,8 @@ class Insta extends Component {
 
             <a href="#" onClick={this.handleClick}>Write </a>
         <a href="#" onClick={this.handleClick2}>Read</a>
+            <a href="#" onClick={this.handleClick3}>TestHelder</a>
+
         hello   hello   hello   hello   hello   hello   hello   hello
         helloY
 
