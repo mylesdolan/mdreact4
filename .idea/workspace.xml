@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Insta/Insta.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Insta/Insta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/insta.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/insta.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/Insta/Insta.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="83">
+              <caret line="152" column="33" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="33" />
               <folding>
                 <element signature="e#175#228#0" expanded="true" />
               </folding>
@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api/insta.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="76" column="3" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
+            <state relative-caret-position="301">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
             </state>
           </provider>
         </entry>
@@ -62,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/FaceBook/fb.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="297" column="20" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="20" />
+            <state relative-caret-position="311">
+              <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#147#187#0" expanded="true" />
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/Server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="77" column="33" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="33" />
+            <state relative-caret-position="2928">
+              <caret line="155" column="38" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -106,11 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>res</find>
-      <find>anyc</find>
-      <find>res555</find>
-      <find>Fromfb</find>
-      <find>theres</find>
       <find>ggg</find>
       <find>gg</find>
       <find>555</find>
@@ -127,7 +122,6 @@
       <find>5555</find>
       <find>gggg</find>
       <find>mong</find>
-      <find>user</find>
       <find>cars</find>
       <find>car</find>
       <find>save</find>
@@ -136,6 +130,12 @@
       <find>helder</find>
       <find>whop</find>
       <find>handleClick</find>
+      <find>user.</find>
+      <find>loadMor</find>
+      <find>theUser</find>
+      <find>user</find>
+      <find>getnam</find>
+      <find>test2</find>
     </findStrings>
     <dirStrings>
       <dir>C:\AReact\FB_Apps\Emergence\client</dir>
@@ -274,23 +274,23 @@
       <option name="presentableId" value="Default" />
       <updated>1569589825692</updated>
       <workItem from="1569589827927" duration="90699000" />
-      <workItem from="1570462403865" duration="4520000" />
+      <workItem from="1570462403865" duration="9932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95219000" />
+    <option name="totallyTimeSpent" value="100631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.44150943" visible="true" weight="0.18335089" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48245615" visible="true" weight="0.18335089" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.5584906" side_tool="true" visible="true" weight="0.18335089" />
+      <window_info id="npm" order="2" sideWeight="0.51754385" side_tool="true" visible="true" weight="0.18335089" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40914157" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8729097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -394,15 +394,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/Server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="33" />
+        <state relative-caret-position="2928">
+          <caret line="155" column="38" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/FaceBook/fb.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="297" column="20" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="20" />
+        <state relative-caret-position="311">
+          <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#147#187#0" expanded="true" />
@@ -412,15 +412,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/insta.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="76" column="3" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
+        <state relative-caret-position="301">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Insta/Insta.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="83">
+          <caret line="152" column="33" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="33" />
           <folding>
             <element signature="e#175#228#0" expanded="true" />
           </folding>

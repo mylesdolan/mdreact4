@@ -64,23 +64,10 @@ fs.writeFile("/tmp/test", "Hey there!", function(err) {
             );
 
 
-// @route   GET api/posts/:id
-// @desc    Get post by id
-// @access  Public
-router.get('/:userm', (req, res) => {
+router.get('/getname/getname', (req, res) => {
+    console.log("fuckfuck");
 
-    User.findOne({name: req.params.userm})
-        .then( usermain => {console.log('whoppeeeeeeeeeee',usermain);res.json(usermain)})
-        .catch(err =>
-            res.status(404).json({ nouserfound: 'No user found with that ID' })
-        );
-});
-
-
-
-
-router.get('/getname', (req, res) => {
-    //console.log ("im so here",req.params.code);
+    console.log ("im so here",req.params.code);
 
     const myPromise = new Promise((resolve, reject) =>
     {
@@ -94,7 +81,27 @@ router.get('/getname', (req, res) => {
 
 
         });
+
     });
+
+
+
+// @route   GET api/posts/:id
+// @desc    Get post by id
+// @access  Public
+router.get('/:userm', (req, res) => {
+console.log("fuck");
+    User.findOne({name: req.params.userm})
+        .then( usermain => {console.log('whoppeeeeeeeeeee',usermain);res.json(usermain)})
+        .catch(err =>
+            res.status(404).json({ nouserfound: 'No user found with that ID' })
+        );
+});
+
+
+
+
+
 
 
             // Two functions
@@ -242,6 +249,8 @@ export const makeRequest = (funcParamURL) => {
         const resultx=result.data["access_token"];
        // const user={name:'Tobeupdated',instatoken:resultx};
           const user={name: theUser,instatoken:resultx};
+          console.log ("rrrrrrrrrrrrrrrrrr",user);
+
           new User(user).save().then(user => res.json(user));
         const url=`https://api.instagram.com/v1/users/self/media/recent?access_token=${resultx}`;
         console.log("res55555555555555555555555555555555555",result.data["access_token"]);

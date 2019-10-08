@@ -15,10 +15,11 @@ class Insta extends Component {
     constructor(props) {
 
         super(props);
-         this.state = {
-        //     FB:JSON,
-             title:'',
-         };
+        this.state = {
+            //     FB:JSON,
+            title:'',
+            codeResponse:''
+        };
         console.log("props",props);
         let Fromfb=props.thing;
         console.log("xxxxxxxxxxxxxxxxxxu",props.thing);
@@ -38,7 +39,7 @@ class Insta extends Component {
 
     componentDidMount() {
         var self = this;
-      //  console.log("sssssssssssssst",this.props.thing);
+        //  console.log("sssssssssssssst",this.props.thing);
         //  console.log("ssssssssssssss",this.state.Fromfbx);
         //        this.state.Fromfb.api('/417230442252839/feed?fields=full_picture,description,created_time,comments{message},caption,message&limit=15', function(response){
 
@@ -61,7 +62,8 @@ class Insta extends Component {
         axios.get(`/api/insta/${namevar}`)
 
             .then( response =>{
-                console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)
+                console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data);
+                this.setState({codeResponse: response.data});
             })
 
 
@@ -72,19 +74,19 @@ class Insta extends Component {
 
 
 
-     //   axios.get('/api/cars')
-        axios.get('/api/insta/getname')
-
-            .then( response =>{
-                console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)
-            })
+        //axios.get('/api/cars')
+          axios.get('/api/insta/getname/getname')
+  .then( response =>{console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)});
 
 
+        console.log("yepeeeee",this.state.title);
+        console.log("yepeeeeee",this.state.codeResponse);
     }
 
 
     handleClick() {
         //const weeName={handle:this.state.title};
+        console.log("yepeeeee2",this.state.title);
 
         const requestBody = {
             weeName: this.state.title
@@ -96,29 +98,29 @@ class Insta extends Component {
             }
         };
 
-       // console.log('im here',weeName);
+        // console.log('im here',weeName);
 
 //axios.post('/api/insta/postname',weeName)
         axios.post('/api/insta/postname',qs.stringify(requestBody), config)
             .then(   res =>{ console.log("resssy",res);})
-        //res =>{ history.push('/Insta')})
-    .catch(err => {
-        console.log("wee error");
-        //  dispatch({
-        //    type: GET_ERRORS,
-        //   payload: err.response.data
-        //})
-    });
-/*
-    .catch((err) => {
-            console.log("err",err)
-        });
+            //res =>{ history.push('/Insta')})
+            .catch(err => {
+                console.log("wee error");
+                //  dispatch({
+                //    type: GET_ERRORS,
+                //   payload: err.response.data
+                //})
+            });
+        /*
+            .catch((err) => {
+                    console.log("err",err)
+                });
 
-        axios.get('/api/cars')
-            .then( response =>{
-                console.log(response.data)
-            })
-*/
+                axios.get('/api/cars')
+                    .then( response =>{
+                        console.log(response.data)
+                    })
+        */
 
     }
 
@@ -133,9 +135,9 @@ class Insta extends Component {
         return (
             <div>
 
-            <a href="#" onClick={this.handleClick}>Write </a>
-        <a href="#" onClick={this.handleClick2}>Read</a>
-            <a href="#" onClick={this.handleClick3}>TestHelder</a>
+            <a href="#" onClick={this.handleClick}>Create User Click</a>
+        <a href="#" onClick={this.handleClick2}>Load user into mem Click2 </a>
+        <a href="#" onClick={this.handleClick3}>Login Click3</a>
 
         hello   hello   hello   hello   hello   hello   hello   hello
         helloY
@@ -143,9 +145,13 @@ class Insta extends Component {
 
         <input type="text" name="title" value={this.state.title} onChange={this.handleChange.bind(this)}/>
 
-       <div> {this.state.title} </div>
+        <div> {this.state.title} </div>
 
         <div id="picfeed"></div>
+1) create user
+2) load user in mem var
+3) go on react link.
+4) Hit back button enter user in field then login... 2 and 3 to be combined redirecting back to that 4 can be performed.
 
             </div>
     );
