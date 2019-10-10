@@ -7,7 +7,9 @@ const querystring = require('querystring');
 const axios = require('axios');
 let theresult;
 //Load User model
-const User = require('../../models/UsersMain');
+//const User = require('../../models/UsersMain');
+const User = require('./UsersMain');
+
 const FormData = require('form-data');
 const fs = require('fs');
 let theUser;
