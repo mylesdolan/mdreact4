@@ -390,6 +390,8 @@ else{
                 <ul>
                     <li>
                         <a href="https://api.instagram.com/oauth/authorize/?client_id=35b7e4397b1a4809965a1b0f0fc493cf&redirect_uri=http://localhost:3001/api/insta&response_type=code">React</a>
+                        <a href="https://api.instagram.com/oauth/authorize/?client_id=35b7e4397b1a4809965a1b0f0fc493cf&redirect_uri=https://warm-caverns-90837.herokuapp.com/api/insta&response_type=code">React Prod</a>
+
                     </li>
                 </ul>
                 <Container fluid>
