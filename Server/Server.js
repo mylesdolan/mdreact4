@@ -30,7 +30,7 @@ var corsOptions = {
 
 // Connect to MongoDB
 mongoose
-    .connect(db)
+    .connect(process.env.MONGODB_URI || db)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
