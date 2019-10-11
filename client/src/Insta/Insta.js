@@ -60,8 +60,8 @@ class Insta extends Component {
 
         //   axios.get('/api/cars')
         //axios.get('/api/insta/helder')
-        axios.get(`/api/insta/${namevar}`)
-
+       // axios.get(`/api/insta/${namevar}`)
+        axios.get(`https://warm-caverns-90837.herokuapp.com/api/insta/${namevar}`)
             .then( response =>{
                 console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data);
                 this.setState({codeResponse: response.data});
