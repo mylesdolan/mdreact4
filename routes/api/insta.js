@@ -185,7 +185,8 @@ loadMore = (code) => {
   };
 
   console.log("proffy",profileData);
-  axios.post(' https://api.instagram.com/oauth/access_token',profileData)
+ // axios.post(' https://api.instagram.com/oauth/access_token',profileData)
+    axios.post(' https://www.instagram.com/oauth/access_token',profileData)
       .then(res => console.log("res",res))
       .catch(err => console.log("errorx",err))
   ;
