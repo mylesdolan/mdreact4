@@ -233,8 +233,9 @@ export const makeRequest = (funcParamURL) => {
     // access_token: code,
     client_secret: 'bf7f60a691714565ae1f48db572ba296',
     grant_type: 'authorization_code',
-    redirect_uri: 'http://localhost:3001/api/insta',
-    code: code};
+   // redirect_uri: 'http://localhost:3001/api/insta',
+      redirect_uri: 'https://warm-caverns-90837.herokuapp.com/api',
+      code: code};
 
   const config = {
     headers: {

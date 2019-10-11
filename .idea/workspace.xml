@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="" />
+    <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/routes/api/insta.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/insta.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Insta/Insta.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="173" column="39" lean-forward="true" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
+            <state relative-caret-position="-313">
+              <caret line="182" column="26" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
               <folding>
                 <element signature="e#175#228#0" expanded="true" />
               </folding>
@@ -28,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/api/insta.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="187" column="1" lean-forward="true" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="1" />
+            <state relative-caret-position="158">
+              <caret line="236" column="65" selection-start-line="236" selection-start-column="65" selection-end-line="236" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -63,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/FaceBook/fb.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="409" column="21" selection-start-line="409" selection-start-column="21" selection-end-line="409" selection-end-column="21" />
+            <state relative-caret-position="37">
+              <caret line="393" lean-forward="true" selection-start-line="391" selection-start-column="23" selection-end-line="393" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#147#187#0" expanded="true" />
@@ -116,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>body</find>
       <find>wtfx</find>
       <find>wt2f</find>
       <find>data</find>
@@ -143,8 +144,9 @@
       <find>andleClick3</find>
       <find>feed</find>
       <find>UsersMain</find>
-      <find>buildPicFeed</find>
       <find>User</find>
+      <find>buildPicFeed</find>
+      <find>hiy</find>
       <find>codeResponse</find>
     </findStrings>
     <dirStrings>
@@ -170,8 +172,8 @@
         <option value="$PROJECT_DIR$/client/src/Insta/Insta.js" />
         <option value="$PROJECT_DIR$/models/UsersMain.js" />
         <option value="$PROJECT_DIR$/Server/Server.js" />
-        <option value="$PROJECT_DIR$/routes/api/insta.js" />
         <option value="$PROJECT_DIR$/client/src/FaceBook/fb.jsx" />
+        <option value="$PROJECT_DIR$/routes/api/insta.js" />
       </list>
     </option>
   </component>
@@ -301,15 +303,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126887000" />
+    <option name="totallyTimeSpent" value="129694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73170733" visible="true" weight="0.17038691" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72923076" visible="true" weight="0.116071425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.2682927" side_tool="true" visible="true" weight="0.17038691" />
+      <window_info id="npm" order="2" sideWeight="0.27076924" side_tool="true" visible="true" weight="0.116071425" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -322,7 +324,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.12765957" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4680851" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -415,20 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api/UsersMain.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/FaceBook/fb.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="409" column="21" selection-start-line="409" selection-start-column="21" selection-end-line="409" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#147#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/keys.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -443,10 +431,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/FaceBook/fb.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="393" lean-forward="true" selection-start-line="391" selection-start-column="23" selection-end-line="393" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#147#187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api/UsersMain.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Insta/Insta.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="173" column="39" lean-forward="true" selection-start-line="173" selection-start-column="39" selection-end-line="173" selection-end-column="39" />
+        <state relative-caret-position="-313">
+          <caret line="182" column="26" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
           <folding>
             <element signature="e#175#228#0" expanded="true" />
           </folding>
@@ -455,8 +457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/api/insta.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="187" column="1" lean-forward="true" selection-start-line="187" selection-start-column="1" selection-end-line="187" selection-end-column="1" />
+        <state relative-caret-position="158">
+          <caret line="236" column="65" selection-start-line="236" selection-start-column="65" selection-end-line="236" selection-end-column="65" />
         </state>
       </provider>
     </entry>
