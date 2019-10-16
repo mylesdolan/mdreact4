@@ -3,6 +3,7 @@ const app = express();
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const twit = require('../routes/api/twit');
 const insta = require('../routes/api/insta');
 const mongoose = require('mongoose');
 
@@ -40,6 +41,7 @@ app.use(express.static('client/build'));
 
 app.use('/api/insta',insta);
 
+app.use('/api/twit',twit);
 
 app.get('/api/testicles',(req,res)=>{
     console.log("testis");

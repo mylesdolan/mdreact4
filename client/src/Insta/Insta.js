@@ -204,7 +204,7 @@ class Insta extends Component {
             <div>
 
             <a href="#" onClick={this.handleClick}>Create User Click</a>
-        <a href="#" onClick={this.handleClick2}>Load user into mem Click2 </a>
+        <a href="#" onClick={this.handleClick2}>Load user into mem Click2 Thats what you think </a> <br></br>
         <a href="#" onClick={this.handleClick3}>Login Click3</a>
         <a href="#" onClick={this.displaypics}>Display Pics</a>
 
@@ -223,6 +223,9 @@ class Insta extends Component {
 2) load user in mem var
 3) go on react link.
 4) Hit back button enter user in field then login... 2 and 3 to be combined redirecting back to that 4 can be performed.
+
+
+
 
             </div>
     );

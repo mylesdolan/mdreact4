@@ -6,6 +6,8 @@ import asset from '../Assets/tester.jpg'
 import { Container,Row, Col } from 'react-bootstrap';
 import Navbar from './Navbar';
 //import {Router,Route,Link} from 'react-router-dom';
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+
 
 import PicLoop from './picloop';
 
@@ -419,7 +421,7 @@ else{
                             {/*    <div>{snippets}</div> */}
                             <div id="thisawlthing"></div>
 
-
+                            <div id="thisbadthing"><TwitterTimelineEmbed sourceType="profile" screenName="ExtinctRebelsIE" options={{height: 500,width: 500}} /></div>
                         </Col>
                     </Row>
                 </Container>
