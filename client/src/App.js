@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import {Fb} from './FaceBook/fb';
 import {Insta} from './Insta/Insta';
-
+import {Twit} from './Twit/Twit';
 class App extends Component {
 
   componentDidMount(){
@@ -27,7 +27,7 @@ class App extends Component {
       <div className="App">
         <Fb/>
         <Insta/>
-
+<Twit/>
 
         </div>
     );

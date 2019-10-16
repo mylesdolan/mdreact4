@@ -90,7 +90,10 @@ class Insta extends Component {
 
         //axios.get('/api/cars')
           axios.get('/api/insta/getname/getname')
-  .then( response =>{console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)});
+  .then( response =>{console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data)
+   //   this.buildPicFeed(response.data)
+  })
+              .catch((err) => {console.log("err",err)});
 
 
         console.log("yepeeeee",this.state.title);
@@ -160,6 +163,9 @@ class Insta extends Component {
     }
 
 */
+
+
+
 
 
 
