@@ -24,13 +24,17 @@ router.get('/getname', (req, res) => {
         strictSSL:            true,     // optional - requires SSL certificates to be valid.
     });
 
+    T.post
+
+
     T.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(err, data, response) {
-        console.log(data)
+        console.log(data);
+        res.json(data);
     })
 
     T.get('followers/ids', { screen_name: 'tolga_tezel' },  function (err, data, response) {
         console.log(data);
-        res.json(response);
+      //  res.json(response);
     })
 
 

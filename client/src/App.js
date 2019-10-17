@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import axios from 'axios'
 import logo from './logo.svg';
 import './App.css';
 import {Fb} from './FaceBook/fb';
 import {Insta} from './Insta/Insta';
 import {Twit} from './Twit/Twit';
+import {Twitter} from './Twit/Twitter';
 class App extends Component {
 
   componentDidMount(){
@@ -24,12 +26,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+        <Router>
+        <div className="App">
+        <Route path="/Twitter" component={Twitter} />
+
+
+
+
+
+
         <Fb/>
         <Insta/>
 <Twit/>
+    </div>
+    </Router>
 
-        </div>
     );
   }
 }
