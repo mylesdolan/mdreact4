@@ -7,6 +7,7 @@ import {Fb} from './FaceBook/fb';
 import {Insta} from './Insta/Insta';
 import {Twit} from './Twit/Twit';
 import {Twitter} from './Twit/Twitter';
+import Upload from './dropzone/Upload'
 class App extends Component {
 
   componentDidMount(){
@@ -31,6 +32,8 @@ class App extends Component {
         <Route path="/Twitter" component={Twitter} />
 
 
+
+        <Upload />
 
 
 

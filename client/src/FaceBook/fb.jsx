@@ -420,8 +420,13 @@ else{
                             {/*  <div id="picfeed"></div> */}
                             {/*    <div>{snippets}</div> */}
                             <div id="thisawlthing"></div>
+                            <div id="thisbadthing2">  <TwitterTweetEmbed
+                                tweetId={'1186204090126098432'}
+                            />       </div>
+                            <div id="thisbadthing"><TwitterTimelineEmbed sourceType="profile" screenName="ExtinctRebelsIE" options={{height: 500,width: 500}} />
 
-                            <div id="thisbadthing"><TwitterTimelineEmbed sourceType="profile" screenName="ExtinctRebelsIE" options={{height: 500,width: 500}} /></div>
+
+                            </div>
                         </Col>
                     </Row>
                 </Container>

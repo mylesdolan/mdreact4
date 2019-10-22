@@ -50,7 +50,7 @@ router.get('/getname', (req, res) => {
         })
         .catch((err) => {console.log("err",err)})
     ;
-    console.log("fuckfuck");
+    console.log("fuckfuckus");
 
 
 
@@ -86,17 +86,20 @@ router.get('/getname', (req, res) => {
 */
 
         // T.get('followers/ids', { screen_name: 'tolga_tezel' },  function (err, data, response) {
-    T.get('followers/ids', { screen_name: 'Myles Dolan' },  function (err, data, response) {
+   // T.get('followers/ids', { screen_name: 'Myles Dolan' },  function (err, data, response) {
+    T.get('friends/ids', { screen_name: 'Myles Dolan' },  function (err, data, response) {
 
         console.log("fucktyfuk",data);
         //let output = '<h3>Latest Tweets</h3>';
         // for(let i in feed.data){
 
         let allids = data.ids;
+        //let allids = data.id_str;
+
         for (let i in allids) {
             // if(feed.data[i].images)
             {
-            console.log("idddd",allids[i]);
+            console.log("iddddg",allids[i],"tyu");
                // T.post('statuses/destroy/:id', { id: allids[i] }, function (err, data, response) {
               //  T.post('friendships/destroy/:user_id', { user_id: allids[i] }, function (err, data, response) {
               //  T.post('friendships/destroy/:user_id', { user_id: allids[i] }, function (err, data, response) {

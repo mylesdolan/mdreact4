@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 //import asset from '../Assets/tester.jpg'
 import { Container,Row, Col } from 'react-bootstrap';
 import axios from 'axios';
-import qs from 'query-string'
+import  './twitter.css';
+import qs from 'query-string';
+import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+
 type State = {
     Fromfbx:JSON
 };
@@ -69,6 +72,23 @@ class Twitter extends Component {
 
     */
 
+    onDrag(event) {
+        event.preventDefault();
+        if (this.props.disabed) return;
+       // dataTransfer.setState("text", event.target.id);
+        dataTransfer.setState(title, event.target.id);
+
+     //   this.setState({title: event.target.value})
+    }
+
+    onDrop(event) {
+        event.preventDefault();
+        let data = ev.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(data));
+    }
+
+
+
     buildTwitFeed(feed) {
         console.log("insideObj", feed);
         //let tweets = data.statuses;
@@ -83,7 +103,7 @@ class Twitter extends Component {
                 output += `
                      <div class="well">
                                  hi ye
-                 
+                 ${tweets[i].id_str}
                  ${tweets[i].text}
                   <span></span>
                   
@@ -108,21 +128,30 @@ class Twitter extends Component {
 
         return (
             <div>
-                geewhiz geewhiz geewhiz geewhiz  geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz
-
-
+                geewhiz geewhiz geewhiz geewhiz  geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhizy
+                <div> {this.state.title} </div>
+                <TwitterTweetEmbed
+                    tweetId={'1186202088776200200'}
+                />
 
                 <a href="#" onClick={this.handleClick}>Twitter </a> <br></br>
 
 
 
 
-                <div> {this.state.title} </div>
+                <div> {this.state.title}
+
+
+                </div>
 
                 <div id="twitfeed"></div>
 
+                <p>Drag the W3Schools image into the rectangle:</p>
 
-
+                <div className="div1" onDrop="drop(event)" onDragOver="allowDrop(event)"></div>
+                <br>
+                    <img id="drag1" src="img_logo.gif" draggable="true" onDragStart="drag(event)" width="336"
+                         height="69">
 
 
             </div>
