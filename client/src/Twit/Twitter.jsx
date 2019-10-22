@@ -7,6 +7,8 @@ import axios from 'axios';
 import  './twitter.css';
 import qs from 'query-string';
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
+import logo from './img_logo.gif'
+
 
 type State = {
     Fromfbx:JSON
@@ -29,7 +31,11 @@ class Twitter extends Component {
         console.log("xxxxxxxxxxxxxxxxxx", Fromfb);
         this.setState({Fromfbx: this.Fromfb});
         //   console.log("oooooooooooooooo",this.state.Fromfbx);
-        this.handleClick = this.handleClick.bind(this)
+        this.handleClick = this.handleClick.bind(this);
+        this.onDrop = this.onDrop.bind(this);
+        this.onDrag = this.onDrag.bind(this);
+        this.allowDrop = this.allowDrop.bind(this);
+
 
     }
     componentDidMount() {
@@ -72,19 +78,26 @@ class Twitter extends Component {
 
     */
 
+    allowDrop(event) {
+        event.preventDefault();
+    }
+
+
     onDrag(event) {
         event.preventDefault();
         if (this.props.disabed) return;
        // dataTransfer.setState("text", event.target.id);
-        dataTransfer.setState(title, event.target.id);
+        console.log ("im here defo you drag");
+        event.dataTransfer.setState( {title:event.target.id});
 
      //   this.setState({title: event.target.value})
     }
 
     onDrop(event) {
         event.preventDefault();
-        let data = ev.dataTransfer.getData("text");
-        event.target.appendChild(document.getElementById(data));
+        //let data = event.dataTransfer.getData("text");
+        console.log ("im here defo drop");
+      //  event.target.appendChild(document.getElementById(data));
     }
 
 
@@ -134,8 +147,8 @@ class Twitter extends Component {
                     tweetId={'1186202088776200200'}
                 />
 
-                <a href="#" onClick={this.handleClick}>Twitter </a> <br></br>
-
+                {/* <a href="#" onClick={this.handleClick}>Twitter </a> <br></br> */}
+Twitter
 
 
 
@@ -146,13 +159,17 @@ class Twitter extends Component {
 
                 <div id="twitfeed"></div>
 
-                <p>Drag the W3Schools image into the rectangle:</p>
 
-                <div className="div1" onDrop="drop(event)" onDragOver="allowDrop(event)"></div>
-                <br>
-                    <img id="drag1" src="img_logo.gif" draggable="true" onDragStart="drag(event)" width="336"
-                         height="69">
+                <div className="div1">
+                    <p>Drag the W3Schools image into the rectangle:</p>
+                                    </div>
 
+                <div id="div1" onDrop={this.onDrop} onDragOver={this.allowDrop}></div>
+                <br></br>
+                <div>
+                    {/*<img id="drag1" src={logo} alt="logo" draggable="true" onDragStart="onDrag(event)" width="136" height="29"/>*/}
+                    <img id="drag1" src={logo} alt="logo" draggable="true" onDragStart={this.onDrag} width="136" height="29"/>
+                </div>
 
             </div>
         );
