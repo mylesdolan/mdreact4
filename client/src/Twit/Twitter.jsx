@@ -32,9 +32,14 @@ class Twitter extends Component {
         this.setState({Fromfbx: this.Fromfb});
         //   console.log("oooooooooooooooo",this.state.Fromfbx);
         this.handleClick = this.handleClick.bind(this);
-        this.onDrop = this.onDrop.bind(this);
+
         this.onDrag = this.onDrag.bind(this);
         this.allowDrop = this.allowDrop.bind(this);
+        this.onDragEnter = this.onDragEnter.bind(this);
+        this.onDragOver = this.onDragOver.bind(this);
+        this.onDragLeave = this.onDragLeave.bind(this);
+        this.onDrop = this.onDrop.bind(this);
+
 
 
     }
@@ -78,26 +83,61 @@ class Twitter extends Component {
 
     */
 
+onDragOver(event) {
+    event.preventDefault();
+    if (this.props.disabed) return;
+    console.log("drafo");
+    this.setState({ hightlight: true });
+}
+
+onDragLeave(event) {
+console.log ("dragl");
+    this.setState({ hightlight: false });
+}
+
+onDrop(event)
+{
+    event.preventDefault();
+    if (this.props.disabed) return;
+    const files = event.dataTransfer.files;
+    if (this.props.onFilesAdded) {
+        const array = this.fileListToArray(files);
+        this.props.onFilesAdded(array);
+    }
+}
+
+    onDragEnter(event)
+    {
+        event.preventDefault();
+        console.log("so here");}
+
+
+
     allowDrop(event) {
         event.preventDefault();
+        console.log("allow drop");
+
     }
 
 
     onDrag(event) {
-        event.preventDefault();
-        if (this.props.disabed) return;
-       // dataTransfer.setState("text", event.target.id);
+       //event.preventDefault();
         console.log ("im here defo you drag");
-        event.dataTransfer.setState( {title:event.target.id});
+        if (this.props.disabed) return;
+       //dataTransfer.setState("text", event.target.id);
+
+        event.dataTransfer.setData("text", event.target.id)
+       // event.dataTransfer.setState( {title:event.target.id});
 
      //   this.setState({title: event.target.value})
     }
 
     onDrop(event) {
-        event.preventDefault();
-        //let data = event.dataTransfer.getData("text");
         console.log ("im here defo drop");
-      //  event.target.appendChild(document.getElementById(data));
+        event.preventDefault();
+        let data = event.dataTransfer.getData("text");
+        console.log ("im here defo drop");
+       event.target.appendChild(document.getElementById(data));
     }
 
 
@@ -164,11 +204,17 @@ Twitter
                     <p>Drag the W3Schools image into the rectangle:</p>
                                     </div>
 
-                <div id="div1" onDrop={this.onDrop} onDragOver={this.allowDrop}></div>
+                <div id="div1" onDrop={this.onDrop} onDragOver={this.allowDrop} onDragEnter={this.onDragEnter}
+                     onDragOver={this.onDragOver}
+                     onDragLeave={this.onDragLeave}
+                     onDrop={this.onDrop}
+
+                >Hello</div>
                 <br></br>
                 <div>
                     {/*<img id="drag1" src={logo} alt="logo" draggable="true" onDragStart="onDrag(event)" width="136" height="29"/>*/}
                     <img id="drag1" src={logo} alt="logo" draggable="true" onDragStart={this.onDrag} width="136" height="29"/>
+                    {/* <img id="drag1" src={logo} alt="logo" draggable="true"  width="136" height="29"/>*/}
                 </div>
 
             </div>
