@@ -82,8 +82,9 @@ class Twit extends Component {
                 console.log("inloop");
                 output += `
                      <div class="well">
-                                 hi ye
-                 
+                                 hi ye twit not twitter
+                  ${tweets[i].id_str}
+                  <span></span>
                  ${tweets[i].text}
                   <span></span>
                   
