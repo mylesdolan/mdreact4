@@ -136,7 +136,7 @@ onDrop(event)
         console.log ("im here defo drop");
         event.preventDefault();
         let data = event.dataTransfer.getData("text");
-        console.log ("im here defo drop");
+        console.log ("im here defo drop",data);
        event.target.appendChild(document.getElementById(data));
     }
 
@@ -182,7 +182,8 @@ onDrop(event)
         return (
             <div>
                 geewhiz geewhiz geewhiz geewhiz  geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhizy
-                <div> {this.state.title} </div>
+                <div> {this.state.title} Before Banana </div>
+
                 <TwitterTweetEmbed
                     tweetId={'1186202088776200200'}
                 />
@@ -210,6 +211,12 @@ Twitter
                      onDrop={this.onDrop}
 
                 >Hello</div>
+
+
+
+
+
+
                 <br></br>
                 <div>
                     {/*<img id="drag1" src={logo} alt="logo" draggable="true" onDragStart="onDrag(event)" width="136" height="29"/>*/}

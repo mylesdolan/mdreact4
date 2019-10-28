@@ -69,7 +69,7 @@ router.get('/getname', (req, res) => {
     //})
 
 
-    T.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(err, data, response) {
+    T.get('search/tweets', { q: 'banana dopio since:2011-07-11', count: 100 }, function(err, data, response) {
         console.log(data);
         res.json(data);
     });
