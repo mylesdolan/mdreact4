@@ -5,6 +5,8 @@ import React from "react";
 
 
 class Grabid extends React.Component<Props> {
+   // never worked unexpected token private  topic: string = 'AnyTopic';
+
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -14,7 +16,12 @@ class Grabid extends React.Component<Props> {
     }
 
     componentDidMount() {
+        const script = document.createElement("script");
 
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+
+        document.body.appendChild(script);
     }
     handleClick(){
 
@@ -28,8 +35,32 @@ class Grabid extends React.Component<Props> {
     }
 
     render() {
+        let newstring='';
+        let verynewstring='1186298651829772289';
+        console.log("props",this.props);
+        console.log("props2",this.props.TwitIdThing);
+        console.log("props2a",this.props.tweetId);
+        let myJSON = JSON.stringify(this.props.tweetId);
+       // let myJ=myJSON[0];
+        console.log ("json",myJSON);
+    //    console.log ("myj",myJ);
+        //console.log("props3",this.props[TwitIdThing]);
+const { tweetId } = this.props;
+        console.log("props3",tweetId);
+       let  TwitIdThing  = '1186298651829772289';
+       console.log ("TwitIdThingxxxxxxxxxxxxxxxxxx",TwitIdThing);
+console.log("this p twee",this.props.tweetId);
+        if (this.props.tweetId !== 'AnyOldString') {
+             newstring = this.props.tweetId.toString();
+             verynewstring=newstring.replace(/[^\x20-\x7E]/g, '');
+            console.log ("verynewstring",verynewstring);
+        }
+       // this.topic={TwitIdThing}
 
-//const { TwitIdThing } = this.props;
+        console.log("TwitIdThing2",this.topic);
+
+
+
         return (
             <div>
 
@@ -37,16 +68,27 @@ class Grabid extends React.Component<Props> {
 
 
 
-        hello {TwitIdThing}
+        hello {tweetId}
 
-        <div> hi <TwitterTweetEmbed tweetId=\`$TwitIdThing\`/>
-                {/*
-      go     <TwitterTweetEmbed tweetId={'`${TwitIdThing}`'}/>
-            go2     <TwitterTweetEmbed tweetId={'{TwitIdThing}'}/> */}
-
+        <div> hi
+        {/* <TwitterTweetEmbed tweetId=\`$TwitIdThing\`/>
+               let  TwitIdThing  = '1186297586724024327';
             gone    <TwitterTweetEmbed tweetId={'1186298651829772289'}/>
+      go     <TwitterTweetEmbed tweetId={'`${TwitIdThing}`'}/>
+            go2     <TwitterTweetEmbed tweetId={'{TwitIdThing}'}/>
+                     going <TwitterTweetEmbed tweetId={this.topic}/> >
+                        going <TwitterTweetEmbed tweetId={TwitIdThing2.TwitIdThing}/
+            going <TwitterTweetEmbed tweetId={this.props.TwitIdThing}/>
+            going <TwitterTweetEmbed tweetId={this.props.tweetId}/>
+              going <TwitterTweetEmbed tweetId={verynewstring}/>
+            going <TwitterTweetEmbed tweetId={myJ}/>
 
-bye
+These were closest but too dirty to leave on.
+            going <TwitterTweetEmbed tweetId={TwitIdThing}/>
+            gone <TwitterTweetEmbed tweetId={verynewstring}/>
+            */}
+
+        bye
 
 
 

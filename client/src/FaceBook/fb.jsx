@@ -424,8 +424,7 @@ else{
                                 tweetId={'1186204090126098432'}
                             />
 two
-                                <TwitterTweetEmbed
-                                    tweetId={'1186298651829772289'}/>
+
 three
                                 <TwitterTweetEmbed
                                     tweetId={'1186298651829772300'}/>

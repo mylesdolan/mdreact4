@@ -21,13 +21,15 @@ class Twit extends Component {
         this.state = {
             //     FB:JSON,
             title: '',
-            codeResponse: ''
+            codeResponse: '',
+            twitID:'1186297586724024321'
         };
         console.log("props", props);
         let Fromfb = props.thing;
         console.log("xxxxxxxxxxxxxxxxxxu", props.thing);
         console.log("xxxxxxxxxxxxxxxxxx", Fromfb);
         this.setState({Fromfbx: this.Fromfb});
+        this.setState({twitID: 'anyoldstring'});
         //   console.log("oooooooooooooooo",this.state.Fromfbx);
         this.handleClick = this.handleClick.bind(this)  ;
         this.onDrag = this.onDrag.bind(this);
@@ -158,6 +160,10 @@ let anyoldthing=this.onDrag;
     }
 
     onDrop(event) {
+
+
+
+
         console.log ("im here defo drop");
         event.preventDefault();
         let data = event.dataTransfer.getData("text");
@@ -167,6 +173,18 @@ let anyoldthing=this.onDrag;
 
         console.log("after");
 //        event.target.appendChild(document.getElementById(data));
+        let statusvar=data;
+        //axios.get(`https://warm-caverns-90837.herokuapp.com/api/insta/${namevar}`)
+
+        axios.get(`/api/twit/${statusvar}`)
+            .then( response =>{
+                console.log("xxxxxxxxxxxxxxxxxxxxxt",response.data);
+                //this.setState({codeResponse: response.data});
+            });
+
+
+
+
     }
 
 
@@ -175,12 +193,12 @@ let anyoldthing=this.onDrag;
         render() {
 console.log ("tid",this.state.twitID);
 //console.log ("tid2",twitID);
-console.log ("tid3",this.twitID);
+console.log ("tid3",this.state.twitID);
             return (
                 <div>
                     geewhiz geewhiz geewhiz geewhiz  geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz geewhiz
-                    <Grabid TwitIdThing={this.state.twitID}/>
-
+                    {/*}   <Grabid TwitIdThing={this.state.twitID}/>*/}
+                    <Grabid tweetId={this.state.twitID}/>
 
                     <a href="#" onClick={this.handleClick}>Twit </a> <br></br>
 

@@ -8,10 +8,24 @@ const axios = require('axios');
 let theresult;
 //Load User model
 const Twit = require('twit');
+const TwitStatus=require('../../models/twitstatus');
+
+
+router.get('/:twitstatusid', (req, res) => {
+
+   let twitstatus = req.params.twitstatusid;
+    console.log("twitstat",twitstatus);
+    let twitname = req.query.twitname;
+    const twitstat={statusid:twitstatus,name:twitname};
+
+    new TwitStatus(twitstat).save().then(twitstat => res.json(twitstat));
+
+
+});
 
 
 
-router.get('/getname', (req, res) => {
+router.get('/', (req, res) => {
 
     console.log("fuckfucko");
 
