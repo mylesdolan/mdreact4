@@ -7,7 +7,16 @@ import {Fb} from './FaceBook/fb';
 import {Insta} from './Insta/Insta';
 import {Twit} from './Twit/Twit';
 import {Twitter} from './Twit/Twitter';
+import TwitContainer from './containers/twit_container.js';
 import Upload from './dropzone/Upload'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import promiseMiddleware from 'redux-promise';
+import reducers from './reducers'
+
+
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
+
 class App extends Component {
 
   componentDidMount(){
@@ -27,15 +36,16 @@ class App extends Component {
 
   render() {
     return (
+        <Provider store={createStoreWithMiddleware(reducers)}>
         <Router>
         <div className="App">
         <Route path="/Twitter" component={Twitter} />
-
+            <Route path="/TwitContainer" component={TwitContainer} />
 
 
         <Upload />
 
-
+            {/*    <TwitContainer /> */}
 
 
         <Fb/>
@@ -43,7 +53,7 @@ class App extends Component {
 <Twit/>
     </div>
     </Router>
-
+        </Provider>
     );
   }
 }

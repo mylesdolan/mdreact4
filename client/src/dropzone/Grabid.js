@@ -2,8 +2,11 @@ import asset from '../Assets/tester.jpg'
 import { Container,Row, Col } from 'react-bootstrap';
 import { TwitterTimelineEmbed, TwitterShareButton, TwitterFollowButton, TwitterHashtagButton, TwitterMentionButton, TwitterTweetEmbed, TwitterMomentShare, TwitterDMButton, TwitterVideoEmbed, TwitterOnAirButton } from 'react-twitter-embed';
 import React from "react";
-
-
+/* global FB*/
+/* global ga*/
+/* global twttr*/
+/* global theURL*/
+import {Helmet} from "react-helmet";
 class Grabid extends React.Component<Props> {
    // never worked unexpected token private  topic: string = 'AnyTopic';
 
@@ -16,12 +19,47 @@ class Grabid extends React.Component<Props> {
     }
 
     componentDidMount() {
+        /* None of this worked when trying to get twttr.widgets load working but its very WTF anyway?
+        window.addEventListener("load", function() {
+            window.fbAsyncInit = function() {
+                FB.Event.subscribe('edge.create', function(targetUrl) {
+                    ga('send', 'social', 'facebook', 'like', targetUrl);
+                });
+                FB.Event.subscribe('edge.remove', function(targetUrl) {
+                    ga('send', 'social', 'facebook', 'unlike', targetUrl);
+                });
+            }
+
+            document.getElementById('tweetjs').addEventListener('load', function() {
+                twttr.ready(function (twttr) {
+                    twttr.events.bind('tweet', function(e){
+                        if(!e) return;
+                        ga('send', 'social', 'twitter', 'tweet', theURL);
+                    })
+                });
+            }, false);
+        }, false);
+
+
         const script = document.createElement("script");
 
-        script.src = "https://platform.twitter.com/widgets.js";
+        script.src = "//platform.twitter.com/widgets.js";
         script.async = true;
 
         document.body.appendChild(script);
+        twttr.widgets.load();
+
+        //differnet thinbg to try
+  const s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.innerHTML = "document.write('This is output by document.write()!')";
+        this.instance.appendChild(s);
+        */
+
+     //   twttr.widgets.load();
+      //  script.src = "//platform.twitter.com/widgets.js";
+       // script.async = true;
     }
     handleClick(){
 
@@ -47,7 +85,7 @@ class Grabid extends React.Component<Props> {
         //console.log("props3",this.props[TwitIdThing]);
 const { tweetId } = this.props;
         console.log("props3",tweetId);
-       let  TwitIdThing  = '1186298651829772289';
+       let  TwitIdThing  = '1190225655323144192';
        console.log ("TwitIdThingxxxxxxxxxxxxxxxxxx",TwitIdThing);
 console.log("this p twee",this.props.tweetId);
         if (this.props.tweetId !== 'AnyOldString') {
@@ -84,8 +122,7 @@ console.log("this p twee",this.props.tweetId);
             going <TwitterTweetEmbed tweetId={myJ}/>
 
 These were closest but too dirty to leave on.
-            going <TwitterTweetEmbed tweetId={TwitIdThing}/>
-            gone <TwitterTweetEmbed tweetId={verynewstring}/>
+
             */}
 
         bye
@@ -95,10 +132,17 @@ These were closest but too dirty to leave on.
     bye2
             </div>
 
+                <Helmet>
+                    <script src="//platform.twitter.com/widgets.js"></script>
+                    twttr.widgets.load();
 
 
 
+                </Helmet>
 
+
+                going <TwitterTweetEmbed tweetId={TwitIdThing}/>
+                gone <TwitterTweetEmbed tweetId={verynewstring}/>
 
         </div>
     );

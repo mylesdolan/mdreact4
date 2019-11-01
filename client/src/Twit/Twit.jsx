@@ -22,7 +22,7 @@ class Twit extends Component {
             //     FB:JSON,
             title: '',
             codeResponse: '',
-            twitID:'1186297586724024321'
+            twitID:'1190226004528320512'
         };
         console.log("props", props);
         let Fromfb = props.thing;
@@ -58,7 +58,9 @@ class Twit extends Component {
 
 
             //axios.get('/api/cars')
-            axios.get('/api/twit/getname')
+            //axios.get('/api/twit/getname')
+            axios.get('/api/twit')
+
                 .then( response =>{console.log("xxxxxxxxxxxxxxxxxxxxxtwit",response.data)
                     this.buildTwitFeed(response.data)
                 })
