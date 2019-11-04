@@ -13,19 +13,19 @@ export function tweeterList(keywords){
 
 
 export function tweeterListAll(){
-let request="";
+//let request="";
     console.log("bloodywellhere");
   //  const request = axios.get(`${URL}/artists?_limit=6`)
     //const request = axios.get(`/api/twit?_limit=6`)
-    //const request =
+    const request =
         axios.get('/api/twit')
 
 
-      //  .then(response => response.data)
-        .then(response => {console.log("777777777777778",response.data) })
-        .catch((err) => {console.log("errdjfkjsd",err)});
+        .then(response => response.data)
+        //.then(response => {console.log("777777777777778",response.data) })
+        //.catch((err) => {console.log("errdjfkjsd",err)});
     return {
-        type: 'GET_ARTISTS_ALL',
+        type: 'GET_TWEETERS',
         payload: request
     }
 }

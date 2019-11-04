@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import tweeters from './tweeter_reducer';
+import statuses from './tweeter_reducer';
 
 const rootReducer = combineReducers({
-    tweeters
+    statuses
 })
 
 export default rootReducer;

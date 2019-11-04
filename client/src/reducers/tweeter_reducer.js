@@ -2,7 +2,8 @@ export default function(state={},action) {
 
     switch (action.type) {
         case 'GET_TWEETERS':
-            return {...state, tweeterList: action.payload}
+            console.log("inside reducer",action.payload);
+            return {...state, statuses: action.payload}
         case 'GET_ARTISTS':
             return {...state, artistList: action.payload}
         case 'GET_ARTISTS_ALL':

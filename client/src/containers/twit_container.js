@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import Tweeterlist from '../Components/Tweetlist'
 import { connect } from 'react-redux';
 import  {tweeterListAll,tweeterList}  from '../actions';
 import { bindActionCreators } from 'redux';
@@ -9,18 +9,30 @@ import { bindActionCreators } from 'redux';
 //import Tweeterlist from '../components/artistlist';
 
 class TwitContainer extends Component {
+    constructor(props) {
+
+        super(props);
+        this.state = {
+            statuses: ['', '', '']
+
+        }
+    };
+
 
     componentWillMount() {
         this.props.tweeterListAll()
     }
     render(){
-        console.log("here we go",this.props)
+        console.log("here we go",this.props);
+        console.log("here we gogo",this.props.statuses);
+        console.log("here we gogogo",this.props.tweeters);
         return (
             <div>
-
+Say something anyway!
                 {/*  <Search keywords={this.getKeywords}/>
-                <Tweeterlist tweettists={this.props.artists.artistList}/>*/}
+                <Tweeterlist tweets={this.props.artists.artistList}/>*/}
 
+                <Tweeterlist tweets={this.props.statuses}/>
             </div>
         )
     }
@@ -28,7 +40,7 @@ class TwitContainer extends Component {
 }
     function mapStateToProps(state){
     return {
-        tweeters:state.artists
+        statuses:state.statuses
     }
 }
 
