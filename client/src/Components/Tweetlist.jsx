@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {TwitterTweetEmbed} from "react-twitter-embed";
 
 const Tweeterlist = (props) =>{
     console.log("insidetweeterlist", props.tweets.statuses);
@@ -25,6 +26,7 @@ ho
                         <div>
                             something xxxxxxxxxxx
                             {item.id_str}
+                            <TwitterTweetEmbed tweetId={item.id_str}/>
                         </div>
                     )) : null
 
