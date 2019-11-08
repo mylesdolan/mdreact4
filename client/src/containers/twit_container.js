@@ -22,6 +22,13 @@ class TwitContainer extends Component {
     componentWillMount() {
         this.props.tweeterListAll()
     }
+    getKeywords = (event) => {
+        let key = event.target.value;
+        console.log("key!!!!!!!!!",key);
+      //  this.props.artistList(key)
+    }
+
+
     render(){
         console.log("here we go",this.props);
         console.log("here we gogo",this.props.statuses);
@@ -32,7 +39,10 @@ Say something anyway!
                 {/*  <Search keywords={this.getKeywords}/>
                 <Tweeterlist tweets={this.props.artists.artistList}/>*/}
 
-                <Tweeterlist tweets={this.props.statuses}/>
+                <Tweeterlist keywords={this.getKeywords} tweets={this.props.statuses}/>
+
+
+
             </div>
         )
     }

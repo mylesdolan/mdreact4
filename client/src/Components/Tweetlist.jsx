@@ -23,7 +23,7 @@ ho
                     //  props.tweets['statuses'].map(item => (
                     props.tweets.statuses.statuses.map((item,index) => (
 
-                        <div>
+                        <div draggable={draggablebool} onDragStart={event => props.keywords(event)}>
                             something xxxxxxxxxxx
                             {item.id_str}
                             <TwitterTweetEmbed tweetId={item.id_str}/>
