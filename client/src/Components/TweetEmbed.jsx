@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import {TwitterTweetEmbed} from "react-twitter-embed";
 
 
-const Tweeterlist = (props) =>{
+const TweeterEmbed = (props) =>{
     console.log("insidetweeterlist", props.tweets.statuses);
     console.log("insidetweeterlist", props.tweets.statuses);
-  //  console.log("insidetweeterlist", props.tweets.statuses.length);
+    //  console.log("insidetweeterlist", props.tweets.statuses.length);
     console.log("insidetweeterlist2",props.tweets.length);
     console.log("insidetweeterlist3did",props.droppedid);
     //props.tweets.statuses && props.tweets.statuses.length > 0 ?
@@ -14,13 +14,13 @@ const Tweeterlist = (props) =>{
     let draggablebool=true;
     return (
         <div >
-ho
+            ho
             {
                 props.tweets.statuses  ?
 
 
 
-                   //props.tweets.map((item,index) => (
+                    //props.tweets.map((item,index) => (
 
                     //  props.tweets['statuses'].map(item => (
                     props.tweets.statuses.statuses.map((item,index) => (
@@ -36,8 +36,8 @@ ho
 
             }
             <div id="div1"
-                onDragOver={event => props.keywordsdo(event)}
-                onDragLeave={event => props.keywordsdl(event)}
+                 onDragOver={event => props.keywordsdo(event)}
+                 onDragLeave={event => props.keywordsdl(event)}
                  onDrop={event => props.keywords2(event)}
 
 
@@ -51,15 +51,15 @@ ho
 
             {
                 props.droppedid  ?
-            <div>  {props.droppedid}
+                    <div>  {props.droppedid}
 
-                <TwitterTweetEmbed tweetId={props.droppedid}/>
+                        <TwitterTweetEmbed tweetId={props.droppedid}/>
 
-            </div>  : null
+                    </div>  : null
             }
 
         </div>
     )
 }
 
-export default Tweeterlist;
+export default TweeterEmbed;

@@ -143,6 +143,7 @@ These were closest but too dirty to leave on.
 
                 going <TwitterTweetEmbed tweetId={TwitIdThing}/>
                 gone <TwitterTweetEmbed tweetId={verynewstring}/>
+                goner <TwitterTweetEmbed tweetId={tweetId}/>
 
         </div>
     );

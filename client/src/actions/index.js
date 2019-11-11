@@ -10,6 +10,22 @@ export function tweeterList(keywords){
     }
 }
 
+export function dropStatusId(droppedid) {
+    const droppedId = droppedid
+    return {
+        type: 'GET_DROPID',
+        payload: droppedId
+    }
+
+}
+
+export function ClearEmbedDetail(){
+    return{
+        type:'CLEAR_EMBED_DETAIL',
+        payload:null
+    }
+}
+
 
 
 export function tweeterListAll(){

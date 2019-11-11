@@ -8,19 +8,19 @@ import { bindActionCreators } from 'redux';
 //import Search from '../components/search';
 //import Tweeterlist from '../components/artistlist';
 
-class TwitContainer extends Component {
+class TwitEmbedContainer extends Component {
     constructor(props) {
 
         super(props);
         this.state = {
             //statuses: ['', '', ''],
-           // twred: ['', '', '']
+            // twred: ['', '', '']
         }
     };
 
 
     componentWillMount() {
-        this.props.tweeterListAll()
+     //   this.props.tweeterListAll()
 
     }
 
@@ -35,7 +35,7 @@ class TwitContainer extends Component {
         // event.dataTransfer.setState( {title:event.target.id});
         console.log ("im here defo you dragid",key);
         console.log ("im here defo you drag",x);
-       // console.log("key!!!!!!!!!",txt);
+        // console.log("key!!!!!!!!!",txt);
         //  this.props.artistList(key)
     }
 
@@ -75,7 +75,7 @@ class TwitContainer extends Component {
         console.log("here we gogogoDID",this.props.twred.did);
         return (
             <div>
-Say something anyway!
+                Say something anyway!
                 {/*  <Search keywords={this.getKeywords}/>
                 <Tweeterlist tweets={this.props.artists.artistList}/>*/}
 
@@ -88,19 +88,19 @@ Say something anyway!
     }
 
 }
-    function mapStateToProps(state){
+function mapStateToProps(state){
     return {
-       // statuses:state.statuses
+        // statuses:state.statuses
         twred:state.twred
     }
 }
 
-    function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch){
     return bindActionCreators({tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail},dispatch)
 }
 
 
 
-    export default connect(mapStateToProps,mapDispatchToProps)(TwitContainer);
+export default connect(mapStateToProps,mapDispatchToProps)(TwitEmbedContainer);
 
 
