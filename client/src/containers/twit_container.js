@@ -43,6 +43,7 @@ class TwitContainer extends Component {
         //event.preventDefault();
         let key2 = event.target.value;
         let txt = event.dataTransfer.getData("text");
+        this.props.ClearEmbedDetail();
         console.log("Dropkey!!!!!!!!!test",txt);
         this.props.dropStatusId(txt);
         //  this.props.artistList(key)

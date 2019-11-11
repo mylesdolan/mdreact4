@@ -8,6 +8,7 @@ import {Insta} from './Insta/Insta';
 import {Twit} from './Twit/Twit';
 import {Twitter} from './Twit/Twitter';
 import TwitContainer from './containers/twit_container.js';
+import TwitEmbedContainer from './containers/twitembedcontainer.js';
 import Upload from './dropzone/Upload'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -42,7 +43,7 @@ class App extends Component {
         <Route path="/Twitter" component={Twitter} />
             <Route path="/TwitContainer" component={TwitContainer} />
 
-
+<TwitEmbedContainer/>
         <Upload />
 
             {/*    <TwitContainer /> */}
@@ -50,6 +51,7 @@ class App extends Component {
 
         <Fb/>
         <Insta/>
+
 <Twit/>
     </div>
     </Router>

@@ -14,7 +14,7 @@ const TweeterEmbed = (props) =>{
     let draggablebool=true;
     return (
         <div >
-            ho
+            {/*   ho
             {
                 props.tweets.statuses  ?
 
@@ -28,7 +28,7 @@ const TweeterEmbed = (props) =>{
                         <div id={item.id_str} draggable={draggablebool} onDragStart={event => props.keywords(event)}>
                             something xxxxxxxxxxx
                             {item.id_str}
-                            {/*   <TwitterTweetEmbed tweetId={item.id_str}/> */}
+
                         </div>
                     ))
 
@@ -48,7 +48,8 @@ const TweeterEmbed = (props) =>{
 
 
             >HelloInTweetlist </div>
-
+            */}
+            Oh Fuck {props.droppedid}
             {
                 props.droppedid  ?
                     <div>  {props.droppedid}

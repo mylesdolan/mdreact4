@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Tweeterlist from '../Components/Tweetlist'
+//import Tweeterlist from '../Components/Tweetlist'
+import TweeterEmbed from '../Components/TweetEmbed'
+
 import { connect } from 'react-redux';
 import  {tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail}  from '../actions';
 import { bindActionCreators } from 'redux';
@@ -25,6 +27,7 @@ class TwitEmbedContainer extends Component {
     }
 
     componentWillUnmount(){
+        console.log("bloody u mount");
         this.props.ClearEmbedDetail();
     }
 
@@ -75,11 +78,11 @@ class TwitEmbedContainer extends Component {
         console.log("here we gogogoDID",this.props.twred.did);
         return (
             <div>
-                Say something anyway!
+               TWIT EMBED CONTAIN!
                 {/*  <Search keywords={this.getKeywords}/>
                 <Tweeterlist tweets={this.props.artists.artistList}/>*/}
 
-                <Tweeterlist droppedid={this.props.twred.did} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
+                <TweeterEmbed droppedid={this.props.twred.did} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
 
 
