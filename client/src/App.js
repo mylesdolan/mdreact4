@@ -13,7 +13,8 @@ import Upload from './dropzone/Upload'
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
-import reducers from './reducers'
+import reducers from './reducers';
+import twitembedder from './Components/PointsToTwitEmbedCont';
 
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
@@ -42,7 +43,7 @@ class App extends Component {
         <div className="App">
         <Route path="/Twitter" component={Twitter} />
             <Route path="/TwitContainer" component={TwitContainer} />
-
+            <Route path="/twe/:id" exact component={twitembedder}/>
 <TwitEmbedContainer/>
         <Upload />
 

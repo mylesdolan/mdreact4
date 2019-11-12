@@ -4,7 +4,7 @@ import axios from 'axios';
 import TweeterEmbed from '../Components/TweetEmbed'
 
 import { connect } from 'react-redux';
-import  {tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail}  from '../actions';
+import  {tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail,linkStatusId}  from '../actions';
 import { bindActionCreators } from 'redux';
 
 //import Search from '../components/search';
@@ -15,15 +15,20 @@ class TwitEmbedContainer extends Component {
 
         super(props);
         this.state = {
+            //this.props.artistDetail(this.props.match.params.id)
+            //embedid:this.props.match.params.id
             //statuses: ['', '', ''],
             // twred: ['', '', '']
         }
+
+
+
     };
 
 
     componentWillMount() {
-     //   this.props.tweeterListAll()
-
+      this.props.linkStatusId(this.props.match.params.id)
+     //   this.setState({ id:this.props.match.params.id });
     }
 
     componentWillUnmount(){
@@ -31,7 +36,13 @@ class TwitEmbedContainer extends Component {
         this.props.ClearEmbedDetail();
     }
 
-
+    componentDidMount()
+    {
+     console.log('inside tec', this.props)
+        //   this.props.tweeterListAll()
+    // if (this.props.match.params !=null)
+    // {this.setState({ id:this.props.match.params.id });}
+    }
     getKeywords = (event) => {
         let key = event.target.id;
         let x= event.dataTransfer.setData("text", event.target.id);
@@ -69,6 +80,8 @@ class TwitEmbedContainer extends Component {
     }
 
     render(){
+        //console.log("paramsthing",this.props.match.params.id);
+        console.log("stateparamsthing",this.state.id);
         console.log("here we go",this.props);
         console.log("here we gogodid",this.props.did);
         console.log("here we gogo",this.props.statuses);
@@ -99,7 +112,7 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail},dispatch)
+    return bindActionCreators({tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail,linkStatusId},dispatch)
 }
 
 

@@ -19,6 +19,19 @@ export function dropStatusId(droppedid) {
 
 }
 
+export function linkStatusId(linkeddid) {
+    const linkedId = linkeddid;
+  //  console.log("blaaaaaaaaaaaaaaaaaaaaaaady",linkeddId)
+    return {
+        type: 'GET_LINKID',
+        payload: linkedId
+    }
+
+}
+
+
+
+
 export function ClearEmbedDetail(){
     return{
         type:'CLEAR_EMBED_DETAIL',
