@@ -27,8 +27,14 @@ class TwitEmbedContainer extends Component {
 
 
     componentWillMount() {
-      this.props.linkStatusId(this.props.match.params.id)
+     // this.props.linkStatusId(this.props.match.params.id)
      //   this.setState({ id:this.props.match.params.id });
+        console.log("twitembedcont",this.props);
+        if (this.props.match !=null)
+        {console.log("twitembedcont2",this.props.match.params.id);
+            this.props.linkStatusId(this.props.match.params.id)
+                }
+
     }
 
     componentWillUnmount(){
@@ -89,13 +95,20 @@ class TwitEmbedContainer extends Component {
         console.log("here we gogogo",this.props.tweeters);
         //console.log("here we gogogoDID",this.props.statuses.did);
         console.log("here we gogogoDID",this.props.twred.did);
+        console.log("here we linkDID",this.props.twred.linkid);
+
         return (
             <div>
                TWIT EMBED CONTAIN!
                 {/*  <Search keywords={this.getKeywords}/>
-                <Tweeterlist tweets={this.props.artists.artistList}/>*/}
+                <Tweeterlist tweets={this.props.artists.artistList}/>
 
                 <TweeterEmbed droppedid={this.props.twred.did} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
+
+
+                */}
+
+                     <TweeterEmbed droppedid={this.props.twred.linkid} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
 
 

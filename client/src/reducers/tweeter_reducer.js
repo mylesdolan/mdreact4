@@ -1,6 +1,9 @@
 export default function(state={},action) {
 
     switch (action.type) {
+        case 'GET_LINKID':
+            console.log("inside reducerLINNK",action.payload);
+            return {...state, linkid: action.payload}
         case 'GET_DROPID':
             console.log("inside reducerdi",action.payload);
             return {...state, did: action.payload}
