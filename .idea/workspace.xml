@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/twit_container.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/twit_container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/twitembedcontainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/twitembedcontainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/containers/twit_container.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+            <state relative-caret-position="445">
+              <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -61,15 +63,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/containers/twitembedcontainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="88" column="64" lean-forward="true" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
+            <state relative-caret-position="1138">
+              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#121#160#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/FaceBook/picloop.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -86,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="744">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -113,23 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/dropzone/Grabid.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3216">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/Components/Tweetlist.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="469">
+              <caret line="29" column="126" selection-start-line="29" selection-start-column="126" selection-end-line="29" selection-end-column="126" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -141,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="28" />
+              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -152,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
+            <state relative-caret-position="312">
               <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -172,11 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ddg</find>
-      <find>id_</find>
-      <find>ddd</find>
-      <find>id_s</find>
-      <find>localhost</find>
       <find>3000</find>
       <find>handleChange</find>
       <find>so her</find>
@@ -201,13 +195,19 @@
       <find>embe</find>
       <find>verynewstring</find>
       <find>twitembedid</find>
+      <find>setst</find>
       <find>linkStatusId</find>
+      <find>Fromfbx</find>
+      <find>fromfb</find>
+      <find>updateOnL</find>
+      <find>cont2</find>
     </findStrings>
     <dirStrings>
       <dir>C:\AReact\FB_Apps\Emergence\client</dir>
       <dir>C:\AReact\FB_Apps\Emergence\Server</dir>
       <dir>C:\AReact\FB_Apps\Emergence</dir>
       <dir>C:\AReact\FB_Apps\Emergence\client\src</dir>
+      <dir>C:\Users\myles.dolan\Benefacts.ie.new\mdreact4\client\src</dir>
       <dir>C:\Users\myles.dolan\Benefacts.ie.new\mdreact4\client</dir>
     </dirStrings>
   </component>
@@ -242,13 +242,13 @@
         <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/client/src/Components/TweetEmbed.js" />
         <option value="$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx" />
-        <option value="$PROJECT_DIR$/client/src/containers/twit_container.js" />
-        <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" />
-        <option value="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" />
         <option value="$PROJECT_DIR$/client/src/actions/index.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js" />
+        <option value="$PROJECT_DIR$/client/src/containers/twit_container.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" />
+        <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/containers/twitembedcontainer.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" />
       </list>
     </option>
   </component>
@@ -442,13 +442,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254241000" />
+    <option name="totallyTimeSpent" value="265732000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.88653845" visible="true" weight="0.26343518" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88653845" visible="true" weight="0.14805058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.11346154" side_tool="true" weight="0.19626866" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -463,7 +463,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.117056854" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25975475" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -519,13 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="1416" selection-start-line="1416" selection-end-line="1416" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/FaceBook/picloop.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="96" column="17" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -685,63 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/containers/twit_container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="46" column="48" lean-forward="true" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Tweetlist.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -756,13 +692,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/FaceBook/picloop.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/twit_container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/twitembedcontainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="88" column="64" lean-forward="true" selection-start-line="88" selection-start-column="64" selection-end-line="88" selection-end-column="64" />
+        <state relative-caret-position="1138">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#121#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Tweetlist.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="29" column="126" selection-start-line="29" selection-start-column="126" selection-end-line="29" selection-end-column="126" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -102,6 +102,6 @@ Say something anyway!
 
 
 
-    export default connect(mapStateToProps,mapDispatchToProps)(TwitContainer);
+    export default connect(mapStateToProps,mapDispatchToProps)(TwitContainer,{updateOnLocationChange: true});
 
 

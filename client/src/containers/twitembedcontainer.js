@@ -9,12 +9,18 @@ import { bindActionCreators } from 'redux';
 
 //import Search from '../components/search';
 //import Tweeterlist from '../components/artistlist';
+let doit;
+type State = {
+   // Fromfbx:'';
+}
 
 class TwitEmbedContainer extends Component {
     constructor(props) {
 
         super(props);
+    //    this.setState({Fromfbx:''});
         this.state = {
+
             //this.props.artistDetail(this.props.match.params.id)
             //embedid:this.props.match.params.id
             //statuses: ['', '', ''],
@@ -29,14 +35,23 @@ class TwitEmbedContainer extends Component {
     componentWillMount() {
      // this.props.linkStatusId(this.props.match.params.id)
      //   this.setState({ id:this.props.match.params.id });
-        console.log("twitembedcont",this.props);
+        console.log("twitembedcontxx",this.props);
         if (this.props.match !=null)
         {console.log("twitembedcont2",this.props.match.params.id);
-            this.props.linkStatusId(this.props.match.params.id)
+           this.props.linkStatusId(this.props.match.params.id)
                 }
 
     }
+    componentDidUpdate (){
 
+        console.log("twitembedcontxxxx",this.props);
+        if (this.props.match !=null)
+        {console.log("twitembedcont3",this.props.match.params.id);
+     /// wont work       this.props.linkStatusId(this.props.match.params.id)
+        }
+
+
+    }
     componentWillUnmount(){
         console.log("bloody u mount");
         this.props.ClearEmbedDetail();
@@ -97,6 +112,14 @@ class TwitEmbedContainer extends Component {
         console.log("here we gogogoDID",this.props.twred.did);
         console.log("here we linkDID",this.props.twred.linkid);
 
+        if (this.props.match !=null)
+        {console.log("twitembedcont2further",this.props.match.params.id);
+         /// dony worky  this.props.linkStatusId(this.props.match.params.id)
+           // this.setState({Fromfbx:this.props.match.params.id});
+            // doit=this.props.match.params.id;
+        }
+
+
         return (
             <div>
                TWIT EMBED CONTAIN!
@@ -105,10 +128,11 @@ class TwitEmbedContainer extends Component {
 
                 <TweeterEmbed droppedid={this.props.twred.did} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
+     <TweeterEmbed droppedid={doit} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
                 */}
 
-                     <TweeterEmbed droppedid={this.props.twred.linkid} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
+                <TweeterEmbed droppedid={this.props.twred.linkid} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
 
 
@@ -130,6 +154,6 @@ function mapDispatchToProps(dispatch){
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(TwitEmbedContainer);
+export default connect(mapStateToProps,mapDispatchToProps)(TwitEmbedContainer,{updateOnLocationChange: true});
 
 

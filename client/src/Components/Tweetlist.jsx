@@ -27,7 +27,7 @@ ho
 
                         <div id={item.id_str} draggable={draggablebool} onDragStart={event => props.keywords(event)}>
                             something xxxxxxxxxxxwithlink
-                            {item.id_str} <Link to={`/twe/${item.id_str}`} key={item.id_str} className="artist_item" > LInk </Link>
+                            {item.id_str} <Link to={`/twe/${item.id_str}`} key={item.id_str} className="artist_item"onClick={}> LInk </Link>
 
                         {/*   <TwitterTweetEmbed tweetId={item.id_str}/> */}
                         </div>

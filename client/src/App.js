@@ -41,9 +41,11 @@ class App extends Component {
         <Provider store={createStoreWithMiddleware(reducers)}>
         <Router>
         <div className="App">
+            <Switch>
         <Route path="/Twitter" component={Twitter} />
             <Route path="/TwitContainer" component={TwitContainer} />
             <Route path="/twe/:id" exact component={twitembedder}/>
+            </Switch>
 <TwitEmbedContainer/>
         <Upload />
 
@@ -52,8 +54,8 @@ class App extends Component {
 
         <Fb/>
         <Insta/>
-
-<Twit/>
+            <TwitContainer/>
+            {/*<Twit/>*/}
     </div>
     </Router>
         </Provider>
