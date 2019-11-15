@@ -4,7 +4,6 @@
     <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/twit_container.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/twit_container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/containers/twitembedcontainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/twitembedcontainer.js" afterDir="false" />
@@ -18,44 +17,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="4">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/client/src/actions/index.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="240">
-                    <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/client/src/Twit/Twit.jsx">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="519">
-                    <caret line="34" column="19" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="19" />
-                    <folding>
-                      <element signature="e#175#228#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/containers/twit_container.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+            <state relative-caret-position="126">
+              <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -64,10 +32,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/containers/twitembedcontainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1138">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="250">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#121#160#0" expanded="true" />
@@ -86,22 +63,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/Insta/Insta.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="360">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -110,25 +75,25 @@
         <entry file="file://$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="888">
+              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Components/Tweetlist.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="29" column="126" selection-start-line="29" selection-start-column="126" selection-end-line="29" selection-end-column="126" />
+            <state relative-caret-position="192">
+              <caret line="29" column="174" lean-forward="true" selection-start-line="29" selection-start-column="174" selection-end-line="29" selection-end-column="174" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -140,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -151,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="504">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -244,11 +209,11 @@
         <option value="$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx" />
         <option value="$PROJECT_DIR$/client/src/actions/index.js" />
         <option value="$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js" />
-        <option value="$PROJECT_DIR$/client/src/containers/twit_container.js" />
         <option value="$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js" />
+        <option value="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/containers/twitembedcontainer.js" />
-        <option value="$PROJECT_DIR$/client/src/Components/Tweetlist.jsx" />
+        <option value="$PROJECT_DIR$/client/src/containers/twit_container.js" />
       </list>
     </option>
   </component>
@@ -354,7 +319,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/jul19/devconnector_S9" />
+    <property name="last_opened_file_path" value="S:/myles/The complete React Fullstack course/The complete React Fullstack course/[Tutsgalaxy.com] - The complete React Fullstack course/3. React in deep Routes, Lifecycle/13.1 02_router_lifecycles.zip" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -442,13 +407,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265732000" />
+    <option name="totallyTimeSpent" value="276014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88653845" visible="true" weight="0.14805058" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88653845" visible="true" weight="0.29083246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.11346154" side_tool="true" weight="0.19626866" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -463,7 +428,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.25975475" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.22630993" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -572,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -619,13 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -674,7 +625,7 @@
     <entry file="file://$PROJECT_DIR$/client/src/Insta/Insta.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="23" />
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -685,10 +636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js">
+    <entry file="file://$PROJECT_DIR$/client/src/FaceBook/picloop.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="168">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -699,19 +650,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/FaceBook/picloop.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/tweeter_reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="48">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+    <entry file="file://$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="504">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,37 +670,27 @@
     <entry file="file://$PROJECT_DIR$/client/src/Components/PointsToTwitEmbedCont.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/TweetEmbed.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/Components/Tweetlist.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="192">
+          <caret line="29" column="174" lean-forward="true" selection-start-line="29" selection-start-column="174" selection-end-line="29" selection-end-column="174" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/containers/twit_container.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/twitembedcontainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1138">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="250">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#121#160#0" expanded="true" />
@@ -757,13 +698,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/Components/Tweetlist.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="29" column="126" selection-start-line="29" selection-start-column="126" selection-end-line="29" selection-end-column="126" />
+        <state relative-caret-position="360">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/containers/twit_container.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="49" column="42" lean-forward="true" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
         </state>
       </provider>
     </entry>

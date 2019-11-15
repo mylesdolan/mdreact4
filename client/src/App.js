@@ -43,10 +43,10 @@ class App extends Component {
         <div className="App">
             <Switch>
         <Route path="/Twitter" component={Twitter} />
-            <Route path="/TwitContainer" component={TwitContainer} />
+                {/*    <Route path="/TwitContainer" component={TwitContainer} />*/}
             <Route path="/twe/:id" exact component={twitembedder}/>
             </Switch>
-<TwitEmbedContainer/>
+            {/*  <TwitEmbedContainer/>*/}
         <Upload />
 
             {/*    <TwitContainer /> */}

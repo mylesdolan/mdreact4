@@ -4,6 +4,7 @@ import Tweeterlist from '../Components/Tweetlist'
 import { connect } from 'react-redux';
 import  {tweeterListAll,tweeterList,dropStatusId,ClearEmbedDetail}  from '../actions';
 import { bindActionCreators } from 'redux';
+//import { Link, History } from 'react-router';
 
 //import Search from '../components/search';
 //import Tweeterlist from '../components/artistlist';
@@ -20,9 +21,22 @@ class TwitContainer extends Component {
 
 
     componentWillMount() {
-        this.props.tweeterListAll()
+        this.props.tweeterListAll();
+        this.changeLocation()
+        window.addEventListener('popstate', this.changeLocation.bind(this));
+
 
     }
+
+    // update state based on the URL
+    changeLocation() {
+        const path = window.location.pathname.split('/')
+        console.log("changing location",path);
+        const currentView = path[path.length - 1]
+        this.setState({ currentView })
+
+    }
+
 
     componentWillUnmount(){
         this.props.ClearEmbedDetail();
@@ -48,6 +62,36 @@ class TwitContainer extends Component {
         this.props.dropStatusId(txt);
         //  this.props.artistList(key)
     }
+
+
+
+
+
+
+    navigateToRoute(route) {
+        console.log("historyRoute",route);
+        ///console.log(this.props.history);
+        this.setState({ currentView: route })
+      ////  this.props.history.push(`/options/${route}`)
+    }
+
+
+
+    getKeywordslink = (event) => {
+        //event.preventDefault();
+        let key2 = event.target.id;
+       // let txt = event.dataTransfer.getData("text");
+     //   this.props.ClearEmbedDetail();
+        console.log("Linkkey!!!!!!!!!test",key2);
+        console.log("Linkkey!!!!!!!!!test",event);
+        this.navigateToRoute(key2);
+
+
+
+        //this.props.dropStatusId(key2);
+        //  this.props.artistList(key)
+    }
+
 
     getKeywordsdo = (event) => {
         event.preventDefault();
@@ -80,7 +124,7 @@ Say something anyway!
                 {/*  <Search keywords={this.getKeywords}/>
                 <Tweeterlist tweets={this.props.artists.artistList}/>*/}
 
-                <Tweeterlist droppedid={this.props.twred.did} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
+                <Tweeterlist droppedid={this.props.twred.did} keywordslink={this.getKeywordslink} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
 
 
