@@ -6,7 +6,7 @@ const twitembedder = (props) =>{
 
     console.log('twitembedidxx',props);
     return(
-        <TwitEmbedContainer {...props}/>
+        <TwitEmbedContainer history={props.history} {...props}/>
     )
 }
 

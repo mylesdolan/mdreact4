@@ -70,7 +70,8 @@ class TwitContainer extends Component {
 
     navigateToRoute(route) {
         console.log("historyRoute",route);
-        ///console.log(this.props.history);
+        console.log("historyprops",this.props);
+        if(this.props.history) console.log(this.props.history);
         this.setState({ currentView: route })
       ////  this.props.history.push(`/options/${route}`)
     }
