@@ -22,7 +22,7 @@ class TwitContainer extends Component {
 
     componentWillMount() {
         this.props.tweeterListAll();
-        this.changeLocation()
+       // this.changeLocation();
         window.addEventListener('popstate', this.changeLocation.bind(this));
 
 
@@ -30,10 +30,11 @@ class TwitContainer extends Component {
 
     // update state based on the URL
     changeLocation() {
-        const path = window.location.pathname.split('/')
-        console.log("changing location",path);
-        const currentView = path[path.length - 1]
-        this.setState({ currentView })
+        console.log("changing location no var");
+     //   const path = window.location.pathname.split('/')
+       // console.log("changing location",path);
+        //const currentView = path[path.length - 1]
+       // this.setState({ currentView })
 
     }
 
@@ -71,15 +72,17 @@ class TwitContainer extends Component {
     navigateToRoute(route) {
         console.log("historyRoute",route);
         console.log("historyprops",this.props);
-        if(this.props.history) console.log(this.props.history);
-        this.setState({ currentView: route })
-      ////  this.props.history.push(`/options/${route}`)
+        if(this.props.history) {
+            console.log(this.props.history);
+            this.setState({currentView: route})
+            this.props.history.push(`/options/${route}`)
+        }
     }
 
 
 
     getKeywordslink = (event) => {
-        //event.preventDefault();
+       // event.preventDefault();
         let key2 = event.target.id;
        // let txt = event.dataTransfer.getData("text");
      //   this.props.ClearEmbedDetail();

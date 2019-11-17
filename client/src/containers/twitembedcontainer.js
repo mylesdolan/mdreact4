@@ -42,6 +42,7 @@ class TwitEmbedContainer extends Component {
                 }
 
     }
+
     componentDidUpdate (){
 
         console.log("twitembedcontxxxx",this.props);
@@ -135,7 +136,7 @@ class TwitEmbedContainer extends Component {
 Did
                  <TweeterEmbed droppedid={this.props.twred.did} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 LInked
-                <TweeterEmbed droppedid={this.props.twred.linkid} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
+                <TweeterEmbed droppedid={this.props.match.params.id} keywords={this.getKeywords} keywords2={this.getKeywords2} keywordsdo={this.getKeywordsdo} keywordsdl={this.getKeywordsdl} tweets={this.props.twred}/>
 
 
             </div>
