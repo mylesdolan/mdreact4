@@ -15,6 +15,7 @@ import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import reducers from './reducers';
 import twitembedder from './Components/PointsToTwitEmbedCont';
+import harvupper from './Harvestor/harvupper';
 
 
 const createStoreWithMiddleware = applyMiddleware(promiseMiddleware)(createStore);
@@ -46,6 +47,8 @@ class App extends Component {
                 {/*    <Route path="/TwitContainer" component={TwitContainer} />*/}
             <Route path="/twe/:id" exact component={twitembedder}/>
             </Switch>
+
+             <Route exact path="/h2" component={harvupper}/>
             {/*  <TwitEmbedContainer/>*/}
         <Upload />
 

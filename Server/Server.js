@@ -4,6 +4,7 @@ const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const twit = require('../routes/api/twit');
+const harv = require('./harv');
 const insta = require('../routes/api/insta');
 const mongoose = require('mongoose');
 
@@ -38,7 +39,7 @@ mongoose
 
 
 app.use(express.static('client/build'));
-
+app.use('/harv', harv);
 app.use('/api/insta',insta);
 
 app.use('/api/twit',twit);
