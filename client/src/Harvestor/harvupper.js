@@ -14,6 +14,7 @@ class harvupper extends Component {
         this.onChange = this.onChange.bind(this);
         this.state = {
        //     TotPrice: '',
+            TheJson:{},
         rowDD:{},
 
             columnDefs: [{
@@ -114,7 +115,7 @@ totaller() {
 
         var text, parser, xmlDoc;
         parser = new DOMParser();
-        fetch('/harv/test')
+  fetch('/harv/test')
       // fetch('http://192.168.50.26:8080/DATA')
             .then(response => response.text())
            // .then(textx => console.log('ffsharv',textx))
@@ -122,8 +123,15 @@ totaller() {
             .then( text =>parser.parseFromString(text,"text/xml") )
             //.then(result => console.log('shark',result) )
             .then(xml => this.xmlToJson(xml))
-            .then(result => console.log('shark',result))
+           .then(result => this.setState({TheJson: result}))
+         // .then(result => console.log('shark',result))
+      .then(console.log('shark',this.state.TheJson))
+
         ;
+
+
+
+       // this.setState({thejson: TheJson});
 
 
 
@@ -298,6 +306,9 @@ this.totaller();
 
 
     render() {
+        console.log ("RdataTheJson",this.state.TheJson);
+
+
         console.log("RowData",this.state.rowData);
         const snippets= this.state.rowData.map((anObjectMapped, index) => {
             console.log("obm",anObjectMapped.price);
