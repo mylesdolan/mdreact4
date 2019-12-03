@@ -19,10 +19,11 @@ router.get('/test', (req, res) =>
 //function upload() {
 
 
-    fs.readFile('DATA', 'utf8', function(err, contents) {
+    fs.readFile('try.txt', 'utf8', function(err, contents) {
         console.log(contents);
         console.log('after calling readFilexx');
-        res.json(contents);
+       // res.json(contents);
+        res.send(contents);
     });
 
 
