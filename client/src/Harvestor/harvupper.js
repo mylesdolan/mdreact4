@@ -1,24 +1,24 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Harv from './harv'
 import axios from "axios";
 
 
 let snippets4;
+
 class harvupper extends Component {
-    constructor(props)
-    {
+    constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.Test2 = this.Test2.bind(this);
         this.onChange = this.onChange.bind(this);
         this.state = {
-       //     TotPrice: '',
-            TheJson:{},
-        rowDD:{},
+            //     TotPrice: '',
+            TheJson: {},
+            rowDD: {},
 
             columnDefs: [{
-                headerName: "group2", field: "group2", checkboxSelection:true, sortable: true, filter: true
+                headerName: "group2", field: "group2", checkboxSelection: true, sortable: true, filter: true
             },
 
                 //    {
@@ -32,34 +32,35 @@ class harvupper extends Component {
 
             rowData2: [
                 {
-                car1:{
-                    group2: "sr_acc", model: "Celica1", price: 100
-                }},
-                {
-                    car2:{
+                    car1: {
                         group2: "sr_acc", model: "Celica1", price: 100
-                    }}
+                    }
+                },
+                {
+                    car2: {
+                        group2: "sr_acc", model: "Celica1", price: 100
+                    }
+                }
 
 
-        ],
-
+            ],
 
 
             rowData: [{
-                    group1: "GOV", group2: "SR_HEA", model: "St Jos", price: 200
+                group1: "GOV", group2: "SR_HEA", model: "St Jos", price: 200
             },
                 {
                     group1: "GOV", group2: "SR_HEA", model: "St Pats", price: 200
-            },
+                },
                 {
-                    group1: "JAP",  group2: "Nissan", model: "Sunny", price: 200
+                    group1: "JAP", group2: "Nissan", model: "Sunny", price: 200
                 },
                 {
                     group1: "JAP", group2: "Nissan", model: "Cherry", price: 200
                 },
 
                 {
-                    group1: "JAP",  group2: "Toyota", model: "Celica", price: 200
+                    group1: "JAP", group2: "Toyota", model: "Celica", price: 200
                 },
                 {
                     group1: "JAP", group2: "Toyota", model: "Prius", price: 200
@@ -68,12 +69,10 @@ class harvupper extends Component {
 
                 {
                     group1: "EUR", group2: "Renault", model: "Mondeo", price: 32000
-            }, {
+                }, {
                     group1: "EUR", group2: "Renault", model: "Boxter", price: 72000
 
-            }],
-
-
+                }],
 
 
         };
@@ -81,59 +80,57 @@ class harvupper extends Component {
     }
 
     onChange(e) {
-        console.log("NameXXX",e.target.name);
-        console.log("ValXXX",e.target.value);
-        this.setState({ [e.target.name]: e.target.value });
-        this.state.RowDD[e.target.name].price= e.target.value;
+        console.log("NameXXX", e.target.name);
+        console.log("ValXXX", e.target.value);
+        this.setState({[e.target.name]: e.target.value});
+        this.state.RowDD[e.target.name].price = e.target.value;
         this.totaller();
-        console.log("state",this.state);
+        console.log("state", this.state);
 
     }
 
-totaller() {
-    let totprice = 0;
-    if (this.state.RowDD !=null) {
-        //for (let key of this.state.RowDD) {
-        for (var key in this.state.RowDD) {
+    totaller() {
+        let totprice = 0;
+        if (this.state.RowDD != null) {
+            //for (let key of this.state.RowDD) {
+            for (var key in this.state.RowDD) {
 
-            console.log("tpricein", this.state.RowDD[key].price);
-            totprice = Number(totprice + parseInt(this.state.RowDD[key].price));
-            this.setState({TotPrice: totprice});
+                console.log("tpricein", this.state.RowDD[key].price);
+                totprice = Number(totprice + parseInt(this.state.RowDD[key].price));
+                this.setState({TotPrice: totprice});
 
+            }
+            console.log("tpriceout", this.state.TotPrice);
         }
-        console.log("tpriceout", this.state.TotPrice);
     }
-}
+
     componentDidMount() {
         axios.get('/api/tickets/test')
-            .then(res =>console.log('fuckffss',res));
+            .then(res => console.log('fuckffss', res));
 
 
         fetch('/api/ticket/test')
             .then(response => response.text())
-            .then(text => console.log('Holyffss',text));
+            .then(text => console.log('Holyffss', text));
 
         var text, parser, xmlDoc;
         parser = new DOMParser();
-  fetch('/harv/test')
-      // fetch('http://192.168.50.26:8080/DATA')
+        fetch('/harv/test')
+        // fetch('http://192.168.50.26:8080/DATA')
             .then(response => response.text())
-           // .then(textx => console.log('ffsharv',textx))
+            // .then(textx => console.log('ffsharv',textx))
             //.then(texty => console.log('ffsharvxx',texty))
-            .then( text =>parser.parseFromString(text,"text/xml") )
+            .then(text => parser.parseFromString(text, "text/xml"))
             //.then(result => console.log('shark',result) )
             .then(xml => this.xmlToJson(xml))
-           .then(result => this.setState({TheJson: result}))
-         // .then(result => console.log('shark',result))
-      .then(console.log('shark',this.state.TheJson))
+            .then(result => this.setState({TheJson: result}))
+            // .then(result => console.log('shark',result))
+            .then(console.log('shark', this.state.TheJson))
 
         ;
 
 
-
-       // this.setState({thejson: TheJson});
-
-
+        // this.setState({thejson: TheJson});
 
 
         var rowDataDict = [];
@@ -143,83 +140,83 @@ totaller() {
 
         //var rowDataDict6 = Array(4).fill(Array(4));
 
- //       var rowDataDict6 =[[]];
+        //       var rowDataDict6 =[[]];
         var rowDataDict7 = {};
         var rowDataDict6 = [];
-        rowDataDict6['x']={};
+        rowDataDict6['x'] = {};
 
         //var rowDataDict2 = [[[]]];
         //var rowDataDict3={};
-     //   var rowDataDict3 = Array(10).fill(Array(10))
+        //   var rowDataDict3 = Array(10).fill(Array(10))
 
         for (var i = 0; i < this.state.rowData.length; i++) {
             rowDataDict[this.state.rowData[i].group2] = this.state.rowData[i];
-            console.log("dick",rowDataDict);
-           ///// rowDataDict6[this.state.rowData[i].group2]={};
-            rowDataDict6[this.state.rowData[i].group2]=[];
-            rowDataDict7[this.state.rowData[i].group1]=[];
+            console.log("dick", rowDataDict);
+            ///// rowDataDict6[this.state.rowData[i].group2]={};
+            rowDataDict6[this.state.rowData[i].group2] = [];
+            rowDataDict7[this.state.rowData[i].group1] = [];
         }
 
-       for (var j = 0; j < this.state.rowData.length; j++) {
-console.log (this.state.rowData[j].group1);
-            console.log (this.state.rowData[j].group2);
-            console.log (this.state.rowData[j].model);
+        for (var j = 0; j < this.state.rowData.length; j++) {
+            console.log(this.state.rowData[j].group1);
+            console.log(this.state.rowData[j].group2);
+            console.log(this.state.rowData[j].model);
 
-            rowDataDict3[this.state.rowData[j].model]= this.state.rowData[j];
-            console.log("dick3",rowDataDict3);
+            rowDataDict3[this.state.rowData[j].model] = this.state.rowData[j];
+            console.log("dick3", rowDataDict3);
 
-            console.log("dick4" ,rowDataDict3[this.state.rowData[j].model]);
+            console.log("dick4", rowDataDict3[this.state.rowData[j].model]);
 
             //  rowDataDict4[this.state.rowData[j].group2][this.state.rowData[j].model] ==    rowDataDict3[this.state.rowData[j].model];
             //rowDataDict4[this.state.rowData[j].group2] = rowDataDict3[this.state.rowData[j].model];
             //console.log("dick4",rowDataDict4);
 
-        //    rowDataDict3[this.state.rowData[j].group1][this.state.rowData[j].group2]== this.state.rowData[j];
+            //    rowDataDict3[this.state.rowData[j].group1][this.state.rowData[j].group2]== this.state.rowData[j];
 
-             // rowDataDict5[this.state.rowData[j].group1][this.state.rowData[j].group2][this.state.rowData[j].model] = this.state.rowData[j];
+            // rowDataDict5[this.state.rowData[j].group1][this.state.rowData[j].group2][this.state.rowData[j].model] = this.state.rowData[j];
             //rowDataDict[this.state.rowData[i].group2] = this.state.rowData[i];
-        /////////     rowDataDict6[this.state.rowData[j].group2][this.state.rowData[j].model] = this.state.rowData[j];
+            /////////     rowDataDict6[this.state.rowData[j].group2][this.state.rowData[j].model] = this.state.rowData[j];
 
-         //   rowDataDict6[this.state.rowData[j].group2].push(rowDataDict3[this.state.rowData[j].model]);
-          //  rowDataDict6[this.state.rowData[j].group2].push(rowDataDict3[this.state.rowData[j].model]);
-           //rowDataDict6[this.state.rowData[j].group2][this.state.rowData[j].model]='1';
-       //////////////////////    rowDataDict6[this.state.rowData[j].group2]=[];
-       //   rowDataDict6[this.state.rowData[j].group2][this.state.rowData[j].model]='1';
-           rowDataDict6[this.state.rowData[j].group2].push(this.state.rowData[j].model);
-          // var obj = {};
-         //  obj(rowDataDict6[this.state.rowData[j].group2])={};
+            //   rowDataDict6[this.state.rowData[j].group2].push(rowDataDict3[this.state.rowData[j].model]);
+            //  rowDataDict6[this.state.rowData[j].group2].push(rowDataDict3[this.state.rowData[j].model]);
+            //rowDataDict6[this.state.rowData[j].group2][this.state.rowData[j].model]='1';
+            //////////////////////    rowDataDict6[this.state.rowData[j].group2]=[];
+            //   rowDataDict6[this.state.rowData[j].group2][this.state.rowData[j].model]='1';
+            rowDataDict6[this.state.rowData[j].group2].push(this.state.rowData[j].model);
+            // var obj = {};
+            //  obj(rowDataDict6[this.state.rowData[j].group2])={};
 
-           ///////////////////////////////////rowDataDict7[this.state.rowData[j].group1].push(rowDataDict6[this.state.rowData[j].group2]);
-           rowDataDict7[this.state.rowData[j].group1]=rowDataDict6[this.state.rowData[j].group2];
+            ///////////////////////////////////rowDataDict7[this.state.rowData[j].group1].push(rowDataDict6[this.state.rowData[j].group2]);
+            rowDataDict7[this.state.rowData[j].group1] = rowDataDict6[this.state.rowData[j].group2];
 
 
-          /// rowDataDict7[this.state.rowData[j].group1].push(obj(rowDataDict6[this.state.rowData[j].group2]));
+            /// rowDataDict7[this.state.rowData[j].group1].push(obj(rowDataDict6[this.state.rowData[j].group2]));
 
-          ///// rowDataDict6['x']['y']='1';
-        ///   var thing=rowDataDict6[this.state.rowData[j].group2]['x'];
-           ///thing.push(this.state.rowData[j].model);
+            ///// rowDataDict6['x']['y']='1';
+            ///   var thing=rowDataDict6[this.state.rowData[j].group2]['x'];
+            ///thing.push(this.state.rowData[j].model);
 
             //  rowDataDict3[this.state.rowData[j].group2]= this.state.rowData[j];
-            console.log("you dick",rowDataDict6);
+            console.log("you dick", rowDataDict6);
 
         }
-       console.log("you dick2",rowDataDict6);
-        console.log("you dick3",rowDataDict7);
-/*let obj={};
+        console.log("you dick2", rowDataDict6);
+        console.log("you dick3", rowDataDict7);
+        /*let obj={};
 
-obj=rowDataDict6;
-        obj.map(sweetItem => {
-        //rowDataDict6.map(sweetItem => {
-            console.log ("sweetness",sweetItem)
-        });
-*/
+        obj=rowDataDict6;
+                obj.map(sweetItem => {
+                //rowDataDict6.map(sweetItem => {
+                    console.log ("sweetness",sweetItem)
+                });
+        */
         rowDataDict6.forEach(this.myFunction);
-        rowDataDict6.forEach(element => console.log("element",element));
-///this is working
-        for(var update in rowDataDict6) {
+        rowDataDict6.forEach(element => console.log("element", element));
+        ///this is working
+        for (var update in rowDataDict6) {
             //unfortunatly dirty solution now will be
 
-            console.log("uspdate",update,rowDataDict6[update]);
+            console.log("uspdate", update, rowDataDict6[update]);
         }
 
 
@@ -237,32 +234,33 @@ obj=rowDataDict6;
                 }
           */
 
-var car= rowDataDict["Ford"];
-console.log("Car",car);
+        var car = rowDataDict["Ford"];
+        console.log("Car", car);
 
-        this.setState({RowDD:rowDataDict});
-this.totaller();
+        this.setState({RowDD: rowDataDict});
+        this.totaller();
 
     }
+
     myFunction(item, index) {
-        console.log("item",item);
+        console.log("item", item);
     }
 
 
-
-    handleClick(){
+    handleClick() {
 
         this.setState({});
 
     }
-    Test2(){
+
+    Test2() {
         this.setState({});
 
 
     }
 
     // Changes XML to JSON
-     xmlToJson(xml) {
+    xmlToJson(xml) {
 
         // Create the return object
         var obj = {};
@@ -271,6 +269,7 @@ this.totaller();
             // do attributes
             if (xml.attributes.length > 0) {
                 obj["@attributes"] = {};
+
                 for (var j = 0; j < xml.attributes.length; j++) {
                     var attribute = xml.attributes.item(j);
                     obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
@@ -282,13 +281,13 @@ this.totaller();
 
         // do children
         if (xml.hasChildNodes()) {
-            for(var i = 0; i < xml.childNodes.length; i++) {
+            for (var i = 0; i < xml.childNodes.length; i++) {
                 var item = xml.childNodes.item(i);
                 var nodeName = item.nodeName;
-                if (typeof(obj[nodeName]) == "undefined") {
+                if (typeof (obj[nodeName]) == "undefined") {
                     obj[nodeName] = this.xmlToJson(item);
                 } else {
-                    if (typeof(obj[nodeName].push) == "undefined") {
+                    if (typeof (obj[nodeName].push) == "undefined") {
                         var old = obj[nodeName];
                         obj[nodeName] = [];
                         obj[nodeName].push(old);
@@ -301,68 +300,78 @@ this.totaller();
     };
 
 
-
-
-
-
     render() {
-        console.log ("RdataTheJson",this.state.TheJson);
+        console.log("RdataTheJson", this.state.TheJson);
+        console.log("trythis", this.state.TheJson.Data);
+        if (this.state.TheJson.Data != null) {
+            console.log("trythis", this.state.TheJson.Data.Return.BalanceSheet.DataItem)
+        }
+        ;
 
 
-        console.log("RowData",this.state.rowData);
-        const snippets= this.state.rowData.map((anObjectMapped, index) => {
-            console.log("obm",anObjectMapped.price);
-            return(
-          <div>
-             not in harv {anObjectMapped.price}
-              <Harv name={anObjectMapped.group2} price={anObjectMapped.price} value={anObjectMapped.model} />
-                after
-          </div>
+      //  const snippets5 = this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
+
+        const snippets5=  this.state.TheJson.Data ? this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
+
+          //  console.log("obmxx", anObjectMapped.Total.'#text');
+                console.log("obmxx", anObjectMapped.Total['@attributes']) ;
+                console.log("obmxx", anObjectMapped.Total['#text']) ;
+
+                let diddy=anObjectMapped.Total['#text'];
+
+            return (
+                <div>
+                    not in harv  {diddy}
+                </div>
+            );
+        })
+        : null;
+
+        console.log("RowData", this.state.rowData);
+        const snippets = this.state.rowData.map((anObjectMapped, index) => {
+            console.log("obm", anObjectMapped.price);
+            return (
+                <div>
+                    not in harv {anObjectMapped.price}
+                    <Harv name={anObjectMapped.group2} price={anObjectMapped.price} value={anObjectMapped.model}/>
+                    after
+                </div>
             );
 
         });
 
-    const snippets2= this.state.rowData2.map((anObjectMapped, index) => {
-        console.log("obm2",index);
-        console.log("obm3",anObjectMapped.car1);
-        return(
-             <div>
-                 {/*    not in harvxx {anObjectMapped[index].price}
-                <Harv name={anObjectMapped[index].group2} price={anObjectMapped[index].price} value={anObjectMapped[index].model} />
-                afterxx
-                */}
-            </div>
+        const snippets2 = this.state.rowData2.map((anObjectMapped, index) => {
+            console.log("obm2", index);
+            console.log("obm3", anObjectMapped.car1);
+            return (
+                <div>
+                    {/*    not in harvxx {anObjectMapped[index].price}
+                    <Harv name={anObjectMapped[index].group2} price={anObjectMapped[index].price} value={anObjectMapped[index].model} />
+                    afterxx
+                    */}
+                </div>
 
-        );
+            );
 
-    });
+        });
 
-        console.log("ddx",this.state.RowDD);
-        if (this.state.RowDD !=null){
-             snippets4=[];
+        console.log("ddx", this.state.RowDD);
+        if (this.state.RowDD != null) {
+            snippets4 = [];
 
-            for (var key in this.state.RowDD)
-            {
-                console.log("ontheinside",this.state.RowDD[key]);
-snippets4.push(
-
-    <Harv name={this.state.RowDD[key].group2} price={this.state.RowDD[key].price} value={this.state.RowDD[key].model} onChange={this.onChange} />
-
-
-
-
-
-)
+            for (var key in this.state.RowDD) {
+                console.log("ontheinside", this.state.RowDD[key]);
+                snippets4.push(
+                    <Harv name={this.state.RowDD[key].group2} price={this.state.RowDD[key].price}
+                          value={this.state.RowDD[key].model} onChange={this.onChange}/>
+                )
             }
             snippets4.push(
-            <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}  />
-
+                <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>
             )
 
 
         }
-
-
 
 
         return (
@@ -373,7 +382,9 @@ snippets4.push(
                 {snippets2}
                 hello
                 {snippets4}
-    <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}  />
+                <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>
+                hi the fuck
+                {snippets5}
             </div>
         );
     }
