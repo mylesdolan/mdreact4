@@ -12,6 +12,10 @@ class harvupper extends Component {
         this.handleClick = this.handleClick.bind(this);
         this.Test2 = this.Test2.bind(this);
         this.onChange = this.onChange.bind(this);
+
+        var xmlDoc = document.implementation.createDocument(null, "books");
+        console.log("books",xmlDoc);
+
         this.state = {
             //     TotPrice: '',
             TheJson: {},
@@ -299,6 +303,20 @@ class harvupper extends Component {
         return obj;
     };
 
+    totaller2() {
+        let totprice = 0;
+        if (this.state.RowDD != null) {
+            //for (let key of this.state.RowDD) {
+            for (var key in this.state.RowDD) {
+
+                console.log("tpricein", this.state.RowDD[key].price);
+                totprice = Number(totprice + parseInt(this.state.RowDD[key].price));
+                this.setState({TotPrice: totprice});
+
+            }
+            console.log("tpriceout", this.state.TotPrice);
+        }
+    }
 
     render() {
         console.log("RdataTheJson", this.state.TheJson);
@@ -310,23 +328,36 @@ class harvupper extends Component {
 
 
       //  const snippets5 = this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
-
+let totalreceipt=0;
         const snippets5=  this.state.TheJson.Data ? this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
 
           //  console.log("obmxx", anObjectMapped.Total.'#text');
                 console.log("obmxx", anObjectMapped.Total['@attributes']) ;
                 console.log("obmxx", anObjectMapped.Total['#text']) ;
-
+                console.log("obmyy", anObjectMapped['@attributes'].name);
                 let diddy=anObjectMapped.Total['#text'];
-
+                let diddy3=anObjectMapped.Total['#text']? parseInt(anObjectMapped.Total['#text']):0 ;
+                let diddy2 =isNaN(parseInt(anObjectMapped.Total['#text']) )? 0 : parseInt(anObjectMapped.Total['#text']);
+                console.log ("diddy",diddy);
+                console.log ("diddy2",diddy2);
+                let diddyman=anObjectMapped['@attributes'].name;
+                totalreceipt = Number(totalreceipt + parseInt(diddy2));
+                console.log("tots",totalreceipt);
             return (
                 <div>
-                    not in harv  {diddy}
+                    not in harv {diddyman} {diddy}
                 </div>
             );
         })
-        : null;
 
+        : null;
+        console.log("tots2",totalreceipt);
+if (snippets5 != null)
+{  snippets5.push(
+            <div>
+                Total {totalreceipt}
+            </div>
+        )}
         console.log("RowData", this.state.rowData);
         const snippets = this.state.rowData.map((anObjectMapped, index) => {
             console.log("obm", anObjectMapped.price);
@@ -383,7 +414,7 @@ class harvupper extends Component {
                 hello
                 {snippets4}
                 <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>
-                hi the fuck
+                hi the fck
                 {snippets5}
             </div>
         );
