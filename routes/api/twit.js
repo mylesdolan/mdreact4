@@ -84,7 +84,7 @@ router.get('/', (req, res) => {
 
 
     T.get('search/tweets', { q: 'ireland since:2011-07-11', count: 100 }, function(err, data, response) {
-        console.log(data);
+        console.log('checkthis',data);
         res.json(data);
     });
 

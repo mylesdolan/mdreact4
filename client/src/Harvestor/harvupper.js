@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Harv from './harv'
 import axios from "axios";
+import qs from 'query-string'
 
 
 let snippets4;
@@ -14,11 +15,12 @@ class harvupper extends Component {
         this.onChange = this.onChange.bind(this);
 
         var xmlDoc = document.implementation.createDocument(null, "books");
-        console.log("books",xmlDoc);
+        console.log("books", xmlDoc);
 
         this.state = {
             //     TotPrice: '',
             TheJson: {},
+            TheJson2: {},
             rowDD: {},
 
             columnDefs: [{
@@ -109,6 +111,11 @@ class harvupper extends Component {
     }
 
     componentDidMount() {
+
+
+
+
+
         axios.get('/api/tickets/test')
             .then(res => console.log('fuckffss', res));
 
@@ -116,6 +123,37 @@ class harvupper extends Component {
         fetch('/api/ticket/test')
             .then(response => response.text())
             .then(text => console.log('Holyffss', text));
+
+
+        axios.get('/xmltoJson')
+            .then(result => {
+                this.setState({TheJson2: result.data})
+            })
+            //.then( response =>{console.log("xxxxxxxxxxxxxxxxxxxxxNOTtwit",response.data)   })
+            .catch((err) => {
+                console.log("err", err)
+            })
+        ;
+
+
+
+
+
+
+
+
+
+
+        fetch('/xmltoJson')
+        // .then(response => JSON.parse(response))
+            .then(objx => console.log('ffsharvJawsobj', objx));
+        //.then(result => this.setState({TheJson2: JSON.parse(result)}));
+        // .then(result => this.setState({TheJson2: result}));
+
+        ////  .then(response => response.text())
+        ///   .then(textx => console.log('ffsharvJaws',textx));
+        // .then(result => (console.log("maybe",result.data)));
+        //  .then(result => this.setState({TheJson2: result}));
 
         var text, parser, xmlDoc;
         parser = new DOMParser();
@@ -321,43 +359,97 @@ class harvupper extends Component {
     render() {
         console.log("RdataTheJson", this.state.TheJson);
         console.log("trythis", this.state.TheJson.Data);
+        console.log("trythis2", this.state.TheJson2);
         if (this.state.TheJson.Data != null) {
             console.log("trythis", this.state.TheJson.Data.Return.BalanceSheet.DataItem)
         }
         ;
+        if (this.state.TheJson2.result != null)
+        {
+            //  console.log("trythisHOLD", this.state.TheJson2.result.Data.Return.BalanceSheet.DataItem)
+            console.log("trythisHOLD", this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_']);
+            this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'] = '777';
+            const x = this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'];
+            console.log("trythisHOLD2", this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_']);
+            // this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_']
+            //   console.log("trythisHOLD", this.state.TheJson2['Data']);
 
 
-      //  const snippets5 = this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
-let totalreceipt=0;
-        const snippets5=  this.state.TheJson.Data ? this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
+            const requestBody = {
+                weeName: this.state.TheJson2
+            };
 
-          //  console.log("obmxx", anObjectMapped.Total.'#text');
-                console.log("obmxx", anObjectMapped.Total['@attributes']) ;
-                console.log("obmxx", anObjectMapped.Total['#text']) ;
+            const config = {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+
+                }
+            };
+
+             console.log('im here wee fella');
+
+            axios.post('/xmltoJsonUpload',requestBody)
+                .then(res => {
+                    console.log("resssy", res);
+                })
+                //res =>{ history.push('/Insta')})
+                .catch(err => {
+                    console.log("wee error");
+
+                });
+
+
+/*
+//axios.post('/api/insta/postname',weeName)
+            axios.post('/xmltoJsonUpload', qs.stringify(requestBody), config)
+                .then(res => {
+                    console.log("resssy", res);
+                })
+                //res =>{ history.push('/Insta')})
+                .catch(err => {
+                    console.log("wee error");
+                    //  dispatch({
+                    //    type: GET_ERRORS,
+                    //   payload: err.response.data
+                    //})
+                });
+
+*/
+        }
+        ;
+
+        //  const snippets5 = this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
+        let totalreceipt = 0;
+        const snippets5 = this.state.TheJson.Data ? this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
+
+                //  console.log("obmxx", anObjectMapped.Total.'#text');
+                console.log("obmxx", anObjectMapped.Total['@attributes']);
+                console.log("obmxx", anObjectMapped.Total['#text']);
                 console.log("obmyy", anObjectMapped['@attributes'].name);
-                let diddy=anObjectMapped.Total['#text'];
-                let diddy3=anObjectMapped.Total['#text']? parseInt(anObjectMapped.Total['#text']):0 ;
-                let diddy2 =isNaN(parseInt(anObjectMapped.Total['#text']) )? 0 : parseInt(anObjectMapped.Total['#text']);
-                console.log ("diddy",diddy);
-                console.log ("diddy2",diddy2);
-                let diddyman=anObjectMapped['@attributes'].name;
+                let diddy = anObjectMapped.Total['#text'];
+                let diddy3 = anObjectMapped.Total['#text'] ? parseInt(anObjectMapped.Total['#text']) : 0;
+                let diddy2 = isNaN(parseInt(anObjectMapped.Total['#text'])) ? 0 : parseInt(anObjectMapped.Total);
+                console.log("diddy", diddy);
+                console.log("diddy2", diddy2);
+                let diddyman = anObjectMapped['@attributes'].name;
                 totalreceipt = Number(totalreceipt + parseInt(diddy2));
-                console.log("tots",totalreceipt);
-            return (
-                <div>
-                    not in harv {diddyman} {diddy}
-                </div>
-            );
-        })
+                console.log("tots", totalreceipt);
+                return (
+                    <div>
+                        not in harv {diddyman} {diddy}
+                    </div>
+                );
+            })
 
-        : null;
-        console.log("tots2",totalreceipt);
-if (snippets5 != null)
-{  snippets5.push(
-            <div>
-                Total {totalreceipt}
-            </div>
-        )}
+            : null;
+        console.log("tots2", totalreceipt);
+        if (snippets5 != null) {
+            snippets5.push(
+                <div>
+                    Total {totalreceipt}
+                </div>
+            )
+        }
         console.log("RowData", this.state.rowData);
         const snippets = this.state.rowData.map((anObjectMapped, index) => {
             console.log("obm", anObjectMapped.price);

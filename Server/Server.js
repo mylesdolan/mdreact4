@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const twit = require('../routes/api/twit');
 const harv = require('./harv');
+const xmltoJson = require('./xmltoJson');
+const xmltoJsonUpload = require('./xmltoJsonUpload');
 const insta = require('../routes/api/insta');
 const mongoose = require('mongoose');
 
@@ -39,6 +41,8 @@ mongoose
 
 
 app.use(express.static('client/build'));
+app.use('/xmltoJson',xmltoJson);
+app.post('/xmltoJsonUpload',xmltoJsonUpload);
 app.use('/harv', harv);
 app.use('/api/insta',insta);
 
