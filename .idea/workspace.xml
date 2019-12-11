@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/DATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/xmltoJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/xmltoJson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/xmltoJsonUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/xmltoJsonUpload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Assets/link7.docx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Assets/link7.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Harvestor/harvupper.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Harvestor/harvupper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edited-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edited-test.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,11 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Harvestor/harvupper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="413" column="47" lean-forward="true" selection-start-line="413" selection-start-column="47" selection-end-line="413" selection-end-column="47" />
+            <state relative-caret-position="6239">
+              <caret line="388" column="9" lean-forward="true" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -120,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/xmltoJson.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="192">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -158,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bloddy</find>
       <find>blod</find>
       <find>fuck</find>
       <find>fuckus</find>
@@ -188,6 +181,7 @@
       <find>snippets6</find>
       <find>graph</find>
       <find>777</find>
+      <find>xmltojsonu</find>
     </findStrings>
     <dirStrings>
       <dir>C:\AReact\FB_Apps\Emergence\Server</dir>
@@ -447,13 +441,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367890000" />
+    <option name="totallyTimeSpent" value="368768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-200" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6612378" visible="true" weight="0.1301743" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6612378" visible="true" weight="0.1301743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.33876222" side_tool="true" weight="0.15849674" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -468,7 +462,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.21404682" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.1430096" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -824,20 +818,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/xmltoJson.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Harvestor/harvupper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="413" column="47" lean-forward="true" selection-start-line="413" selection-start-column="47" selection-end-line="413" selection-end-column="47" />
+        <state relative-caret-position="6239">
+          <caret line="388" column="9" lean-forward="true" selection-start-line="388" selection-start-column="9" selection-end-line="388" selection-end-column="9" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/xmltoJson.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
