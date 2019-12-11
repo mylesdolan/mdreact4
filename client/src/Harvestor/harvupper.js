@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Harv from './harv'
+import Harv2 from './harv2'
 import axios from "axios";
 import qs from 'query-string'
 
@@ -13,6 +14,8 @@ class harvupper extends Component {
         this.handleClick = this.handleClick.bind(this);
         this.Test2 = this.Test2.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.onChange2 = this.onChange2.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         var xmlDoc = document.implementation.createDocument(null, "books");
         console.log("books", xmlDoc);
@@ -94,6 +97,19 @@ class harvupper extends Component {
         console.log("state", this.state);
 
     }
+
+    onChange2(e) {
+        console.log("NameXXX", e.target.name);
+        console.log("ValXXX", e.target.value);
+        this.setState({[e.target.name]: e.target.value});
+        this.state.RowDD[e.target.name].price = e.target.value;
+        this.totaller();
+        console.log("state", this.state);
+//
+
+    }
+
+
 
     totaller() {
         let totprice = 0;
@@ -356,7 +372,12 @@ class harvupper extends Component {
         }
     }
 
-    render() {
+    onSubmit(e) {
+        e.preventDefault();
+    }
+
+
+        render() {
         console.log("RdataTheJson", this.state.TheJson);
         console.log("trythis", this.state.TheJson.Data);
         console.log("trythis2", this.state.TheJson2);
@@ -378,14 +399,14 @@ class harvupper extends Component {
             const requestBody = {
                 weeName: this.state.TheJson2
             };
-
+/*
             const config = {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
 
                 }
             };
-
+*/
              console.log('im here wee fella');
 
             axios.post('/xmltoJsonUpload',requestBody)
@@ -418,6 +439,57 @@ class harvupper extends Component {
         }
         ;
 
+
+        //this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'] = '777';
+
+        const snippets6 =
+            this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].IncExp[0].DataItem.map((anObjectMapped, index) => {
+                console.log("obmxx6", anObjectMapped['$'].name);
+                console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
+                console.log("obmxx8", anObjectMapped.Unrestricted[0]['_']);
+                console.log("obmxx9", anObjectMapped.Endowment[0]['_']);
+                console.log("obmxx10", anObjectMapped.Designated[0]['_']);
+                console.log("obmxx11", anObjectMapped.Total[0]['_']);
+                console.log("obmxx12", anObjectMapped.PrevYear[0]['_']);
+
+                let Name=anObjectMapped['$'].name;
+                let Restricted=anObjectMapped.Restricted[0]['_'];
+                    let Unrestricted=anObjectMapped.Unrestricted[0]['_'];
+                    let Endowment=anObjectMapped.Endowment[0]['_'];
+                    let Designated=anObjectMapped.Designated[0]['_'];
+                    let Total=anObjectMapped.Total[0]['_'];
+                    let PrevYear=anObjectMapped.PrevYear[0]['_'];
+
+                console.log("obmxx13", anObjectMapped);
+                    return (
+                        <div>
+                            {/*    Harv LINE {Name} {Restricted} {Unrestricted}{Endowment}{Designated}{Total}{PrevYear} */}
+                            <Harv2 name={Name}
+                                   Restricted={Restricted}
+                                   Unrestricted={Unrestricted}
+                                Endowment={Endowment}
+                                Designated={Designated}
+                                Total={Total}
+                                PrevYear={PrevYear}/>
+
+                        </div>
+                    );
+
+    })
+
+
+
+                : null;
+
+
+
+
+
+
+
+
+
+        //This uses harv.js on serverside and the xmltojson in this file to convert the json.
         //  const snippets5 = this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
         let totalreceipt = 0;
         const snippets5 = this.state.TheJson.Data ? this.state.TheJson.Data.Return.BalanceSheet.DataItem.map((anObjectMapped, index) => {
@@ -508,6 +580,14 @@ class harvupper extends Component {
                 <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>
                 hi the fck
                 {snippets5}
+                hi the fckfck
+                {snippets6}
+                <input
+                    type="submit"
+                    value="Submit"
+                    className="btn btn-info btn-block mt-4"
+                />
+
             </div>
         );
     }

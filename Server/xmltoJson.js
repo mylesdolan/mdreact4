@@ -9,8 +9,10 @@ module.exports = function xmltoJsonx(req, resx) {
 
 
 
-fs.readFile("DATA", "utf-8", function(err, data) {
-    if (err) console.log(err);
+//fs.readFile("DATA", "utf-8", function(err, data) {
+    fs.readFile("62508613.xml", "utf-8", function(err, data) {
+
+        if (err) console.log(err);
     // we log out the readFile results
     console.log("isindexml",data);
     // we then pass the data to our method here

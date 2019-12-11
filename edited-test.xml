@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Data>
   <Return>
-    <Date period="12">31/03/2015</Date>
-    <CRONumber>97049</CRONumber>
-    <CHYNumber>6501</CHYNumber>
-    <LAFileNet>58600707</LAFileNet>
-    <Sorp>0</Sorp>
+    <Date period="12">31/12/2018</Date>
+    <CRONumber>335505</CRONumber>
+    <CHYNumber>13825</CHYNumber>
+    <LAFileNet>62508613</LAFileNet>
+    <Sorp>1</Sorp>
     <Abridged>0</Abridged>
     <HealthVoteFormat>0</HealthVoteFormat>
     <OneYearData>0</OneYearData>
@@ -14,549 +14,813 @@
     <PensionRevaluation>0</PensionRevaluation>
     <TottingError>0</TottingError>
     <IncExp>
-      <Status>Sent</Status>
+      <Status>CrossValidated</Status>
       <DataItem name="TIR">
-        <Total expression="273895">273895</Total>
-        <PrevYear expression="306914">306914</PrevYear>
+        <Restricted expression="46804877">46804877</Restricted>
+        <Unrestricted expression="864988+109257+280531">1254776</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="48,059,653">48059653</Total>
+        <PrevYear expression="8,125,566">8125566</PrevYear>
       </DataItem>
       <DataItem name="VI_D">
+        <Restricted expression="46804877">46804877</Restricted>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="46,804,877">46804877</Total>
+        <PrevYear expression="4,550,000">4550000</PrevYear>
+      </DataItem>
+      <DataItem name="VI_TR">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
-      <DataItem name="VI_TR">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
       <DataItem name="VI_G">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="VI_G_SGF">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="VI_G_CD">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="VI_GLA">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="VI_MSS">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="VI_DPCC">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="VI_UVI">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="AGF_FEA">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="AGF_CS">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="AGF_UAFGF">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="II_IP">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
-      </DataItem>
-      <DataItem name="II_LI_D">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
-      <DataItem name="II_FEGL">
-        <Total expression=""/>
+      <DataItem name="VI_G_CD">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
+      <DataItem name="VI_GLA">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="VI_MSS">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="VI_DPCC">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="VI_UVI">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="AGF_FEA">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="AGF_CS">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="AGF_UAFGF">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="II_IP">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="II_LI_D">
+        <Restricted expression=""/>
+        <Unrestricted expression="867942">867942</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="867,942">867942</Total>
+        <PrevYear expression="817,183">817183</PrevYear>
+      </DataItem>
+      <DataItem name="II_FEGL">
+        <Restricted expression=""/>
+        <Unrestricted expression="109257">109257</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="109,257">109257</Total>
+        <PrevYear expression="-109,709">-109709</PrevYear>
+      </DataItem>
       <DataItem name="II_OUI">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="II_UII">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="II_GLI">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression=""/>
+        <Unrestricted expression="280531">280531</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="280,531">280531</Total>
+        <PrevYear expression="2,882,012">2882012</PrevYear>
       </DataItem>
       <DataItem name="II_GLDFA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="UIRFGF">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="IRCA_FITA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="IRCA_UA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="IRCA_G">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="IRCA_G_SGF">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="IRCA_G_CD">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="HEA">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="HEA_AF">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="HEA_OI">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OIR">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="UI">
-        <Total expression="273895">273895</Total>
-        <PrevYear expression="306914">306914</PrevYear>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE">
-        <Total expression="-282535">-282535</Total>
-        <PrevYear expression="-276987">-276987</PrevYear>
+        <Restricted expression="-500000">-500000</Restricted>
+        <Unrestricted expression="-2433511+500000">-1933511</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="-2,433,511">-2433511</Total>
+        <PrevYear expression="-2,340,351">-2340351</PrevYear>
       </DataItem>
       <DataItem name="TRE_CGF">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE_CA">
-        <Total expression="-282535">-282535</Total>
-        <PrevYear expression="-276,987">-276987</PrevYear>
+        <Restricted expression="-500000">-500000</Restricted>
+        <Unrestricted expression="-2433511+500000">-1933511</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="-2,433,511">-2433511</Total>
+        <PrevYear expression="-2,340,351">-2340351</PrevYear>
       </DataItem>
       <DataItem name="TRE_ORE">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE_GA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE_UE">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE_GLI">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE_FEGL">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="TRE_GLDFA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL">
-        <Total expression="">0</Total>
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_RFA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_GLDFA">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_GLI">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_AGLP">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_FEGL">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_TBF">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_OGL">
-        <Total expression=""/>
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OB">
-        <Total expression="167,267">167267</Total>
-        <PrevYear expression="137340">137340</PrevYear>
+        <Restricted expression="4550000">4550000</Restricted>
+        <Unrestricted expression="46795621">46795621</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="51,345,621">51345621</Total>
+        <PrevYear expression="47,849,833">47849833</PrevYear>
       </DataItem>
       <DataItem name="EIOE">
-        <Total expression="-8,640">-8640</Total>
-        <PrevYear expression="29,927">29927</PrevYear>
+        <Restricted expression="46,304,877">46304877</Restricted>
+        <Unrestricted expression="-2,372,705">-2372705</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="43,932,172">43932172</Total>
+        <PrevYear expression="3,495,788">3495788</PrevYear>
       </DataItem>
       <DataItem name="CB">
-        <Total expression="158627">158627</Total>
-        <PrevYear expression="167267">167267</PrevYear>
+        <Restricted expression="50854877">50854877</Restricted>
+        <Unrestricted expression="44422916">44422916</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression="0">0</Designated>
+        <Total expression="95,277,793">95277793</Total>
+        <PrevYear expression="51,345,621">51345621</PrevYear>
       </DataItem>
       <DataItem name="NMF">
-        <Total expression="-8,640">-8640</Total>
-        <PrevYear expression="29,927">29927</PrevYear>
+        <Restricted expression="46,304,877">46304877</Restricted>
+        <Unrestricted expression="-2,372,705">-2372705</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
+        <Total expression="43,932,172">43932172</Total>
+        <PrevYear expression="3,495,788">3495788</PrevYear>
       </DataItem>
       <DataItem name="II">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="864,988">864988</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
+        <Total expression="864,988">864988</Total>
+        <PrevYear expression="803,263">803263</PrevYear>
       </DataItem>
       <DataItem name="II_LI">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="867,942">867942</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
+        <Total expression="867,942">867942</Total>
+        <PrevYear expression="817,183">817183</PrevYear>
       </DataItem>
       <DataItem name="II_MM">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression=""/>
+        <Unrestricted expression="-2954">-2954</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="-2,954">-2954</Total>
+        <PrevYear expression="-13,920">-13920</PrevYear>
       </DataItem>
       <DataItem name="IRCA">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="IRGF">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression="46,804,877">46804877</Restricted>
+        <Unrestricted expression="1,254,776">1254776</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
+        <Total expression="48,059,653">48059653</Total>
+        <PrevYear expression="8,125,566">8125566</PrevYear>
       </DataItem>
       <DataItem name="AGF">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="VI">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression="46,804,877">46804877</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
+        <Total expression="46,804,877">46804877</Total>
+        <PrevYear expression="4,550,000">4550000</PrevYear>
       </DataItem>
       <DataItem name="IRCA_AFCA">
+        <Restricted expression="0">0</Restricted>
+        <Unrestricted expression="0">0</Unrestricted>
+        <Endowment expression="0">0</Endowment>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="OGL_UGLI">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Restricted expression=""/>
+        <Unrestricted expression="-1595388-98582">-1693970</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="-1,693,970">-1693970</Total>
+        <PrevYear expression="-2,289,427">-2289427</PrevYear>
       </DataItem>
       <DataItem name="OGL_RGLI">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
     </IncExp>
     <BalanceSheet>
-      <Status>Sent</Status>
+      <Status>CrossValidated</Status>
       <DataItem name="NA">
-        <Total expression="239627">239627</Total>
-        <PrevYear expression="248267">248267</PrevYear>
+        <Total expression="95277793">95277793</Total>
+        <PrevYear expression="51345621">51345621</PrevYear>
       </DataItem>
       <DataItem name="FA_IA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_TA_F">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_TA_L">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_TA_U">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_TA_PMMV">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_TA_FFE">
-        <Total expression="81000">81000</Total>
-        <PrevYear expression="81000">81000</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_TA_UTFA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_IA_IP">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_IA_LI_E">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_IA_LI_B">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_IA_LI_OLI">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_IA_LI_ULI">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="34801832">34801832</Total>
+        <PrevYear expression="31711741">31711741</PrevYear>
       </DataItem>
       <DataItem name="FA_IA_ISARP">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_IA_MMF">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="3478569">3478569</Total>
+        <PrevYear expression="11145955">11145955</PrevYear>
       </DataItem>
       <DataItem name="FA_IA_OUI">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="3667671">3667671</Total>
+        <PrevYear expression="3023883">3023883</PrevYear>
       </DataItem>
       <DataItem name="FA_IA_UIA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA_UFA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_CBH_RC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_CBH_URC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_CBH_UPC">
-        <Total expression="158076">777</Total>
-        <PrevYear expression="135072">135072</PrevYear>
+        <Total expression="53703815">777</Total>
+        <PrevYear expression="6045737">6045737</PrevYear>
       </DataItem>
       <DataItem name="CA_STI">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_TD">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_DSARP">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_P">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_AI">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="33767">33767</Total>
+        <PrevYear expression="28064">28064</PrevYear>
       </DataItem>
       <DataItem name="CA_D_PAI">
-        <Total expression="57668">57668</Total>
-        <PrevYear expression="38121">38121</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_GR">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_OD">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_D_UD">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_S">
-        <Total expression="1342">1342</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CA_UCA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_LO">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_TC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_DSARP">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="-358503">-358503</Total>
+        <PrevYear expression="-442416">-442416</PrevYear>
       </DataItem>
       <DataItem name="CRD_ADI">
-        <Total expression="-56746">-56746</Total>
-        <PrevYear expression="-3785">-3785</PrevYear>
+        <Total expression="-43548">-43548</Total>
+        <PrevYear expression="-161722">-161722</PrevYear>
       </DataItem>
       <DataItem name="CRD_FGC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_LHPA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_TSW_PP">
-        <Total expression="-1524">-1524</Total>
-        <PrevYear expression="-507">-507</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression="-5621">-5621</PrevYear>
       </DataItem>
       <DataItem name="CRD_TSW_OT">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="-5810">-5810</Total>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_OC">
-        <Total expression="-189">-189</Total>
-        <PrevYear expression="-1634">-1634</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_UPC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_LO">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_DSARP">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_TLGC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_DCGG">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_LHPA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_OC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="CRD_1Y_UPC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="PLC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="DBPSA">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR">
-        <Total expression="239627">239627</Total>
-        <PrevYear expression="248267">248267</PrevYear>
+        <Total expression="95277793">95277793</Total>
+        <PrevYear expression="51345621">51345621</PrevYear>
       </DataItem>
       <DataItem name="FR_IE">
-        <Total expression="158627">158627</Total>
-        <PrevYear expression="167267">167267</PrevYear>
+        <Total expression="">0</Total>
+        <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="FR_DF">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_GG">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_EF">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_RF">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="50854877">50854877</Total>
+        <PrevYear expression="4550000">4550000</PrevYear>
       </DataItem>
       <DataItem name="FR_UF">
-        <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="44422916">44422916</Total>
+        <PrevYear expression="46795621">46795621</PrevYear>
       </DataItem>
       <DataItem name="FR_SC">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_CF">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_RR">
-        <Total expression="81000">81000</Total>
-        <PrevYear expression="81000">81000</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_FVR">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_UPF">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FR_OT">
         <Total expression=""/>
+        <PrevYear expression=""/>
+      </DataItem>
+      <DataItem name="FR_SR">
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="FR_MS">
         <Total expression=""/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear expression=""/>
       </DataItem>
       <DataItem name="FA">
-        <Total expression="81000">81000</Total>
-        <PrevYear expression="81000">81000</PrevYear>
+        <Total expression="41948072">41948072</Total>
+        <PrevYear expression="45881579">45881579</PrevYear>
       </DataItem>
       <DataItem name="FA_TA">
-        <Total expression="81,000">81000</Total>
-        <PrevYear expression="81,000">81000</PrevYear>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="FA_TA_LB">
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="FA_INVA">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="41,948,072">41948072</Total>
+        <PrevYear expression="45,881,579">45881579</PrevYear>
       </DataItem>
       <DataItem name="FA_IA_LI">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="34,801,832">34801832</Total>
+        <PrevYear expression="31,711,741">31711741</PrevYear>
       </DataItem>
       <DataItem name="NCA">
-        <Total expression="158627">158627</Total>
-        <PrevYear expression="167267">167267</PrevYear>
+        <Total expression="53329721">53329721</Total>
+        <PrevYear expression="5464042">5464042</PrevYear>
       </DataItem>
       <DataItem name="CA">
-        <Total expression="217,086">217086</Total>
-        <PrevYear expression="173,193">173193</PrevYear>
+        <Total expression="53,737,582">53737582</Total>
+        <PrevYear expression="6,073,801">6073801</PrevYear>
       </DataItem>
       <DataItem name="CA_CABIH">
-        <Total expression="158,076">158076</Total>
-        <PrevYear expression="135,072">135072</PrevYear>
+        <Total expression="53,703,815">53703815</Total>
+        <PrevYear expression="6,045,737">6045737</PrevYear>
       </DataItem>
       <DataItem name="CA_D">
-        <Total expression="57,668">57668</Total>
-        <PrevYear expression="38,121">38121</PrevYear>
+        <Total expression="33,767">33767</Total>
+        <PrevYear expression="28,064">28064</PrevYear>
       </DataItem>
       <DataItem name="CRD">
-        <Total expression="-58,459">-58459</Total>
-        <PrevYear expression="-5,926">-5926</PrevYear>
+        <Total expression="-407,861">-407861</Total>
+        <PrevYear expression="-609,759">-609759</PrevYear>
       </DataItem>
       <DataItem name="CRD_TSW">
-        <Total expression="-1,524">-1524</Total>
-        <PrevYear expression="-507">-507</PrevYear>
+        <Total expression="-5,810">-5810</Total>
+        <PrevYear expression="-5,621">-5621</PrevYear>
       </DataItem>
       <DataItem name="CRD_1Y">
         <Total expression="">0</Total>
@@ -564,78 +828,78 @@
       </DataItem>
     </BalanceSheet>
     <Notes>
-      <Status>Sent</Status>
+      <Status>Validated</Status>
       <DataItem name="P">
-        <Total expression="66836">66836</Total>
-        <PrevYear expression="66793">66793</PrevYear>
+        <Total expression="36907">36907</Total>
+        <PrevYear expression="35020">35020</PrevYear>
       </DataItem>
       <DataItem name="P_WS">
-        <Total expression="60352">60352</Total>
-        <PrevYear expression="60310">60310</PrevYear>
+        <Total expression="33392">33392</Total>
+        <PrevYear expression="31644">31644</PrevYear>
       </DataItem>
       <DataItem name="P_SS">
-        <Total expression="6484">6484</Total>
-        <PrevYear expression="6483">6483</PrevYear>
+        <Total expression="3515">3515</Total>
+        <PrevYear expression="3376">3376</PrevYear>
       </DataItem>
       <DataItem name="P_PS">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="P_MI">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="AR">
-        <Total expression="3218">3218</Total>
-        <PrevYear expression="3218">3218</PrevYear>
+        <Total expression="7500">7500</Total>
+        <PrevYear expression="7500">7500</PrevYear>
       </DataItem>
       <DataItem name="AR_AS">
-        <Total expression="3218">3218</Total>
-        <PrevYear expression="3218">3218</PrevYear>
+        <Total expression="7500">7500</Total>
+        <PrevYear expression="7500">7500</PrevYear>
       </DataItem>
       <DataItem name="AR_OS">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="DR">
         <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="DOS">
-        <Total/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="DF">
-        <Total/>
+        <Total expression="0">0</Total>
         <PrevYear expression="0">0</PrevYear>
       </DataItem>
       <DataItem name="NE">
-        <Total expression="2">2</Total>
-        <PrevYear expression="2">2</PrevYear>
+        <Total expression="1">1</Total>
+        <PrevYear expression="1">1</PrevYear>
       </DataItem>
       <DataItem name="NE_FTE">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="NE_PTE">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="NE_UNSP">
-        <Total expression="2">2</Total>
-        <PrevYear expression="2">2</PrevYear>
+        <Total expression="1">1</Total>
+        <PrevYear expression="1">1</PrevYear>
       </DataItem>
       <DataItem name="NE_NV">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="DPR">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="IP">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="N_KMP">
         <Total/>
@@ -643,11 +907,11 @@
       </DataItem>
       <DataItem name="IC">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="LC">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="CT">
         <Total expression="0">0</Total>
@@ -655,19 +919,19 @@
       </DataItem>
       <DataItem name="RDE">
         <Total/>
-        <PrevYear expression="0">0</PrevYear>
+        <PrevYear/>
       </DataItem>
       <DataItem name="N_RPT">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression="45,827,795">45827795</Total>
+        <PrevYear expression="2,602,011">2602011</PrevYear>
       </DataItem>
       <DataItem name="N_RPTI">
-        <Total/>
-        <PrevYear/>
+        <Total expression="46804877">46804877</Total>
+        <PrevYear expression="4550000">4550000</PrevYear>
       </DataItem>
       <DataItem name="N_RPTE">
-        <Total/>
-        <PrevYear/>
+        <Total expression="687185+289897">977082</Total>
+        <PrevYear expression="506+1947483">1947989</PrevYear>
       </DataItem>
       <DataItem name="N_SB60">
         <Total/>
@@ -777,6 +1041,82 @@
         <Total/>
         <PrevYear/>
       </DataItem>
+      <DataItem name="N_SB330">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB340">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB350">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB360">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB370">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB380">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB390">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB400">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB410">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB420">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB430">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB440">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB450">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB460">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB470">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB480">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB490">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB500">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
+      <DataItem name="N_SB510">
+        <Total/>
+        <PrevYear/>
+      </DataItem>
       <DataItem name="N_TPC">
         <Total/>
         <PrevYear/>
@@ -794,11 +1134,11 @@
         <PrevYear/>
       </DataItem>
       <DataItem name="N_SBN">
-        <Total expression="-1">-1</Total>
-        <PrevYear expression="-1">-1</PrevYear>
+        <Total expression="1">1</Total>
+        <PrevYear expression="1">1</PrevYear>
       </DataItem>
       <DataItem name="N_TCBY">
-        <Total expression="83537">83537</Total>
+        <Total/>
         <PrevYear/>
       </DataItem>
       <DataItem name="N_TFA_TA">
@@ -842,7 +1182,7 @@
         <PrevYear/>
       </DataItem>
       <DataItem name="N_TFA_AD">
-        <Total expression="-2537">-2537</Total>
+        <Total/>
         <PrevYear/>
       </DataItem>
       <DataItem name="N_TFA_RI">
@@ -854,24 +1194,27 @@
         <PrevYear/>
       </DataItem>
       <DataItem name="N_TFA_NBV">
-        <Total expression="81,000">81000</Total>
+        <Total/>
         <PrevYear/>
       </DataItem>
     </Notes>
     <Grants>
-      <Status>Sent</Status>
+      <Status>Validated</Status>
       <DataItem name="G_UNSP">
-        <Total expression="0">0</Total>
-        <PrevYear expression="0">0</PrevYear>
+        <Total expression=""/>
+        <PrevYear expression=""/>
       </DataItem>
     </Grants>
     <Donations>
-      <Status>Sent</Status>
+      <Status>Validated</Status>
     </Donations>
-    <PriorYearDate period="12">31/03/2014</PriorYearDate>
-    <SORPState>0</SORPState>
+    <PriorYearDate period="12">31/12/2017</PriorYearDate>
+    <SORPState>1</SORPState>
     <PriorYearRestated>0</PriorYearRestated>
     <PriorYearReclassified>0</PriorYearReclassified>
     <DataEntryLevel>1</DataEntryLevel>
+    <ReportingStandard>1</ReportingStandard>
+    <SorpSubVal>3</SorpSubVal>
+    <RelatedPartyTransactions>1</RelatedPartyTransactions>
   </Return>
 </Data>
