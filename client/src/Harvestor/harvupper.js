@@ -483,6 +483,8 @@ class harvupper extends Component {
         //this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'] = '777';
 
         const snippets6 =
+            //
+            //
             this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem.map((anObjectMapped, index) => {
                 console.log("obmxx6", anObjectMapped['$'].name);
                 console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
