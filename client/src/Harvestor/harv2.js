@@ -9,6 +9,7 @@ const Harv2 = ({
                    Designated,
                    Total,
                    PrevYear,
+    Index,
                   onChange
               }) => {
     return (
@@ -22,25 +23,25 @@ const Harv2 = ({
                 id={name}
                 value={name}
 
-
+                onChange={onChange}
             />
             <input
 
 
                 name={name}
-
-                id={name}
+/*deal with hard code */
+                id='Restricted'
                 value={Restricted}
-
+                onChange={onChange}
 
             />
             <input
 
 
                 name={name}
-                id={name}
+                id='Unrestricted'
                 value={Unrestricted}
-
+                onChange={onChange}
 
             />
 
@@ -48,9 +49,9 @@ const Harv2 = ({
 
 
                 name={name}
-                id={name}
+                id='Endowment'
                 value={Endowment}
-
+                onChange={onChange}
 
             />
 
@@ -59,9 +60,9 @@ const Harv2 = ({
 
 
                 name={name}
-                id={name}
+                id='Designated'
                 value={Designated}
-
+                onChange={onChange}
 
             />
 
@@ -76,9 +77,11 @@ const Harv2 = ({
 
 
                 name={name}
-                id={name}
+                /*id='Total'*/
+                id={Index}
+
                 value={Total}
-
+                onChange={onChange}
 
             />
 
@@ -86,10 +89,10 @@ const Harv2 = ({
 
 
                 name={name}
-                id={name}
+                id='PrevYear'
                 value={PrevYear}
 
-
+                onChange={onChange}
             />
 
 

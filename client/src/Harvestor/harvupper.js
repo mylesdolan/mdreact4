@@ -88,23 +88,42 @@ class harvupper extends Component {
 
     }
 
+    onSubmit(e) {
+        e.preventDefault();
+
+    }
+
+
     onChange(e) {
         console.log("NameXXX", e.target.name);
         console.log("ValXXX", e.target.value);
-        this.setState({[e.target.name]: e.target.value});
+       // this.setState({[e.target.name]: e.target.value});
         this.state.RowDD[e.target.name].price = e.target.value;
-        this.totaller();
+      this.totaller();
         console.log("state", this.state);
 
     }
 
     onChange2(e) {
-        console.log("NameXXX", e.target.name);
-        console.log("ValXXX", e.target.value);
-        this.setState({[e.target.name]: e.target.value});
-        this.state.RowDD[e.target.name].price = e.target.value;
-        this.totaller();
+        console.log("NameXXX2", e.target.name);
+        console.log("ValXXX2", e.target.value);
+        console.log("ValXXX2", e.target.id);
+        //this.setState({[e.target.name]: e.target.value});
+        //this.state.RowDD[e.target.name].price = e.target.value;
+        //this.totaller();
         console.log("state", this.state);
+       // this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_']= e.target.value;
+        console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']);
+        this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']= e.target.value;
+              this.setState( {xx: 'ss'});
+        console.log("state", this.state);
+       // this.totaller();
+
+    //    let someProperty = {...this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]};
+//someProperty.['_']=e.target.value;
+      //  this.setState( { [ this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']] : e.target.value });
+       // this.setState( {xxrt: 'ss'});
+        console.log("statej", this.state);
 //
 
     }
@@ -357,6 +376,29 @@ class harvupper extends Component {
         return obj;
     };
 
+    onSubmit(e) {
+        e.preventDefault();
+        const requestBody = {
+            weeName: this.state.TheJson2
+        };
+        /*
+                    const config = {
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+
+                        }
+                    };
+        */
+        console.log('im here wee fella');
+
+        axios.post('/xmltoJsonUpload',requestBody)
+            .then(res => {
+                console.log("resssy", res);
+            })
+
+
+    }
+
     totaller2() {
         let totprice = 0;
         if (this.state.RowDD != null) {
@@ -372,9 +414,7 @@ class harvupper extends Component {
         }
     }
 
-    onSubmit(e) {
-        e.preventDefault();
-    }
+
 
 
         render() {
@@ -408,7 +448,7 @@ class harvupper extends Component {
             };
 */
              console.log('im here wee fella');
-
+/*Removing for now Works a treat though
             axios.post('/xmltoJsonUpload',requestBody)
                 .then(res => {
                     console.log("resssy", res);
@@ -419,7 +459,7 @@ class harvupper extends Component {
 
                 });
 
-
+*/
 /*
 //axios.post('/api/insta/postname',weeName)
             axios.post('/xmltoJsonUpload', qs.stringify(requestBody), config)
@@ -443,7 +483,7 @@ class harvupper extends Component {
         //this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'] = '777';
 
         const snippets6 =
-            this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].IncExp[0].DataItem.map((anObjectMapped, index) => {
+            this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem.map((anObjectMapped, index) => {
                 console.log("obmxx6", anObjectMapped['$'].name);
                 console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
                 console.log("obmxx8", anObjectMapped.Unrestricted[0]['_']);
@@ -451,7 +491,7 @@ class harvupper extends Component {
                 console.log("obmxx10", anObjectMapped.Designated[0]['_']);
                 console.log("obmxx11", anObjectMapped.Total[0]['_']);
                 console.log("obmxx12", anObjectMapped.PrevYear[0]['_']);
-
+                    console.log("obmxx15", index);
                 let Name=anObjectMapped['$'].name;
                 let Restricted=anObjectMapped.Restricted[0]['_'];
                     let Unrestricted=anObjectMapped.Unrestricted[0]['_'];
@@ -470,7 +510,9 @@ class harvupper extends Component {
                                 Endowment={Endowment}
                                 Designated={Designated}
                                 Total={Total}
-                                PrevYear={PrevYear}/>
+                                PrevYear={PrevYear}
+                                Index={index}
+                                   onChange={this.onChange2}/>
 
                         </div>
                     );
@@ -577,17 +619,20 @@ class harvupper extends Component {
                 {snippets2}
                 hello
                 {snippets4}
-                <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>
+                {/*   <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>*/}
                 hi the fck
                 {snippets5}
+
+                <form onSubmit={this.onSubmit}>
                 hi the fckfck
+
                 {snippets6}
                 <input
                     type="submit"
                     value="Submit"
                     className="btn btn-info btn-block mt-4"
                 />
-
+                </form>
             </div>
         );
     }

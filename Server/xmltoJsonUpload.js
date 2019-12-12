@@ -10,7 +10,9 @@ module.exports = function upload(req, res) {
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(json);
 
-    fs.writeFile("edited-test.xml", xml, function(err, data) {
+   // fs.writeFile("edited-test.xml", xml, function(err, data) {
+    fs.writeFile("62508613.xml", xml, function(err, data) {
+
         if (err) console.log(err);
 
         console.log("successfully written our update xml to file");
