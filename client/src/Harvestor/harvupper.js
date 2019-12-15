@@ -7,6 +7,7 @@ import qs from 'query-string'
 
 
 let snippets4;
+let snippets8;
 
 class harvupper extends Component {
     constructor(props) {
@@ -113,6 +114,10 @@ class harvupper extends Component {
         //this.totaller();
         console.log("state", this.state);
        // this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_']= e.target.value;
+
+        //
+        // this.state.TheJson2.result.Data.Return[0].RecPay[0][RecOrPay].DataItem[e.target.id].Total[0]['_']= e.target.value;
+
         console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']);
         this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']= e.target.value;
               this.setState( {xx: 'ss'});
@@ -145,8 +150,29 @@ class harvupper extends Component {
         }
     }
 
-    componentDidMount() {
 
+    componentDidMount() {
+/* https://stackoverflow.com/questions/43040721/how-to-update-nested-state-properties-in-react
+        var someProperty = {...this.state.someProperty}
+        someProperty.flag = true;
+        this.setState({someProperty});
+
+        this.setState(prevState => ({
+            ...prevState,
+            someProperty: {
+                ...prevState.someProperty,
+                someOtherProperty: {
+                    ...prevState.someProperty.someOtherProperty,
+                    anotherProperty: {
+                        ...prevState.someProperty.someOtherProperty.anotherProperty,
+                        flag: false
+                    }
+                }
+            }
+        }));
+
+        console.log("state!",this.state);
+*/
 
 
 
@@ -482,48 +508,80 @@ class harvupper extends Component {
 
         //this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'] = '777';
 
-        const snippets6 =
-            //
-            //
-            this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem.map((anObjectMapped, index) => {
-                console.log("obmxx6", anObjectMapped['$'].name);
-                console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
-                console.log("obmxx8", anObjectMapped.Unrestricted[0]['_']);
-                console.log("obmxx9", anObjectMapped.Endowment[0]['_']);
-                console.log("obmxx10", anObjectMapped.Designated[0]['_']);
-                console.log("obmxx11", anObjectMapped.Total[0]['_']);
-                console.log("obmxx12", anObjectMapped.PrevYear[0]['_']);
-                    console.log("obmxx15", index);
-                let Name=anObjectMapped['$'].name;
-                let Restricted=anObjectMapped.Restricted[0]['_'];
-                    let Unrestricted=anObjectMapped.Unrestricted[0]['_'];
-                    let Endowment=anObjectMapped.Endowment[0]['_'];
-                    let Designated=anObjectMapped.Designated[0]['_'];
-                    let Total=anObjectMapped.Total[0]['_'];
-                    let PrevYear=anObjectMapped.PrevYear[0]['_'];
 
-                console.log("obmxx13", anObjectMapped);
-                    return (
-                        <div>
-                            {/*    Harv LINE {Name} {Restricted} {Unrestricted}{Endowment}{Designated}{Total}{PrevYear} */}
-                            <Harv2 name={Name}
-                                   Restricted={Restricted}
-                                   Unrestricted={Unrestricted}
-                                Endowment={Endowment}
-                                Designated={Designated}
-                                Total={Total}
-                                PrevYear={PrevYear}
-                                Index={index}
-                                   onChange={this.onChange2}/>
+            const snippets6 =
+                //
+                //
+                //  this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem.map((anObjectMapped, index) => {
+                //  this.state.TheJson2.result ?  this.state.TheJson2.result.Data.Return[0].RecPay[0].Object.keys(RecPay[0]).map
+                this.state.TheJson2.result ?  Object.keys(this.state.TheJson2.result.Data.Return[0].RecPay[0]).map
+                    //  this.state.TheJson2.result ?  Object.keys(this.state.TheJson2.result.Data.Return[0].RecPay).map
+                    //   this.state.TheJson2.result ? this.state.TheJson2.result.Data.Return[0].RecPay[0].map
 
-                        </div>
+
+                    ((Template_anObjectMapped, index) => {
+
+                        console.log("Temp_anObjectMapped",Template_anObjectMapped,index,key);
+                        console.log("Temp_anObjectMapped",this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem);
+                        //this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped].map((anObjectMapped, index) => {
+                        return (
+
+                        this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem.map((anObjectMapped, index) => {
+                            console.log("ye bad fuck",anObjectMapped.Restricted[0]['_']);
+
+                            // console.log("obmxx777", anObjectMapped.DataItem[0]);
+                            //           let dItem=anObjectMapped.DataItem[0];
+                            //           console.log("obmxx7776", dItem['$'].name);
+                            console.log("obmxx6", anObjectMapped['$'].name);
+                            console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
+                            console.log("obmxx8", anObjectMapped.Unrestricted[0]['_']);
+                            console.log("obmxx9", anObjectMapped.Endowment[0]['_']);
+                            console.log("obmxx10", anObjectMapped.Designated[0]['_']);
+                            console.log("obmxx11", anObjectMapped.Total[0]['_']);
+                            console.log("obmxx12", anObjectMapped.PrevYear[0]['_']);
+                            console.log("obmxx15", index);
+                            console.log("stater",this.state);
+                            let Name=anObjectMapped['$'].name;
+                            let Restricted=anObjectMapped.Restricted[0]['_'];
+                            let Unrestricted=anObjectMapped.Unrestricted[0]['_'];
+                            let Endowment=anObjectMapped.Endowment[0]['_'];
+                            let Designated=anObjectMapped.Designated[0]['_'];
+                            let Total=anObjectMapped.Total[0]['_'];
+                            let PrevYear=anObjectMapped.PrevYear[0]['_'];
+
+                            console.log("obmxx13", anObjectMapped);
+                            return (
+                                <div>
+                                    before silver
+                                    <Harv2 name={Name}
+                                           Restricted={Restricted}
+                                           Unrestricted={Unrestricted}
+                                           Endowment={Endowment}
+                                           Designated={Designated}
+                                           Total={Total}
+                                           PrevYear={PrevYear}
+                                           Index={index}
+                                           onChange={this.onChange2}/>
+                                    after silver
+                                </div>
+
+                            );
+
+                        })
                     );
-
-    })
-
+                    })
 
 
-                : null;
+
+                    : null;
+
+
+
+
+
+
+
+            console.log('snippets6',snippets6);
 
 
 
@@ -629,6 +687,8 @@ class harvupper extends Component {
                 hi the fckfck
 
                 {snippets6}
+                    {snippets8}
+
                 <input
                     type="submit"
                     value="Submit"

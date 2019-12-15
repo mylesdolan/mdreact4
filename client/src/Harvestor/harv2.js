@@ -14,8 +14,9 @@ const Harv2 = ({
               }) => {
     return (
         <div>
-            hiho
+            hihosilver
             <input
+                style={{width:"90px"}}
 
 
                 name={name}
@@ -26,6 +27,7 @@ const Harv2 = ({
                 onChange={onChange}
             />
             <input
+                style={{width:"90px"}}
 
 
                 name={name}
@@ -36,6 +38,7 @@ const Harv2 = ({
 
             />
             <input
+                style={{width:"90px"}}
 
 
                 name={name}
@@ -46,6 +49,7 @@ const Harv2 = ({
             />
 
             <input
+                style={{width:"90px"}}
 
 
                 name={name}
@@ -58,7 +62,7 @@ const Harv2 = ({
 
             <input
 
-
+                style={{width:"90px"}}
                 name={name}
                 id='Designated'
                 value={Designated}
@@ -67,13 +71,25 @@ const Harv2 = ({
             />
 
 
+            <input
+                style={{width:"90px"}}
 
+
+                name={name}
+                /*id='Total'*/
+                id='RecOrPay'
+
+                value={Total}
+                onChange={onChange}
+
+            />
 
 
 
 
 
             <input
+                style={{width:"90px"}}
 
 
                 name={name}
@@ -86,6 +102,7 @@ const Harv2 = ({
             />
 
             <input
+                style={{width:"90px"}}
 
 
                 name={name}

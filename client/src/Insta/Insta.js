@@ -61,6 +61,7 @@ class Insta extends Component {
         //   axios.get('/api/cars')
         //axios.get('/api/insta/helder')
         // axios.get(`/api/insta/${namevar}`)
+        ////THIS GOES TO router.get('/:userm', (req, res) =>   in ista api getting code from db. this wired in the insta api thing.
         axios.get(`https://warm-caverns-90837.herokuapp.com/api/insta/${namevar}`)
             .then(response => {
                 console.log("xxxxxxxxxxxxxxxxxxxxxt", response.data);
@@ -121,7 +122,7 @@ class Insta extends Component {
         };
 
         // console.log('im here',weeName);
-
+//  axios.post('/xmltoJsonUpload',requestBody) harveupper.  did not need stringify
 //axios.post('/api/insta/postname',weeName)
         axios.post('/api/insta/postname', qs.stringify(requestBody), config)
             .then(res => {
