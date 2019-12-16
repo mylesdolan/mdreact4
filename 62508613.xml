@@ -1456,7 +1456,7 @@
           <Unrestricted expression=""/>
           <Endowment expression=""/>
           <Designated expression=""/>
-          <Total expression="0">0</Total>
+          <Total expression="0">2</Total>
           <PrevYear expression="0">0</PrevYear>
         </DataItem>
       </Rec>
@@ -1699,7 +1699,7 @@
           <Unrestricted expression="-1595388-98582">-1693970</Unrestricted>
           <Endowment expression=""/>
           <Designated expression=""/>
-          <Total expression="-1,693,970">-1693969</Total>
+          <Total expression="-1,693,970">-1693966</Total>
           <PrevYear expression="-2,289,427">-2289427</PrevYear>
         </DataItem>
         <DataItem name="OGL_RGLI">
@@ -1707,7 +1707,7 @@
           <Unrestricted expression=""/>
           <Endowment expression=""/>
           <Designated expression=""/>
-          <Total expression="0">1</Total>
+          <Total expression="0">7</Total>
           <PrevYear expression="0">0</PrevYear>
         </DataItem>
       </Pay>

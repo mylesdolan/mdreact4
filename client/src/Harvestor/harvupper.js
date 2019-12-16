@@ -31,6 +31,7 @@ class harvupper extends Component {
                 headerName: "group2", field: "group2", checkboxSelection: true, sortable: true, filter: true
             },
 
+                //SheetTotals:{},
                 //    {
                 //  headerName: "Model", field: "model", sortable: true, filter: true
                 //},
@@ -106,6 +107,7 @@ class harvupper extends Component {
     }
 
     onChange2(e) {
+        //console.log("NameXXX2v", e.target.anyoldval);
         console.log("NameXXX2", e.target.name);
         console.log("ValXXX2", e.target.value);
         console.log("ValXXX2", e.target.id);
@@ -117,9 +119,20 @@ class harvupper extends Component {
 
         //
         // this.state.TheJson2.result.Data.Return[0].RecPay[0][RecOrPay].DataItem[e.target.id].Total[0]['_']= e.target.value;
+let res= e.target.id.split("_");
+let res1=res[1].toString();
+console.log("resstacc",res1,res,res[0],res[1]);
+     //   console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']);
+      //  this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']= e.target.value;
+      //////////  console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0][res1].DataItem[res[0]].Total[0]['_']);
+        console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0][res1][0].DataItem[res[0]].Total[0]['_']);
+        this.state.TheJson2.result.Data.Return[0].RecPay[0][res1][0].DataItem[res[0]].Total[0]['_']=e.target.value;
+        //console.log("state3",this.state.TheJson2.result.Data.Return[0].RecPay[0].Rec);
+          //console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0].res[1][0].DataItem[res[0]].Total[0]['_']);
+          //this.state.TheJson2.result.Data.Return[0].RecPay[0].res[1][0].DataItem[res[0]].Total[0]['_']= e.target.value;
 
-        console.log("state2",this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']);
-        this.state.TheJson2.result.Data.Return[0].RecPay[0].DataItem[e.target.id].Total[0]['_']= e.target.value;
+
+
               this.setState( {xx: 'ss'});
         console.log("state", this.state);
        // this.totaller();
@@ -523,36 +536,75 @@ class harvupper extends Component {
 
                         console.log("Temp_anObjectMapped",Template_anObjectMapped,index,key);
                         console.log("Temp_anObjectMapped",this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem);
-                        //this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped].map((anObjectMapped, index) => {
-                        return (
+                        const totcol1=0;
+                        const totcol2=0;
+                        const totcol3=0;
+                        const totcol4=0;
 
-                        this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem.map((anObjectMapped, index) => {
+                        const list = this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem;
+
+                        console.log("list",list);
+
+                        let jobj= {TotalHere: 5};
+/*
+                        this.setState( list => {
+                            const list2 = [...list, jobj];
+                            return {
+                                list,
+                                value: '',
+                            };
+                        });
+  */
+                        this.setState( list => {
+                         list = [...list, jobj];
+                            return {
+                                list,
+                                value: '',
+                            };
+                        });
+
+
+
+                            console.log("havinglaf",this.state);
+
+
+
+                        //this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped].map((anObjectMapped, index) => {
+                return (
+                            <div>
+                                <h1>{Template_anObjectMapped}</h1>
+                                {/*  bracket below rather crucial allowing me to get in above html */}
+                                {
+                                   // this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].
+                            this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem.map((anObjectMapped, index) => {
                             console.log("ye bad fuck",anObjectMapped.Restricted[0]['_']);
 
                             // console.log("obmxx777", anObjectMapped.DataItem[0]);
                             //           let dItem=anObjectMapped.DataItem[0];
                             //           console.log("obmxx7776", dItem['$'].name);
-                            console.log("obmxx6", anObjectMapped['$'].name);
+                         /*   console.log("obmxx6", anObjectMapped['$'].name);
                             console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
                             console.log("obmxx8", anObjectMapped.Unrestricted[0]['_']);
                             console.log("obmxx9", anObjectMapped.Endowment[0]['_']);
                             console.log("obmxx10", anObjectMapped.Designated[0]['_']);
                             console.log("obmxx11", anObjectMapped.Total[0]['_']);
                             console.log("obmxx12", anObjectMapped.PrevYear[0]['_']);
-                            console.log("obmxx15", index);
-                            console.log("stater",this.state);
-                            let Name=anObjectMapped['$'].name;
+                           // console.log("obmxx15", index + Template_anObjectMapped);
+                            console.log("stater",this.state);*/
+                            var Name=anObjectMapped['$'].name;
                             let Restricted=anObjectMapped.Restricted[0]['_'];
                             let Unrestricted=anObjectMapped.Unrestricted[0]['_'];
                             let Endowment=anObjectMapped.Endowment[0]['_'];
                             let Designated=anObjectMapped.Designated[0]['_'];
                             let Total=anObjectMapped.Total[0]['_'];
                             let PrevYear=anObjectMapped.PrevYear[0]['_'];
-
+let Index_DetailType=index + '_' + Template_anObjectMapped;
+                            console.log("obmxx16", Index_DetailType);
                             console.log("obmxx13", anObjectMapped);
+
                             return (
                                 <div>
-                                    before silver
+
                                     <Harv2 name={Name}
                                            Restricted={Restricted}
                                            Unrestricted={Unrestricted}
@@ -560,14 +612,16 @@ class harvupper extends Component {
                                            Designated={Designated}
                                            Total={Total}
                                            PrevYear={PrevYear}
-                                           Index={index}
+                                           Index={Index_DetailType}
                                            onChange={this.onChange2}/>
-                                    after silver
                                 </div>
 
                             );
 
                         })
+                                }
+                                Total
+                            </div>
                     );
                     })
 

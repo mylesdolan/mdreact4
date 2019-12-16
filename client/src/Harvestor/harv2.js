@@ -71,26 +71,13 @@ const Harv2 = ({
             />
 
 
-            <input
-                style={{width:"90px"}}
-
-
-                name={name}
-                /*id='Total'*/
-                id='RecOrPay'
-
-                value={Total}
-                onChange={onChange}
-
-            />
-
-
 
 
 
             <input
                 style={{width:"90px"}}
 
+                /* anyoldval={Index}does not work*/
 
                 name={name}
                 /*id='Total'*/
