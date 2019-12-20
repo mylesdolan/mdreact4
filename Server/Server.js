@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const app2 = express();
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const fs = require('fs');
@@ -9,6 +10,20 @@ const xmltoJson = require('./xmltoJson');
 const xmltoJsonUpload = require('./xmltoJsonUpload');
 const insta = require('../routes/api/insta');
 const mongoose = require('mongoose');
+//import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
+//const {graphqlExpress, graphiqlExpress} = require('apollo-server-express');
+const graphqlHTTP = require('express-graphql');
+app.use('/graphql',
+    graphqlHTTP({
+        schema: MyGraphQLSchema,
+        graphiql: true,
+    }),);
+
+//app2.listen(4000, () => console.log(`Express server running on port 4000`));
+
+
+
+
 
 // DB Config
 const db = require('../config/keys').mongoURI;

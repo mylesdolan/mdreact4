@@ -1210,7 +1210,12 @@
     </Donations>
     <RecPay>
       <Rec>
-        <Status>CrossValidated</Status>
+	  <TotCol1></TotCol1>
+	  <TotCol2></TotCol2>
+      <TotCol3></TotCol3>
+      <TotCol4></TotCol4>
+      <TotCol5></TotCol5>
+<Status>CrossValidated</Status>
         <DataItem name="TIR">
           <Restricted expression="46804877">46804877666</Restricted>
           <Unrestricted expression="864988+109257+280531">1254776</Unrestricted>
@@ -1224,7 +1229,7 @@
           <Unrestricted expression=""/>
           <Endowment expression=""/>
           <Designated expression=""/>
-          <Total expression="46,804,877">46804877</Total>
+          <Total expression="46,804,877">46804876</Total>
           <PrevYear expression="4,550,000">4550000</PrevYear>
         </DataItem>
         <DataItem name="VI_TR">
@@ -1461,7 +1466,12 @@
         </DataItem>
       </Rec>
       <Pay>
-        <Status>CrossValidated</Status>
+	  <TotCol1></TotCol1>
+	  <TotCol2></TotCol2>
+      <TotCol3></TotCol3>
+      <TotCol4></TotCol4>
+      <TotCol5></TotCol5>
+	  <Status>CrossValidated</Status>
         <DataItem name="TRE">
           <Restricted expression="-500000">-500000</Restricted>
           <Unrestricted expression="-2433511+500000">-1933511</Unrestricted>

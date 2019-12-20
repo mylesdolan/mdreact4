@@ -533,39 +533,41 @@ console.log("resstacc",res1,res,res[0],res[1]);
 
 
                     ((Template_anObjectMapped, index) => {
+                        this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].TotCol1[0]=0;
 
                         console.log("Temp_anObjectMapped",Template_anObjectMapped,index,key);
                         console.log("Temp_anObjectMapped",this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem);
+                        console.log("tryme",this.state.TheJson2.result.Data.Return[0].RecPay[0].Rec[0].TotCol1[0]);
                         const totcol1=0;
                         const totcol2=0;
                         const totcol3=0;
                         const totcol4=0;
-
+                        /*console.log("beforebeforelaf",this.state);
+                        Below 2 things did sucessfully change state and add in total but didnt render . Maybe not good to alter JSON2 mid loop.
                         const list = this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem;
-
-                        console.log("list",list);
-
-                        let jobj= {TotalHere: 5};
+list.value='777';
+                        const list2 = {...this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem};
+                        console.log("listxxxx",list);
+                        console.log("beforelaf",this.state);
+                        */
 /*
-                        this.setState( list => {
-                            const list2 = [...list, jobj];
-                            return {
-                                list,
-                                value: '',
-                            };
-                        });
-  */
-                        this.setState( list => {
-                         list = [...list, jobj];
-                            return {
-                                list,
-                                value: '',
-                            };
-                        });
+                        console.log("beforebeforelaf",this.state);
+                       const list = this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0];
+list.TotValue='777';
+                       const list2 = {...this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0]};
+                       console.log("listxxxx",list);
+                       console.log("beforelaf",this.state);
 
 
 
-                            console.log("havinglaf",this.state);
+
+
+                        this.setState({TheJson2: list2});
+                        console.log("havinglaf",this.state);
+                        this.setState( {xx: 'ss'});
+                        let jobj= {TotalHere: 5};*/
+
+
 
 
 
@@ -578,11 +580,13 @@ console.log("resstacc",res1,res,res[0],res[1]);
                                    // this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].
                             this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].DataItem.map((anObjectMapped, index) => {
                             console.log("ye bad fuck",anObjectMapped.Restricted[0]['_']);
-
+                               // totprice = Number(totprice + parseInt(this.state.RowDD[key].price));
+                            this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].TotCol1[0]=Number(Number(this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].TotCol1[0])+Number(anObjectMapped.Total[0]['_']));
+                            console.log("bigchieftotal",this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].TotCol1[0]);
                             // console.log("obmxx777", anObjectMapped.DataItem[0]);
                             //           let dItem=anObjectMapped.DataItem[0];
                             //           console.log("obmxx7776", dItem['$'].name);
-                         /*   console.log("obmxx6", anObjectMapped['$'].name);
+                            console.log("obmxx6", anObjectMapped['$'].name);
                             console.log("obmxx7", anObjectMapped.Restricted[0]['_']);
                             console.log("obmxx8", anObjectMapped.Unrestricted[0]['_']);
                             console.log("obmxx9", anObjectMapped.Endowment[0]['_']);
@@ -590,7 +594,7 @@ console.log("resstacc",res1,res,res[0],res[1]);
                             console.log("obmxx11", anObjectMapped.Total[0]['_']);
                             console.log("obmxx12", anObjectMapped.PrevYear[0]['_']);
                            // console.log("obmxx15", index + Template_anObjectMapped);
-                            console.log("stater",this.state);*/
+                            console.log("stater",this.state);
                             var Name=anObjectMapped['$'].name;
                             let Restricted=anObjectMapped.Restricted[0]['_'];
                             let Unrestricted=anObjectMapped.Unrestricted[0]['_'];
@@ -619,10 +623,14 @@ let Index_DetailType=index + '_' + Template_anObjectMapped;
                             );
 
                         })
+
                                 }
-                                Total
+                                Total  {this.state.TheJson2.result.Data.Return[0].RecPay[0][Template_anObjectMapped][0].TotCol1[0]}
+                                <br></br>
+
                             </div>
                     );
+
                     })
 
 
@@ -633,9 +641,10 @@ let Index_DetailType=index + '_' + Template_anObjectMapped;
 
 
 
+//            let x =this.state.TheJson2.result.Data.Return[0].RecPay[0].Rec[0].TotCol1[0]-this.state.TheJson2.result.Data.Return[0].RecPay[0].Pay[0].TotCol1[0]
+            let x =this.state.TheJson2.result;
 
-
-            console.log('snippets6',snippets6);
+            console.log('snippets6',x );
 
 
 
@@ -742,6 +751,17 @@ let Index_DetailType=index + '_' + Template_anObjectMapped;
 
                 {snippets6}
                     {snippets8}
+
+
+
+                    {this.state.TheJson2.result ? (
+                        <div>
+                            <h3>Total Rec - Tot Pay</h3>
+                            {this.state.TheJson2.result.Data.Return[0].RecPay[0].Rec[0].TotCol1[0]-this.state.TheJson2.result.Data.Return[0].RecPay[0].Pay[0].TotCol1[0]}
+                        </div>
+                    ) : null}
+
+
 
                 <input
                     type="submit"
