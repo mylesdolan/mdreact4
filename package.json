@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/express-graphql": "^0.9.0",
     "FormData": "^0.10.1",
     "apollo-server-express": "^2.9.14",
     "axios": "^0.19.0",
@@ -25,6 +26,7 @@
     "concurrently": "^4.1.2",
     "cors": "^2.8.5",
     "ecstatic": "^4.1.2",
+    "eslint": "^6.8.0",
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "form-data": "^2.5.1",
@@ -37,6 +39,7 @@
     "query-string": "^6.8.3",
     "react-helmet": "^5.2.1",
     "react-twitter-embed": "^2.0.8",
+    "tslint": "^5.20.1",
     "twit": "^2.2.11",
     "xml2js": "^0.4.22"
   }

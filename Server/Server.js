@@ -13,12 +13,74 @@ const mongoose = require('mongoose');
 //import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 //const {graphqlExpress, graphiqlExpress} = require('apollo-server-express');
 const graphqlHTTP = require('express-graphql');
+//import { buildSchema } from 'graphql';
+
+const { buildSchema } = require('graphql');
+
+//import { schema } from './schema';
+const schema = require('./schema');
+
+//import { resolveArticle } from './resolvers/Help/Article';
+
+
+// Construct a schema, using GraphQL schema language
+var MyGraphQLSchema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+
+// The root provides a resolver function for each API endpoint
+var root = {
+    hello: () => 'Hello world wnk!',
+};
+
+
+/*
+// @ts-ignore
+// tslint:disable:typedef
+app.use('/graphql', graphqlHTTP((request: Request, response: Response, graphQLParams) => ({
+    schema: MyGraphQLSchema,
+    rootValue: root,
+    graphiql: useGraphiql,
+    context: {
+        request,
+        response,
+        // test: 'Hello, World!',
+        // graphQLParams,
+    },
+})));
+*/
+
+
+
 app.use('/graphql',
     graphqlHTTP({
+        // request: Request,
+        // response : Response,
         schema: MyGraphQLSchema,
+        rootValue: root,
         graphiql: true,
     }),);
 
+
+
+
+/*
+
+
+
+
+
+app.use('/graphql',
+    graphqlHTTP({
+       // request: Request,
+       // response : Response,
+        schema: MyGraphQLSchema,
+        rootValue: root,
+        graphiql: true,
+    }),);
+*/
 //app2.listen(4000, () => console.log(`Express server running on port 4000`));
 
 
