@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Resolvers/FinFiles/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Assets/link7.docx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Assets/link7.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -367,19 +360,19 @@
       <workItem from="1572209456565" duration="21585000" />
       <workItem from="1573226328475" duration="2705000" />
       <workItem from="1576858474502" duration="18556000" />
-      <workItem from="1577953758605" duration="17623000" />
+      <workItem from="1577953758605" duration="17878000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="509252000" />
+    <option name="totallyTimeSpent" value="509507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="0" width="1326" height="735" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6306818" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62765956" visible="true" weight="0.14285715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.3693182" side_tool="true" visible="true" weight="0.14285715" />
+      <window_info id="npm" order="2" sideWeight="0.3723404" side_tool="true" visible="true" weight="0.14285715" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -392,7 +385,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4152824" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.68770766" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
