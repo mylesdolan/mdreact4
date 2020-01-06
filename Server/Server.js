@@ -21,7 +21,7 @@ const { buildSchema } = require('graphql');
 const schema = require('./schema');
 
 //import { resolveArticle } from './resolvers/Help/Article';
-
+//const {resolveFinFiles} = require('./Resolvers/FinFiles/index.ts');
 
 // Construct a schema, using GraphQL schema language
 var MyGraphQLSchema = buildSchema(`
@@ -33,6 +33,7 @@ var MyGraphQLSchema = buildSchema(`
 // The root provides a resolver function for each API endpoint
 var root = {
     hello: () => 'Hello world wnk!',
+ //   getFinFiles : resolveFinFiles
 };
 
 

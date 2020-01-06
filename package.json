@@ -41,6 +41,7 @@
     "react-twitter-embed": "^2.0.8",
     "tslint": "^5.20.1",
     "twit": "^2.2.11",
+    "typescript": "^3.7.4",
     "xml2js": "^0.4.22"
   }
 }
