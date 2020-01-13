@@ -195,8 +195,6 @@ getFinFiles2 {
 
        axios.post('/xmltoJsonUpload',result)
        //axios.post('/xmltoJsonUpload',subresult)
-
-
            .then(res => {
                console.log("resssy", res);
            })
@@ -276,14 +274,14 @@ getFinFiles2 {
         fetch('/harv/test')
         // fetch('http://192.168.50.26:8080/DATA')
             .then(response => response.text())
-            // .then(textx => console.log('ffsharv',textx))
+           //  .then(textx => console.log('ffxxxsharv',textx))
             //.then(texty => console.log('ffsharvxx',texty))
             .then(text => parser.parseFromString(text, "text/xml"))
             //.then(result => console.log('shark',result) )
             .then(xml => this.xmlToJson(xml))
-            .then(result => this.setState({TheJson: result}))
-            // .then(result => console.log('shark',result))
-            .then(console.log('shark', this.state.TheJson))
+          //  .then(result => this.setState({TheJson: result}))
+             .then(result => console.log('sharktt',result))
+            //.then(result => console.log('sharkrr', this.state.TheJson))
 
         ;
 
@@ -566,7 +564,7 @@ getFinFiles2 {
 
         //this.state.TheJson2.result.Data.Return[0].BalanceSheet[0].DataItem[20].Total[0]['_'] = '777';
 
-
+console.log("this.state.TheJson2.resultblabla",this.state.TheJson2.result);
             const snippets6 =
                 //
                 //

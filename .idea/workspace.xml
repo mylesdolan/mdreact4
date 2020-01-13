@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a5ff9c9-da93-4df0-8b85-ad756bda5571" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/xmltoJson.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/xmltoJson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/xmltoJsonUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/xmltoJsonUpload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/Harvestor/harvupper.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Harvestor/harvupper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,18 +55,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="58" column="14" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/graphql.config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -80,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/xmltoJson.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+            <state relative-caret-position="1615">
+              <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -90,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/Server/xmltoJsonUpload.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="90" />
+              <caret line="64" column="12" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -103,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/Harvestor/harvupper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="202" selection-start-line="202" selection-end-line="202" />
+            <state relative-caret-position="98">
+              <caret line="197" selection-start-line="197" selection-end-line="197" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -391,15 +377,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="544027000" />
+    <option name="totallyTimeSpent" value="544309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1265" y="18" width="1225" height="984" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.39065817" visible="true" weight="0.25863522" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3901099" visible="true" weight="0.25863522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.6093418" side_tool="true" visible="true" weight="0.25863522" />
+      <window_info id="npm" order="2" sideWeight="0.6098901" side_tool="true" visible="true" weight="0.25863522" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -669,20 +654,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/Resolvers/FinFiles/index.js" />
-    <entry file="file://$PROJECT_DIR$/Server/Resolvers/withScope/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/Resolvers/FinFiles/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/Resolvers/withScope/index.ts" />
+    <entry file="file://$PROJECT_DIR$/Server/Resolvers/FinFiles/index.ts" />
     <entry file="file://$PROJECT_DIR$/Server/schema/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -768,22 +741,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/xmltoJson.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        <state relative-caret-position="1615">
+          <caret line="95" column="34" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/xmltoJsonUpload.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="90" />
+          <caret line="64" column="12" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/Harvestor/harvupper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
+        <state relative-caret-position="98">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
