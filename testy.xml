@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Data>
+  <Cats>335507</Cats>
+  <Cats>335507</Cats>
+  <Cats>335504</Cats>
+  <Return>
+    <CRONumber>335505</CRONumber>
+    <CRONumber>335508</CRONumber>
+    <CHYNumber>335506</CHYNumber>
+    <RecPay>
+      <Rec>
+        <DataItem name="TIR"/>
+        <DataItem name="VI_D"/>
+        <DataItem name="VI_TR"/>
+        <DataItem name="VI_G"/>
+        <DataItem name="VI_G_SGF"/>
+        <DataItem name="VI_G_CD"/>
+        <DataItem name="VI_GLA"/>
+        <DataItem name="VI_MSS"/>
+        <DataItem name="VI_DPCC"/>
+        <DataItem name="VI_UVI"/>
+        <DataItem name="AGF_FEA"/>
+        <DataItem name="AGF_CS"/>
+        <DataItem name="AGF_UAFGF"/>
+        <DataItem name="II_IP"/>
+        <DataItem name="II_LI_D"/>
+        <DataItem name="II_FEGL"/>
+        <DataItem name="II_OUI"/>
+        <DataItem name="II_UII"/>
+        <DataItem name="II_GLI"/>
+        <DataItem name="II_GLDFA"/>
+        <DataItem name="UIRFGF"/>
+        <DataItem name="IRCA_FITA"/>
+        <DataItem name="IRCA_UA"/>
+        <DataItem name="IRCA_G"/>
+        <DataItem name="IRCA_G_SGF"/>
+        <DataItem name="IRCA_G_CD"/>
+        <DataItem name="HEA"/>
+        <DataItem name="HEA_AF"/>
+        <DataItem name="HEA_OI"/>
+        <DataItem name="OIR"/>
+        <DataItem name="UI"/>
+      </Rec>
+    </RecPay>
+  </Return>
+</Data>

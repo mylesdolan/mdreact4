@@ -3,11 +3,20 @@ import PropTypes from 'prop-types';
 import Harv from './harv'
 import Harv2 from './harv2'
 import axios from "axios";
-import qs from 'query-string'
+import qs from 'query-string';
+import {gql} from "apollo-boost";
+//import client from './apolloClient'
+import ApolloClient from 'apollo-boost';
 
+const client = new ApolloClient({
+  //  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+    uri: 'http://localhost:4001/graphql',
+    addTypename: false
+});
 
 let snippets4;
 let snippets8;
+let subresult;
 
 class harvupper extends Component {
     constructor(props) {
@@ -164,7 +173,40 @@ console.log("resstacc",res1,res,res[0],res[1]);
     }
 
 
-    componentDidMount() {
+   componentDidMount() {
+
+       client
+           .query({
+               query: gql`{
+                        
+getFinFiles2 {
+ Data{Return{RecPay{Rec{DataItem{dollarsign{name}}}}}} 
+}
+
+ 
+
+                    }
+    `
+           })
+           .then(result =>
+              // console.log('danielx',result)
+         subresult=result)
+              .then(result =>
+
+       axios.post('/xmltoJsonUpload',result)
+       //axios.post('/xmltoJsonUpload',subresult)
+
+
+           .then(res => {
+               console.log("resssy", res);
+           })
+
+
+
+   );
+
+
+
 /* https://stackoverflow.com/questions/43040721/how-to-update-nested-state-properties-in-react
         var someProperty = {...this.state.someProperty}
         someProperty.flag = true;
@@ -428,10 +470,13 @@ console.log("resstacc",res1,res,res[0],res[1]);
                         }
                     };
         */
-        console.log('im here wee fella');
+       // console.log('im here wee fella',subresult);
 
-        axios.post('/xmltoJsonUpload',requestBody)
-            .then(res => {
+       axios.post('/xmltoJsonUpload',requestBody)
+         //axios.post('/xmltoJsonUpload',subresult)
+
+
+    .then(res => {
                 console.log("resssy", res);
             })
 
