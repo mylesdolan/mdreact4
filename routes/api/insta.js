@@ -142,6 +142,8 @@ router.get('/getname/getname', (req, res) => {
 //This called when you manually double click on the returned link for prod
 //https://warm-caverns-90837.herokuapp.com/api/insta?code=d9140397c82e4e10b45e337d58a6f424
 
+///this from react or react prod
+
 router.get('/', (req, res) => {
     //console.log ("im so here",req.params.code);
     let code = req.query.code;
@@ -176,7 +178,7 @@ loadMore = (code) => {
     console.log("proffy", profileData);
     // axios.post(' https://api.instagram.com/oauth/access_token',profileData)
     axios.post(' https://www.instagram.com/oauth/access_token', profileData)
-        .then(res => console.log("res", res))
+        .then(res => console.log("resomate", res))
         .catch(err => console.log("errorx", err))
     ;
 
@@ -219,8 +221,8 @@ loadMore = (code) => {
         // access_token: code,
         client_secret: 'bf7f60a691714565ae1f48db572ba296',
         grant_type: 'authorization_code',
-        // redirect_uri: 'http://localhost:3001/api/insta',
-        redirect_uri: 'https://warm-caverns-90837.herokuapp.com/api/insta',
+         redirect_uri: 'http://localhost:3001/api/insta',
+     //   redirect_uri: 'https://warm-caverns-90837.herokuapp.com/api/insta',
         code: code
     };
 

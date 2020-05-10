@@ -783,7 +783,7 @@ let Index_DetailType=index + '_' + Template_anObjectMapped;
                 <a href="#" onClick={this.handleClick}>Just Do this</a>
                 {snippets}
                 {snippets2}
-                hello
+                hihello
                 {snippets4}
                 {/*   <Harv name={'total'} price={this.state.TotPrice} value={this.state.TotPrice}/>*/}
                 hi the fck

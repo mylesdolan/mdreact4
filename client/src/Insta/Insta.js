@@ -60,9 +60,11 @@ class Insta extends Component {
 
         //   axios.get('/api/cars')
         //axios.get('/api/insta/helder')
-        // axios.get(`/api/insta/${namevar}`)
+        //axios.get(`/api/insta/${namevar}`)
         ////THIS GOES TO router.get('/:userm', (req, res) =>   in ista api getting code from db. this wired in the insta api thing.
-        axios.get(`https://warm-caverns-90837.herokuapp.com/api/insta/${namevar}`)
+       // axios.get(`https://warm-caverns-90837.herokuapp.com/api/insta/${namevar}`)
+        //axios.get(`/api/insta/${namevar}`)
+        axios.get(`/api/insta/${namevar}`)
             .then(response => {
                 console.log("xxxxxxxxxxxxxxxxxxxxxt", response.data);
                 this.setState({codeResponse: response.data});
@@ -72,6 +74,7 @@ class Insta extends Component {
     }
 
     displaypics() {
+        console.log('Can we survive');
         console.log(this.state.codeResponse);
         const resultx = this.state.codeResponse["instatoken"];
         const url = `https://api.instagram.com/v1/users/self/media/recent?access_token=${resultx}`;
@@ -187,7 +190,7 @@ class Insta extends Component {
                   
                   <img src=${feed.data[i].images['standard_resolution']['url']} id="img" style={{ height: '300px',width: '300px', border: '1px'}}></img>
                   
-                 </div>
+                 </div>1246766686432374786
                     `;
             }
             this.setState({

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Data>
+  <Cats>335505</Cats>
   <Return>
     <Date period="12">31/12/2018</Date>
     <CRONumber>335505</CRONumber>
@@ -1368,7 +1369,7 @@
           <Total expression="280,531">280531</Total>
           <PrevYear expression="2,882,012">2882012</PrevYear>
         </DataItem>
-        <DataItem name="II_GLDFA">
+        <DataItem name="II_GLDFAX">
           <Restricted expression=""/>
           <Unrestricted expression=""/>
           <Endowment expression=""/>
@@ -1464,6 +1465,73 @@
           <Total expression="0">2</Total>
           <PrevYear expression="0">0</PrevYear>
         </DataItem>
+		<DataItem name="IIX_IP">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="IIX_LI_D">
+        <Restricted expression=""/>
+        <Unrestricted expression="867942">867942</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="867,942">867942</Total>
+        <PrevYear expression="817,183">817183</PrevYear>
+      </DataItem>
+      <DataItem name="IIX_FEGL">
+        <Restricted expression=""/>
+        <Unrestricted expression="109257">109257</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="109,257">109257</Total>
+        <PrevYear expression="-109,709">-109709</PrevYear>
+      </DataItem>
+      <DataItem name="IIX_OUI">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="IIX_UIIX">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+      <DataItem name="IIX_GLI">
+        <Restricted expression=""/>
+        <Unrestricted expression="280531">280531</Unrestricted>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="280,531">280531</Total>
+        <PrevYear expression="2,882,012">2882012</PrevYear>
+      </DataItem>
+      <DataItem name="IIX_GLDFA">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+
+	  <DataItem name="IIX_GLDFAXX" DiFormula="IIX_GLI+IIX_FEGL-IIX_LI_D">
+        <Restricted expression=""/>
+        <Unrestricted expression=""/>
+        <Endowment expression=""/>
+        <Designated expression=""/>
+        <Total expression="0">0</Total>
+        <PrevYear expression="0">0</PrevYear>
+      </DataItem>
+	  
+		
       </Rec>
       <Pay>
 	  <TotCol1></TotCol1>
