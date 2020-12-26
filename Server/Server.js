@@ -5,6 +5,7 @@ const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const twit = require('../routes/api/twit');
+const test = require('../routes/api/test');
 const harv = require('./harv');
 const xmltoJson = require('./xmltoJson');
 const xmltoJsonUpload = require('./xmltoJsonUpload');
@@ -124,6 +125,7 @@ app.post('/xmltoJsonUpload',xmltoJsonUpload);
 app.use('/harv', harv);
 app.use('/api/insta',insta);
 
+
 app.use('/api/twit',twit);
 
 app.get('/api/testicles',(req,res)=>{
@@ -134,6 +136,7 @@ app.get('/api/testicles',(req,res)=>{
     })
 });
 
+//app.use('/api/test',test);
 
 app.use(cors(corsOptions));
 

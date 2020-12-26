@@ -25,7 +25,9 @@ class TwitListRedux extends Component {
         this.state = {
             //statuses: ['', '', ''],
             // twred: ['', '', '']
-            thelinkid:null
+            thelinkid:null,
+            twitsubject:'Dublin'
+
 
         }
         this.handleClick = this.handleClick.bind(this);
@@ -34,11 +36,29 @@ class TwitListRedux extends Component {
 
 
     componentDidMount() {
-        this.props.tweeterListAll();
+//        this.props.tweeterListAll();
+
+       // this.props.tweeterListAll('Galway');
+
+            this.props.tweeterListAll(this.state.twitsubject);
+
         // this.changeLocation();
      //   window.addEventListener('popstate', this.changeLocation.bind(this));
         console.log("here we gogogoho",this.props.twred);
     }
+
+    myChangeHandler = (event) => {
+        this.setState({twitsubject: event.target.value});
+        console.log("ts",this.state.twitsubject);
+       // this.props.tweeterListAll(this.state.twitsubject);
+    }
+
+    mySubmitHandler = (event) => {
+        event.preventDefault();
+        alert("You are submitting " + this.state.twitsubject);
+        this.props.tweeterListAll(this.state.twitsubject)
+    }
+
 
 handleClick(e) {
     const { history } = this.props;
@@ -88,8 +108,26 @@ console.log('newtwred',this.props.twred);
 
 
                     hohoho
+
+
+
+                <form onSubmit={this.mySubmitHandler}>
+                    <h1>Hello {this.state.username}</h1>
+                    <p>Enter your name, and submit:</p>
+                    <input
+                        type='text'
+                       onChange={this.myChangeHandler}
+                    />
+                    <input
+                        type='submit'
+                    />
+                </form>
+
+
+
+
                     {
-                        this.props.twred.statuses  ?
+                        this.props.twred.statuses && this.state.twitsubject ?
 
 
 

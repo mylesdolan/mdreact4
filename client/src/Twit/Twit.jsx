@@ -159,6 +159,11 @@ let anyoldthing=this.onDrag;
 
         console.log ("im here defo you drag",x);
         //   this.setState({title: event.target.value})
+
+
+
+
+
     }
 
     onDrop(event) {

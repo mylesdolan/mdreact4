@@ -42,7 +42,7 @@ export function ClearEmbedDetail(){
 }
 
 
-
+/*
 export function tweeterListAll(){
 //let request="";
     console.log("bloodywellhere");
@@ -50,7 +50,7 @@ export function tweeterListAll(){
     //const request = axios.get(`/api/twit?_limit=6`)
     const request =
         axios.get('/api/twit')
-
+    //tweetId={props.match.params.id}
 
         .then(response => response.data)
         //.then(response => {console.log("777777777777778",response.data) })
@@ -60,3 +60,28 @@ export function tweeterListAll(){
         payload: request
     }
 }
+*/
+
+//May 20
+export function tweeterListAll(keyword){
+//let request="";
+    console.log("bloodywellhere",keyword);
+    //  const request = axios.get(`${URL}/artists?_limit=6`)
+    //const request = axios.get(`/api/twit?_limit=6`)
+    const request =
+
+    axios.get(`/api/twit/initial/${keyword}`)
+     //  axios.get(`/api/twit/initial/`)
+      // axios.get(`/api/twit`)
+
+        //tweetId={props.match.params.id}
+
+            .then(response => response.data)
+    //.then(response => {console.log("777777777777778",response.data) })
+    //.catch((err) => {console.log("errdjfkjsd",err)});
+    return {
+        type: 'GET_TWEETERS',
+        payload: request
+    }
+}
+
